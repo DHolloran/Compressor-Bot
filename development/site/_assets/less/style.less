@@ -68,6 +68,7 @@
   @close: #999999;
   @optionsHeadings: #333333;
   @seperator: #555555;
+  @navActive:  #a7cd6c;
 /* ============ @font-face ============= */
   /* Franchise Bold (buttons/logos) font-family: 'FranchiseRegular'; */
     @font-face {
@@ -116,119 +117,14 @@
     font-family: 'FranchiseRegular';
   }
 /* ============ Global ================= */
-  body{
-    background-color: @bgColor;
-    font-family:'BitstreamVeraSerifRoman', Arial, sans-serif;
-    background-color: #333333;
-  }
-  h2,h3,h4,h5,h6{
-    color: @heading;
-    font-family: 'BitstreamVeraSansBold', Arial, sans-serif;
-  }
-  hgroup h2,
-  hgroup h3,
-  hgroup h4,
-  hgroup h5,
-  hgroup h6{
-    color: @subHeading;
-  }
-
-  #container{
-    width: 960px;
-    padding:0;
-    margin:0 auto;
-    background-color: @bgColor;
-  }
   /* ==== Links ==== */
     a { color: #00e; }
     a:visited { color: #551a8b; }
     a:hover { color: #06e; }
     a:focus { outline: thin dotted; }
 /* ============ Header ================= */
-  header{
-    background-color: @headBg;
-    nav{
-      a{
-        text-decoration: none;
-        color:@nav;
-      }
-      h1{
-        margin:  0;
-        padding: 0;
-        float: left;
-        a span{
-          color: @bot;
-        }
-      }
-      li{
-        float: left;
-        margin: 0;
-        padding-top: 0;
-      }
-    }
-    #logged_in{
-      display: none;
-      list-style-type: none;
-      float: left;
-      margin: 0;
-      padding: 0;
-      li{
-        float: left;
-        &:nth-child(1){
-          border-right: @seperator 2px solid;
-          color: #cccccc;
-          span{
-            color: #FAFAFA;
-          }
-        }
-      }
-      a{
-        color: @link;
-      }
-    }
-  }
 /* ============ Body =================== */
-  #content{
-    clear:both;
-    margin: 0;
-    padding: 0;
   /* ==== Home Page ==== */
-    #intro{
-      float: left;
-      background-color: #ff0000;
-      width: 440px;
-      margin:0 0 0 20px;
-      a{
-        .button(400px,70px,36pt);
-        margin: 0 20px;
-      }
-    }
-    #showcase{
-      float: right;
-      width: 480px;
-      background-color: #00ff00;
-      margin: 0 20px 0 0;
-      video{
-        float: left;
-      }
-    ul{
-      float: left;
-      margin: 0;
-      padding: 0;
-      li{
-        width: 142px;
-        height: 142px;
-        background-color: #ccc;
-        float: left;
-        list-style-type: none;
-        padding: 0;
-        &:nth-child(2){
-          margin: 0 27px;
-        }
-      }
-    }
-    }
-  }
   /* ==== Compress Page ==== */
   /* ==== Decompress Page ==== */
   /* ==== Modals Section ==== */
@@ -237,10 +133,6 @@
     /* ==== Edit Profile Modal ==== */
     /* ==== Contact us Modal ==== */
 /* ============ Footer ================= */
-  footer{
-    clear: both;
-    background-color: @footBg;
-  }
 /* ==|== media queries ====================================================== */
   @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */

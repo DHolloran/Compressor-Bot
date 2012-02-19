@@ -1,0 +1,412 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"padding	padding: T R B L"
+			],
+			[
+				"span",
+				"span"
+			],
+			[
+				"footer",
+				"Footer"
+			],
+			[
+				"te",
+				"text	text-align: left/center/right"
+			],
+			[
+				"a",
+				"a	<a>"
+			],
+			[
+				"prin",
+				"printf"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"back",
+				"background	background-color: transparent"
+			],
+			[
+				"list-sty",
+				"list-style-type:   (property)"
+			],
+			[
+				"mar",
+				"margin	margin: T R B L"
+			],
+			[
+				"fetch",
+				"fetchAll"
+			],
+			[
+				"colum",
+				"columnValues"
+			],
+			[
+				"pre",
+				"prepare"
+			],
+			[
+				"P",
+				"PDOException  (class)"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"substr",
+				"substr_replace  (function)"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"where",
+				"whereClauses"
+			],
+			[
+				"wher",
+				"whereClauses"
+			],
+			[
+				"table",
+				"tableName"
+			],
+			[
+				"col",
+				"columnValues"
+			],
+			[
+				"column",
+				"columnNames"
+			],
+			[
+				"mysqlrea",
+				"mysqli_real_escape_string  (function)"
+			],
+			[
+				"tes",
+				"testAssocArr"
+			],
+			[
+				"fore",
+				"foreach  (keyword)"
+			],
+			[
+				"hea",
+				"header"
+			],
+			[
+				"me",
+				"meta"
+			],
+			[
+				"html",
+				"html	html"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"check",
+				"checked  (function)"
+			],
+			[
+				"char",
+				"characters"
+			],
+			[
+				"sele",
+				"selector"
+			],
+			[
+				"val",
+				"value=  (attribute)"
+			],
+			[
+				"chec",
+				"checked  (function)"
+			],
+			[
+				"su",
+				"subpixel_antialias"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: int",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack",
+				"Package Control: Add Repository"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insl",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Add Repository"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 223.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/franchise/FranchiseRegular-demo.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/franchise/stylesheet.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/Bitstream_Vera_Serif/stylesheet.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/Bitstream_Vera_Serif/demo.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/Bitstream_Vera_Sans/stylesheet.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"placeholders/",
+			"* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }",
+			"><",
+			"<a href=\"\" title=\"\"></a>",
+			"output/",
+			" title=\"\"",
+			"minifier",
+			"Minifier",
+			"minifier",
+			"Minifier",
+			"minifier",
+			"Minifier",
+			"minifier",
+			"Minifier",
+			"compressor",
+			"Beautifier",
+			"beautifier",
+			"Beautifier",
+			"beautifier",
+			"<title></title>",
+			"stylesheet",
+			"columnNames",
+			"return",
+			"$string",
+			"string",
+			"sanitizeInput",
+			"sanitize",
+			"\"",
+			"alert",
+			"wtf",
+			"alert(",
+			"console",
+			"console.log",
+			"value=\"ceb",
+			"name=\"ceb",
+			"value=\"ceb",
+			"<table>",
+			"apple.css",
+			"	[",
+			"Bolt",
+			">",
+			"                            <",
+			"Steel ",
+			"<td>",
+			"td",
+			"oo",
+			"ooooo",
+			"oo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"id=\"ceb",
+			"name=\"ceb"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 206.0
+	},
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true
+}
