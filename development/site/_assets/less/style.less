@@ -69,6 +69,10 @@
   @optionsHeadings: #333333;
   @seperator: #555555;
   @navActive:  #a7cd6c;
+  @closeLink: #999999;
+  @textAreaBG: #EBEBEB;
+  @border: #333;
+  @formFieldBorder: rgba(102,102,102,.5);
 /* ============ @font-face ============= */
   /* Franchise Bold (buttons/logos) font-family: 'FranchiseRegular'; */
     @font-face {
@@ -110,7 +114,7 @@
     width: @width;
     height: @height;
     font-size: @fontSize;
-    border: solid 2px #333333;
+    border: solid 2px @border;
     text-decoration: none;
     color: @textColor;
     padding: 10px;
@@ -119,6 +123,10 @@
 
   .hidden{
     display: none;
+  }
+
+  .formBorder{
+    border: 1px solid @formFieldBorder;
   }
 /* ============ Global ================= */
   body{
@@ -131,6 +139,10 @@
     padding: 0;
     margin: 0 auto;
   }
+  textarea{resize: none;overflow: scroll;.formBorder;background-color: @textAreaBG;}
+  h1,h2,h3,h4,h5,h6,hgroup{margin:0;padding:0;}
+  input[type="text"]{.formBorder}
+  [placeholder]{color: #888888;}
   /* ==== Modal Windows ==== */
     .modal_wrapper{
       width:100%;
@@ -140,12 +152,37 @@
       left: 0;
       background-color: rgba(102,102,102,.5);
       z-index: 1000;
+      #contact_modal{
+        height:400px; width:375px;
+        textarea{
+          width: 355px; height: 200px;
+        }
+      }
+      #decompress_modal, #compress_modal{
+        width: 700px; height: 580px;
+        textarea{
+          width: 680px; height: 400px;
+        }
+      }
       section{
-        margin: 400px;
         padding: 10px;
         background: @bgColor;
         z-index: 10001;
+        hgroup{
+          margin-bottom: 20px;
+        }
+        .code_download{
+          margin-top: 20px;
+          float: right;
+        }
+        .modal_close{
+          float: right;
+          color: @closeLink;
+          font-size: 14pt;
+          font-family: 'FranchiseRegular';
+        }
       }
+      input[type="submit"]{  float:right; margin-top:20px; }
     }
   /* ==== Links ==== */
     a { color: #00e; }

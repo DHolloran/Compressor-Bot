@@ -4,41 +4,109 @@
 	<title>Modals Template</title>
 	<link rel="stylesheet" href="../css/style.css">
 </head>
-<body #container>
+<body id="container">
 <!-- Register Modal -->
-	<div class="modal_wrapper">
+	<div class="modal_wrapper hidden">
 		<section id="register_modal">
+			<a href="#" class="modal_close">CLOSE (X)</a>
 			<hgroup>
-				<h1>Register</h1>
-				<h2>Please fill out all fields</h2>
+				<h2>Register</h2>
+				<h3>Please fill out all fields.</h3>
 			</hgroup>
-			<a href="#">CLOSE (X)</a>
-		<!-- Register User Info -->
 			<form action="#" method="post" accept-charset="utf-8">
+			<!-- Register User Info -->
 				<input type="text" name="register_username" value="username" placeholder="username"><br>
 				<input type="email" name="register_email" value="email" placeholder="email"><br>
 				<input type="text" name="register_password1" value="password" placeholder="password"><br>
 				<input type="text" name="register_password2" value="re-enter password" placeholder="re-enter password"><br>
+			<!-- Register Plan Info -->
+				<h4>Choose your plan</h4>
+				<input type="radio" name="plan_options" id="register_monthly_plan" value="monthly" checked="checked">
+					<label for="register_monthly_plan">Unlimited Monthly ($1.99)</label><br>
+				<input type="radio" name="plan_options" id="register_yearly_plan" value="yearly">
+					<label for="register_yearly_plan">Unlimited Yearly ($19.99)</label><br>
+				<input type="radio" name="plan_options" id="register_basic_plan" value="basic">
+					<label for="register_basic_plan">10 Uses Per Month (Free)</label><br>
+				<p>You will be redirected to Paypal to complete your transaction</p>
+				<input type="submit" name="register_submit" value="REGISTER">
 			</form>
-		<!-- Register Plan Info -->
-		<p>You will now be redirected to Paypal to complete your transaction</p>
 		</section><!-- END #register_modal -->
 	</div> <!-- END .modal_wrapper-->
 <!-- Edit Profile Modal -->
-	<section id="edit_profile_modal">
-
-	</section><!-- END #edit_profile_modal -->
+	<div class="modal_wrapper hidden">
+		<section id="edit_profile_modal">
+			<a href="#" class="modal_close">CLOSE (X)</a>
+			<hgroup>
+				<h2>Edit Profile</h2>
+				<h3>Update your profile below.</h3>
+			</hgroup>
+			<form action="#" method="post" accept-charset="utf-8">
+				<input type="text" name="edit_username" value="username" placeholder="username"><br>
+				<input type="email" name="edit_email" value="email" placeholder="email"><br>
+				<input type="text" name="edit_old_password" value="old password" placeholder="old password"><br>
+				<input type="text" name="edit_password1" value="password" placeholder="password"><br>
+				<input type="text" name="edit_password2" value="re-enter password" placeholder="re-enter password"><br>
+			<!-- Edit Profile Plan Info -->
+				<h4>Edit your plan</h4>
+				<input type="radio" name="plan_options" id="edit_monthly_plan" value="monthly" checked="checked">
+					<label for="edit_monthly_plan">Unlimited Monthly ($1.99)</label><br>
+				<input type="radio" name="plan_options" id="edit_yearly_plan" value="yearly">
+					<label for="edit_yearly_plan">Unlimited Yearly ($19.99)</label><br>
+				<input type="radio" name="plan_options" id="edit_basic_plan" value="basic">
+					<label for="edit_basic_plan">10 Uses Per Month (Free)</label><br>
+			<!-- Edit Start Page -->
+				<h4>Start Page</h4>
+				<input type="radio" name="start_page" id="sp_compress" value="compress" checked="checked">
+					<label for="sp_compress">Compress</label>
+				<input type="radio" name="start_page" id="sp_decompress" value="compress">
+					<label for="sp_decompress">Decompress</label>
+			<!-- Submit Form -->
+				<p>You will be redirected to Paypal to complete your transaction</p>
+				<input type="submit" name="edit_submit" value="EDIT">
+			</form>
+		</section><!-- END #edit_profile_modal -->
+	</div> <!-- END .modal_wrapper -->
 <!-- Contact Us Modal -->
-	<section id="contact_us_modal">
-
-	</section><!-- END #contact_us_modal -->
+	<div class="modal_wrapper">
+		<section id="contact_modal">
+			<a href="#" class="modal_close">CLOSE (X)</a>
+			<h2>Contact Us</h2>
+			<form action="#" method="post" accept-charset="utf-8">
+				<select name="contact_form_subject">
+					<optgroup label="Subject">
+						<option value="general_info">General Info</option>
+						<option value="bug_submit">Submit a bug</option>
+					</optgroup>
+				</select><br>
+				<input type="text" name="contact_form_name" value="name" placeholder="name"><br>
+				<textarea name="contact_form_message">message</textarea>
+				<input type="submit" name="contact_submit" value="SEND">
+			</form>
+		</section><!-- END #contact_us_modal -->
+	</div> <!-- END .modal_wrapper -->
 <!-- Compress Output Modal -->
-	<section id="compress_out_modal">
-
-	</section><!-- END #compress_out_modal -->
+	<div class="modal_wrapper hidden">
+		<section id="compress_modal">
+			<a href="#" class="modal_close">CLOSE (X)</a><br>
+			<hgroup>
+				<h2>Compressed Code</h2>
+				<h3>Copy your code below or download it as a file.</h3>
+			</hgroup>
+			<textarea name="compressed_code" class="code_output"></textarea><br>
+			<button class="code_download">DOWNLOAD</button>
+		</section><!-- END #compress_out_modal -->
+	</div> <!-- END .modal_wrapper -->
 <!-- Decompress Output Modal -->
-	<section id="decompress_modal">
-
-	</section><!-- END #decompress_modal -->
+	<div class="modal_wrapper hidden">
+		<section id="decompress_modal">
+			<a href="#" class="modal_close">CLOSE (X)</a><br>
+			<hgroup>
+				<h2>Decompressed Code</h2>
+				<h3>Copy your code below or download it as a file.</h3>
+			</hgroup>
+			<textarea name="decompressed_code" class="code_output"></textarea><br>
+			<button class="code_download">DOWNLOAD</button>
+		</section><!-- END #decompress_modal -->
+	</div> <!-- END .modal_wrapper -->
 </body>
 </html>
