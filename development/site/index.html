@@ -17,13 +17,12 @@
   <meta name="viewport" content="width=device-width">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="http://compressorbot.com/_assets/img/icons/favicon.ico">
-<!-- CSS -->
-  <!--<link rel="stylesheet" href="_assets/css/style.css?v=1">->
+  <!-- CSS -->
+  <link rel="stylesheet" href="_assets/css/style.css?v=1">
   <!-- Prefix free to add vendor specific prefixes -->
   <script src="_assets/js/libs/prefixfree.min.js"></script>
   <!--Modenizer-->
   <!--<script src="_assets/js/libs/modernizr-2.5.2.min.js"></script>-->
-<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -32,64 +31,68 @@
 <div id="container">
   <!-- HEADER Section -->
     <header>
-    <!-- Site Nav -->
-      <nav>
-      <!--http://compressorbot.com-->
-        <h1><a href=".">Compressor<span>Bot</span></a></h1>
-        <ul>
-          <!--http://compressorbot.com/compress-->
-          <li><a href="compress">Compress</a></li>
-          <!--http://compressorbot.com/decompress-->
-          <li><a href="decompress">Decompress</a></li>
-        </ul>
-      </nav>
-  <!-- Login Form -->
-      <form action="#" method="POST" name="login_form" id="login_form">
-        <input type="textfield" name="login_username" value="user name">
-        <input type="password" name="login_password" value="password">
-        <input type="submit" value="Login">
-      </form>
-  <!-- User Logged In/Logout -->
-  <ul id="logged_in">
-      <li>Welcome back <span>DHolloran</span></li>
-      <li><a href="#">Logout</a></li>
-    </ul><!-- END #logged_in -->
+      <div class="wrapper">
+        <!-- Site Nav -->
+          <nav>
+          <!--http://compressorbot.com-->
+            <h1><a href=".">Compressor<span>Bot</span></a></h1>
+            <ul>
+              <!--http://compressorbot.com/compress-->
+              <li><a href="compress">Compress</a></li>
+              <!--http://compressorbot.com/decompress-->
+              <li><a href="decompress">Decompress</a></li>
+            </ul>
+          </nav>
+      <!-- Login Form -->
+          <form action="#" method="POST" name="login_form" id="login_form">
+            <input type="textfield" name="login_username" value="user name">
+            <input type="password" name="login_password" value="password">
+            <input type="submit" value="Login">
+          </form>
+      <!-- User Logged In/Logout -->
+        <ul id="logged_in">
+          <li>Welcome back <span>DHolloran</span></li>
+          <li><a href="#">Logout</a></li>
+        </ul><!-- END #logged_in -->
+      </div><!-- END .wrapper -->
     </header>
-
   <!-- BODY Section -->
-    <div id="content" role="main">
-      <section id="intro">
-        <h2>Speed up your code!</h2>
-        <p>
-          Morbi consectetur ipsum porttitor arcu auctor accumsan.
-          Cras id libero mauris. Nullam odio turpis, sollic
-          itudin. Morbi consectetur ipsum porttitor arcu auctor accu
-          msan. Cras id libero mauris. Nullam odio turpis, sollicitudin. Morbi consectetur ipsum porttitor arcu auctor accumsan. Cras id libero mauris. Nullam odio turpis, sollicitudin.
-        </p>
-        <!-- Signup Button -->
-        <a href="#">SIGN UP NOW!</a>
-
-      </section>
+    <div id="content" class="home" role="main">
+      <div id="home_wrapper" class="wrapper">
+      <!-- Intro Section -->
+        <section id="intro">
+          <h2>Speed up your code!</h2>
+          <p>
+            Morbi consectetur ipsum porttitor arcu auctor accumsan.
+            Cras id libero mauris. Nullam odio turpis, sollic
+            itudin. Morbi consectetur ipsum porttitor arcu auctor accu
+            msan. Cras id libero mauris. Nullam odio turpis, sollicitudin. Morbi consectetur ipsum porttitor arcu auctor accumsan. Cras id libero mauris. Nullam odio turpis, sollicitudin.
+          </p>
+          <!-- Signup Button -->
+          <a href="#">SIGN UP NOW!</a>
+        </section>
     <!-- Showcase -->
       <div id="showcase">
       <!-- Showcase Video -->
         <video poster="_assets/img/placeholders/home/video.png" width="480" height="315"></video>
-
-      <!-- Showcase Thumbnails -->
-        <ul>
-          <li><img src="_assets/img/placeholders/home/upload_thumb.png" alt="Compress Input Upload" width="142" height="142"></li>
-          <li><img src="_assets/img/placeholders/home/copy_paste_thumb.png" alt="Compress Input Copy/Paste" width="142" height="142"></li>
-          <li><img src="_assets/img/placeholders/home/output_thumb.png" alt="Compress Output" width="142" height="142"></li>
-        </ul><!-- / -->
-      </div> <!-- END #showcase_div -->
+    <!-- Showcase Thumbnails -->
+      <ul>
+        <li><img src="_assets/img/placeholders/home/upload_thumb.png" alt="Compress Input Upload" width="142" height="142"></li>
+        <li><img src="_assets/img/placeholders/home/copy_paste_thumb.png" alt="Compress Input Copy/Paste" width="142" height="142"></li>
+        <li><img src="_assets/img/placeholders/home/output_thumb.png" alt="Compress Output" width="142" height="142"></li>
+      </ul><!-- / -->
+    </div> <!-- END #showcase_div -->
+    <div id="clr"></div>
     </div>
-
+  </div><!-- END #home_wrapper -->
   <!-- FOOTER Section -->
     <footer>
-      <ul>
-        <li>Copyright CompressorBot 2012</li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+      <div class="wrapper">
+        <ul>
+          <li>Copyright CompressorBot 2012</li>
+          <li><a href="#contact_modal">Contact Us</a></li>
+        </ul>
+    </div><!-- END .wrapper -->
     </footer>
 </div> <!-- END #container DIV -->
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
