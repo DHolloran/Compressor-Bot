@@ -8,7 +8,13 @@ $(function(){
 		modalClose = $('.modal_close'),
 		modalWindow = $('.modal_wrapper section'),
 		winWidth = $(window).width(),
-		toolSwitch = $('.tool_switch')
+		toolSwitch = $('.tool_switch'),
+		languageChoice = $('.language_choice'),
+		htmlOptions = $('.html_options'),
+		cssOptions = $('.css_options'),
+		jsOptions = $('.js_options'),
+		toolBtn = $('.tool_btn'),
+		languageOptions = $('.languages_options')
 	;
 
 /* ==== Modal Box Control (turn on modal) ==== */
@@ -35,19 +41,51 @@ $(function(){
 		e.preventDefault();
 		return false;
 	});
-/* ==== Tool Control (switch to upload)==== */
+/* ==== Tool Control (switch to upload/insert)==== */
 toolSwitch.on('click', function(e){
 	var that = $(this);
+	// Show compress/decompress depending on what is already showing
 	$(that.attr('href')).show();
-	console.log($('#'+that.data('tool')).hide());
-
-
+	$('#'+that.data('tool')).hide();
 	e.preventDefault();
 	return false;
 });
-/* ==== Tool Control (switch to insert)==== */
 /* ==== Language/Options Control (change options for each language) ==== */
+	// Set what ever language is selected on page load to tool button
+	(function(){
+		var start = languageOptions.find('input[type=radio]:checked'),
+			selected = start.data('lang')
+		;
+		if(selected === "js"){
+			selected = "Javascript";
+		}else{
+			//selected.toUpper();
+		}
+		// For placeholder link
+		toolBtn.empty();
+		toolBtn.append('Compress ' + selected);
+		// Use for submit button
+		//toolBtn.val('Compress ' + selected);
+	})();
+	languageChoice.on('click', function(e){
+		var that = $(this),
+			langSelected = that.data('lang')
+		;
+		htmlOptions.hide();
+		cssOptions.hide();
+		jsOptions.hide();
+		$('.' + that.val()).show();
+		$('.' + langSelected).prop('checked',true);
+		if(langSelected === "js"){
+			langSelected = "Javascript";
+		}else{
+			//langSelected.toUpper();
+		}
+		// For placeholder link
+		toolBtn.empty();
+		toolBtn.append('Compress ' + langSelected);
+		// Use for submit button
+		//toolBtn.val('Compress ' + langSelected);
+	});
+
 });
-
-
-

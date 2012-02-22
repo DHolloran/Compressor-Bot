@@ -149,14 +149,14 @@
     border: 1px solid @formFieldBorder;
   }
 /* ============ Global ================= */
-  /* Body */
+  /* ==== Body ==== */
     body{
       margin: 0;
       padding: 0;
       font-family:'BitstreamVeraSerifRoman', Arial, sans-serif;
       font-size: 12pt;
     }
-  /* #container */
+  /* ==== #container ==== */
     #container{
       min-height: 100%;
       padding: 0;
@@ -166,7 +166,7 @@
       width: 960px;
       margin: 0 auto;
     }
-  /* default headers */
+  /* ==== default headers ==== */
     h1,h2,h3,h4,h5,h6{color: @heading;font-family: 'BitstreamVeraSansBold', Arial, sans-serif;}
     hgroup{
       h2{
@@ -179,7 +179,7 @@
       }
     }
     h1,h2,h3,h4,h5,h6,hgroup{margin:0;padding:0;}
-  /* default form fields */
+  /* ==== default form fields ==== */
     [placeholder]{color: #888888;}
     textarea{resize: none;overflow: scroll;.formBorder;
       background-color: @textAreaBG;color:@inputPlaceholder;
@@ -234,6 +234,10 @@
           margin-top: 20px;
           float: right;
           .button(16pt);
+          padding-left: 45px;
+          background-image: url('../img/icons/big_down_arrow.png');
+        background-repeat: no-repeat;
+        background-position: 10% center;
         }
         .modal_close{
           float: right;
@@ -243,7 +247,11 @@
           font-weight: bold;
         }
       }
-      input[type="submit"]{  float:right; margin-top:20px; .button(16pt)}
+      input[type="submit"]{
+        float:right;
+        margin-top:20px;
+        .button(16pt);
+      }
       p,label{
           font-size: 9pt;
         }
@@ -379,7 +387,7 @@
       } /* End #intro */
       /* ==== #showcase ==== */
         #showcase{
-          margin: 0 0 130px 0;
+          margin: 0 0 90px 0;
           padding: 0;
           width: 550px;
           float: left;
@@ -443,6 +451,16 @@
         input[type="submit"]{
           .button(36pt);
           padding-right: 150px;
+          background-image: url('../img/icons/big_right_arrow.png');
+          background-repeat: no-repeat;
+          background-position: 95% center;
+        }
+  /* REMOVE: Link Placeholder To Allow Compress Output Modal*/
+        .tool_btn{
+          .button(36pt);
+          padding-right: 150px;
+          height: 70px;
+          float: left;
           margin: 20px 0 90px 0;
           background-image: url('../img/icons/big_right_arrow.png');
           background-repeat: no-repeat;
@@ -483,6 +501,7 @@
       .languages_options{
         width: 200px;
         float: left;
+        .css_options,.js_options{display: none;}
         h4{
           color: #333333;
           &:nth-child(1){
