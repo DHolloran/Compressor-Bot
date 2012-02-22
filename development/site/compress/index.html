@@ -2,6 +2,7 @@
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -52,151 +53,153 @@
         </div><!-- END .wrapper -->
     </header>
   <!-- BODY Section -->
-    <div id="content" class="wrapper" role="main">
-    <!-- Code Input Section -->
-      <section id="code_insert">
-        <hgroup>
-          <h2>Insert text to compress.</h2>
-          <h3>Choose your language and options on the right then compress.</h3>
-        </hgroup>
-        <ul id="tool_selection">
-          <li>Insert</li>
-          <li><a href="#">Upload</a></li>
-        </ul>
-        <form action="#" method="post" name="compress_insert">
+    <div id="content" role="main">
+      <div id="compress_wrapper" class="wrapper">
+      <!-- Code Input Section -->
+        <section id="code_insert">
+          <hgroup>
+            <h2>Insert text to compress.</h2>
+            <h3>Choose your language and options on the right then compress.</h3>
+          </hgroup>
+          <ul id="tool_selection">
+            <li>Insert</li>
+            <li><a href="#">Upload</a></li>
+          </ul>
+          <form action="#" method="post" name="compress_insert">
 
-          <!-- Width 700px height 350px-->
-          <textarea name="compress_in"></textarea>
+            <!-- Width 700px height 350px-->
+            <textarea name="compress_in"></textarea>
 
-          <h4>Languages</h4>
-          <input type="radio" name="language" id="in_html" value="html" checked="checked">
-            <label for="in_html">HTML</label><br>
-          <input type="radio" name="language" id="in_css" value="css">
-            <label for="in_css">CSS</label><br>
-          <input type="radio" name="language" id="in_js" value="js">
-            <label for="in_js">Javascript</label><br>
+            <h4>Languages</h4>
+            <input type="radio" name="language" id="in_html" value="html" checked="checked">
+              <label for="in_html">HTML</label><br>
+            <input type="radio" name="language" id="in_css" value="css">
+              <label for="in_css">CSS</label><br>
+            <input type="radio" name="language" id="in_js" value="js">
+              <label for="in_js">Javascript</label><br>
 
-          <h4>Options</h4>
-        <!-- HTML Options -->
-          <div id="in_html_options">
-          <!-- HTML Validate -->
-            <input type="checkbox" name="html_validate" id="in_html_validate">
-              <label for="in_html_validate">Validate</label><br>
-          </div><!-- END #html_options -->
-        <!-- CSS Options -->
-          <div id="in_css_options">
-          <!-- CSS Keep Comments -->
-            <input type="checkbox" name="css_keep_comments" id="in_css_keep_comments">
-              <label for="in_css_keep_comments">Keep Comments</label><br>
-          <!-- CSSLint -->
-            <input type="checkbox" name="css_lint" id="in_css_lint">
-              <label for="in_css_lint">CSSLint</label><br>
-          <!-- CSS Validate -->
-            <input type="checkbox" name="css_validate" id="in_css_validate">
-              <label for="in_css_validate">Validate</label><br>
-          <!-- CSS Prefixer -->
-            <input type="checkbox" name="css_prefixer" id="in_css_prefixer">
-              <label for="in_css_prefixer">Vendor Prefixes</label><br>
-          <!-- CSS Concatenate -->
-            <input type="checkbox" name="css_concat" id="in_css_concat" >
-              <label for="in_css_concat">Concatenate</label><br>
-          </div><!-- END #css_options -->
-        <!-- JS Options -->
-          <div id="in_js_options">
-          <!-- JS Keep Comments -->
-            <input type="checkbox" name="js_keep_comments" id="in_js_keep_comments">
-              <label for="in_js_keep_comments">Keep Comments</label><br>
-          <!-- JSLint -->
-            <input type="checkbox" name="js_lint" id="in_js_lint">
-              <label for="in_js_lint">JSLint</label><br>
-          <!-- JS Concat -->
-            <input type="checkbox" name="js_concat" id="in_js_concat">
-              <label for="in_js_concat">Concatenate</label><br>
-          </div><!-- END #js_options -->
-
-          <input type="submit" value="Compress language">
-        </form>
-      </section><!-- END #code_insert -->
-    <!-- Code Upload Section -->
-     <section id="code_upload">
-      <hgroup>
-        <h2>Upload Files to decompress.</h2>
-        <h3>Sit back and let CompressorBot do all the work. </h3>
-      </hgroup>
-      <ul>
-        <li><a href="#">Insert</a></li>
-        <li>Upload</li>
-      </ul>
-      <form action="#" method="post">
-      <!-- Upload Table -->
-        <table>
-          <tbody>
-            <tr>
-              <td>URL</td>
-              <td>SIZE</td>
-              <td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td><td>SIZE</td><td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td><td>SIZE</td><td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td><td>SIZE</td><td>TYPE</td>
-            </tr>
-          </tbody>
-        </table>
-        <button>Browse</button>
-      <!-- Languages -->
-        <h4>Languages</h4>
-        <input type="radio" name="language" id="up_html" value="html" checked="checked">
-          <label for="up_html">HTML</label><br>
-        <input type="radio" name="language" id="up_css" value="css">
-          <label for="up_css">CSS</label><br>
-        <input type="radio" name="language" id="up_js" value="js">
-          <label for="up_js">Javascript</label><br>
-      <!-- Options -->
-          <h4>Options</h4>
-      <!-- HTML Options -->
-        <div id="up_html_options">
-        <!-- HTML Validate -->
-          <input type="checkbox" name="html_validate" id="up_html_validate">
-            <label for="up_html_validate">Validate</label><br>
-        </div><!-- END #html_options -->
-        <!-- CSS Options -->
-          <div id="up_css_options">
-          <!-- CSS Keep Comments -->
-            <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
-              <label for="up_css_keep_comments">Keep Comments</label><br>
+            <h4>Options</h4>
+          <!-- HTML Options -->
+            <div id="in_html_options">
+            <!-- HTML Validate -->
+              <input type="checkbox" name="html_validate" id="in_html_validate">
+                <label for="in_html_validate">Validate</label><br>
+            </div><!-- END #html_options -->
+          <!-- CSS Options -->
+            <div id="in_css_options">
+            <!-- CSS Keep Comments -->
+              <input type="checkbox" name="css_keep_comments" id="in_css_keep_comments">
+                <label for="in_css_keep_comments">Keep Comments</label><br>
             <!-- CSSLint -->
-              <input type="checkbox" name="css_lint" id="up_css_lint">
-                <label for="up_css_lint">CSSLint</label><br>
+              <input type="checkbox" name="css_lint" id="in_css_lint">
+                <label for="in_css_lint">CSSLint</label><br>
             <!-- CSS Validate -->
-              <input type="checkbox" name="css_validate" id="up_css_validate">
-                <label for="up_css_validate">Validate</label><br>
+              <input type="checkbox" name="css_validate" id="in_css_validate">
+                <label for="in_css_validate">Validate</label><br>
             <!-- CSS Prefixer -->
-              <input type="checkbox" name="css_prefixer" id="up_css_prefixer">
-                <label for="up_css_prefixer">Vendor Prefixes</label><br>
+              <input type="checkbox" name="css_prefixer" id="in_css_prefixer">
+                <label for="in_css_prefixer">Vendor Prefixes</label><br>
             <!-- CSS Concatenate -->
-              <input type="checkbox" name="css_concat" id="up_css_concat" >
-                <label for="up_css_concat">Concatenate</label><br>
+              <input type="checkbox" name="css_concat" id="in_css_concat" >
+                <label for="in_css_concat">Concatenate</label><br>
             </div><!-- END #css_options -->
           <!-- JS Options -->
-            <div id="up_js_options">
+            <div id="in_js_options">
             <!-- JS Keep Comments -->
-              <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments">
-                <label for="up_js_keep_comments">Keep Comments</label><br>
+              <input type="checkbox" name="js_keep_comments" id="in_js_keep_comments">
+                <label for="in_js_keep_comments">Keep Comments</label><br>
             <!-- JSLint -->
-              <input type="checkbox" name="js_lint" id="up_js_lint">
-                <label for="up_js_lint">JSLint</label><br>
+              <input type="checkbox" name="js_lint" id="in_js_lint">
+                <label for="in_js_lint">JSLint</label><br>
             <!-- JS Concat -->
-              <input type="checkbox" name="js_concat" id="up_js_concat">
-                <label for="up_js_concat">Concatenate</label><br>
+              <input type="checkbox" name="js_concat" id="in_js_concat">
+                <label for="in_js_concat">Concatenate</label><br>
             </div><!-- END #js_options -->
+
             <input type="submit" value="Compress language">
-      </form>
-     </section><!-- END #compress_upload -->
+          </form>
+        </section><!-- END #code_insert -->
+      <!-- Code Upload Section -->
+       <section id="code_upload">
+        <hgroup>
+          <h2>Upload Files to decompress.</h2>
+          <h3>Sit back and let CompressorBot do all the work. </h3>
+        </hgroup>
+        <ul>
+          <li><a href="#">Insert</a></li>
+          <li>Upload</li>
+        </ul>
+        <form action="#" method="post">
+        <!-- Upload Table -->
+          <table>
+            <tbody>
+              <tr>
+                <td>URL</td>
+                <td>SIZE</td>
+                <td>TYPE</td>
+              </tr>
+              <tr>
+                <td>URL</td><td>SIZE</td><td>TYPE</td>
+              </tr>
+              <tr>
+                <td>URL</td><td>SIZE</td><td>TYPE</td>
+              </tr>
+              <tr>
+                <td>URL</td><td>SIZE</td><td>TYPE</td>
+              </tr>
+            </tbody>
+          </table>
+          <button>Browse</button>
+        <!-- Languages -->
+          <h4>Languages</h4>
+          <input type="radio" name="language" id="up_html" value="html" checked="checked">
+            <label for="up_html">HTML</label><br>
+          <input type="radio" name="language" id="up_css" value="css">
+            <label for="up_css">CSS</label><br>
+          <input type="radio" name="language" id="up_js" value="js">
+            <label for="up_js">Javascript</label><br>
+        <!-- Options -->
+            <h4>Options</h4>
+        <!-- HTML Options -->
+          <div id="up_html_options">
+          <!-- HTML Validate -->
+            <input type="checkbox" name="html_validate" id="up_html_validate">
+              <label for="up_html_validate">Validate</label><br>
+          </div><!-- END #html_options -->
+          <!-- CSS Options -->
+            <div id="up_css_options">
+            <!-- CSS Keep Comments -->
+              <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
+                <label for="up_css_keep_comments">Keep Comments</label><br>
+              <!-- CSSLint -->
+                <input type="checkbox" name="css_lint" id="up_css_lint">
+                  <label for="up_css_lint">CSSLint</label><br>
+              <!-- CSS Validate -->
+                <input type="checkbox" name="css_validate" id="up_css_validate">
+                  <label for="up_css_validate">Validate</label><br>
+              <!-- CSS Prefixer -->
+                <input type="checkbox" name="css_prefixer" id="up_css_prefixer">
+                  <label for="up_css_prefixer">Vendor Prefixes</label><br>
+              <!-- CSS Concatenate -->
+                <input type="checkbox" name="css_concat" id="up_css_concat" >
+                  <label for="up_css_concat">Concatenate</label><br>
+              </div><!-- END #css_options -->
+            <!-- JS Options -->
+              <div id="up_js_options">
+              <!-- JS Keep Comments -->
+                <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments">
+                  <label for="up_js_keep_comments">Keep Comments</label><br>
+              <!-- JSLint -->
+                <input type="checkbox" name="js_lint" id="up_js_lint">
+                  <label for="up_js_lint">JSLint</label><br>
+              <!-- JS Concat -->
+                <input type="checkbox" name="js_concat" id="up_js_concat">
+                  <label for="up_js_concat">Concatenate</label><br>
+              </div><!-- END #js_options -->
+              <input type="submit" value="Compress language">
+        </form>
+       </section><!-- END #compress_upload -->
+        </div><!-- END #compress_wrapper -->
     </div><!-- END #container -->
   <!-- FOOTER Section -->
     <footer>

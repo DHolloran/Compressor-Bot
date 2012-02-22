@@ -14,6 +14,8 @@
   a:hover, a:active { outline: 0; }
   abbr[title] { border-bottom: 1px dotted; }
   b, strong { font-weight: bold; }
+  a:active{outline: none;}
+  a:focus{-moz-outline-style: none;}
   blockquote { margin: 1em 40px; }
   dfn { font-style: italic; }
   hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
@@ -130,6 +132,7 @@
     padding: 10px;
     font-family: 'FranchiseRegular';
     display: block;
+    font-weight: normal;
   }
   .listNav{
     list-style-type: none;
@@ -317,7 +320,6 @@
         float: right;
         margin: 25px 0 0 0;
         padding: 0;
-        display: none;
         font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
         list-style-type: none;
         li{
@@ -377,7 +379,7 @@
       } /* End #intro */
       /* ==== #showcase ==== */
         #showcase{
-          margin: 0;
+          margin: 0 0 130px 0;
           padding: 0;
           width: 550px;
           float: left;
@@ -400,9 +402,105 @@
       #clr{clear:both;} /*fixes background disappearing*/
     } /* End #home_wrapper */
   /*==== Compress & Decompress==== */
-  #tool_selection{
-    .listNav;
+  #code_upload{
+    display: none;
   }
+  #code_insert,#code_upload{
+    clear: both;
+    hgroup{
+      float: left;
+      margin: 90px 0 10px 0;
+    }
+    .tool_selection{
+    .listNav;
+      margin: 120px 265px 10px 0;
+      float: right;
+      font-size: 12pt;
+      li:nth-child(1){
+        padding-right: 8px;
+        border-right: 2px solid #ccc;
+      }
+      li:nth-child(2){
+        padding-left: 8px;
+      }
+    }
+    form{
+      #text_input,#file_upload{
+        float: left;
+        width: 760px;
+        margin: 0;
+        padding:0;
+        button,input[type="submit"],textarea{
+          float: left;
+        }
+        button{
+          .button(18pt);
+          margin: 15px 500px 0 0;
+          img{
+            margin: 0 0 2px 35px;
+          }
+        }
+        input[type="submit"]{
+          .button(36pt);
+          padding-right: 150px;
+          margin: 20px 0 90px 0;
+          background-image: url('../img/icons/big_right_arrow.png');
+          background-repeat: no-repeat;
+          background-position: 95% center;
+        }
+        textarea{
+          width: 700px;
+          height: 350px;
+        }
+        #table_wrapper{
+          float: left;
+          border-bottom: 5px solid #A8A8A8;
+          table{
+            width: 700px;
+            background-color: #fff;
+            color: #555555;
+            font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
+            font-size: 13pt;
+              tr{
+                height: 40px;
+                td{
+                  &:nth-child(1){
+                    padding-left: 10px;
+                  }
+                  &:nth-child(1n+2){
+                    width: 60px;
+                    text-align: center;
+                  }
+                  vertical-align: middle;
+                }
+                &:nth-child(even){
+                  background-color: #efefef;
+                }
+              }
+          }
+        }
+      }
+      .languages_options{
+        width: 200px;
+        float: left;
+        h4{
+          color: #333333;
+          &:nth-child(1){
+            margin-top: 30px;
+          }
+          &:nth-child(1n+2){
+            margin-top: 60px;
+          }
+        }
+        label{
+          font-size: 13pt;
+          margin-left: 15px;
+          font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
+        }
+      }
+    }
+  }
+
     /* ==== Compress Page ==== */
     /* ==== Decompress Page ==== */
   /* ==== Modals Section ==== */

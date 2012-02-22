@@ -3,6 +3,7 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
@@ -26,151 +27,143 @@
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="container">
-  <!-- HEADER Section -->
-    <header>
-      <div class="wrapper">
-      <!-- Site Nav -->
-        <nav>
-        <!--http://compressorbot.com-->
-          <h1><a href="../index.html">Compressor<span>Bot</span></a></h1>
-          <ul>
-            <!--http://compressorbot.com/compress-->
-            <li><a href="../compress/">Compress</a></li>
-            <!--http://compressorbot.com/decompress-->
-            <li><a href=".">Decompress</a></li>
-          </ul>
-        </nav>
-      <!-- User Logged In/Logout -->
-        <ul id="logged_in">
-          <li>Welcome back <span>DHolloran</span></li>
-          <li><a href="#">Logout</a></li>
-        </ul><!-- END #logged_in -->
-      </div><!-- END .wrapper -->
-    </header>
-  <!-- BODY Section -->
-    <div id="content" class="wrapper" role="main">
+<!-- HEADER Section -->
+  <header>
+    <div class="wrapper">
+    <!-- Site Nav -->
+      <nav>
+      <!--http://compressorbot.com-->
+        <h1><a href="../index.html">Compressor<span>Bot</span></a></h1>
+        <ul>
+          <!--http://compressorbot.com/compress-->
+          <li><a href="../compress/">Compress</a></li>
+          <!--http://compressorbot.com/decompress-->
+          <li><a href=".">Decompress</a></li>
+        </ul>
+      </nav>
+    <!-- User Logged In/Logout -->
+      <ul id="logged_in">
+        <li>Welcome back <span>DHolloran</span></li>
+        <li><a href="#">Logout</a></li>
+      </ul><!-- END #logged_in -->
+    </div><!-- END .wrapper -->
+  </header>
+<!-- BODY Section -->
+  <div id="content" class="wrapper" role="main">
+    <div id="decompress_wrapper" class="wrapper">
     <!-- Code Input Section -->
       <section id="code_insert">
         <hgroup>
           <h2>Insert text to decompress.</h2>
           <h3>Choose your language and options on the right then decompress.</h3>
         </hgroup>
-        <ul id="tool_selection">
+        <ul class="tool_selection">
           <li>Insert</li>
-          <li><a href="#">Upload</a></li>
+          <li><a href="#code_upload" data-tool="code_insert" class="tool_switch">Upload</a></li>
         </ul>
         <form action="#" method="post" name="decompress_insert">
-
-          <!-- Width 700px height 350px-->
-          <textarea name="decompress_in"></textarea>
-
-          <h4>Languages</h4>
-          <input type="radio" name="language" id="in_html" value="html" checked="checked">
-            <label for="in_html">HTML</label><br>
-          <input type="radio" name="language" id="in_css" value="css">
-            <label for="in_css">CSS</label><br>
-          <input type="radio" name="language" id="in_js" value="js">
-            <label for="in_js">Javascript</label><br>
-
-          <h4>Options</h4>
-        <!-- HTML Options -->
-          <div id="in_html_options">
-            <input type="checkbox" name="html_validate" id="in_html_validate" value="true">
-              <label for="in_html_validate">Validate</label><br>
-          </div><!-- END #html_options -->
-        <!-- CSS Options -->
-          <div id="in_css_options">
-          <!-- CSS Whitespace-wsp (tabs/spaces)-->
-            <label for="in_css_wsp_tabs">Tabs</label>
+          <div id="text_input">
+            <textarea name="decompress_in"></textarea>
+            <input type="submit" value="Compress language">
+          </div><!-- END .text_input -->
+        <!-- .languages_options -->
+          <section class="languages_options">
+            <h4>Languages</h4>
+            <input type="radio" name="language" id="in_html" value="html_options" checked="checked">
+              <label for="in_html">HTML</label><br>
+            <input type="radio" name="language" id="in_css" value="css_options">
+              <label for="in_css">CSS</label><br>
+            <input type="radio" name="language" id="in_js" value="js_options">
+              <label for="in_js">Javascript</label>
+            <h4>Options</h4>
+          <!-- HTML Options -->
+            <div class="html_options">
+              <input type="checkbox" name="html_validate" id="in_html_validate" value="true">
+                <label for="in_html_validate">Validate</label><br>
+            </div><!-- END #html_options -->
+          <!-- CSS Options -->
+            <div class="css_options">
+            <!-- CSS Whitespace-wsp (tabs/spaces)-->
               <input type="radio" id="in_css_wsp_tabs" name="css_wsp" value="tabs" checked="checked">
-            <label for="in_css_wsp_spaces">Spaces</label>
-              <input type="radio" id="in_css_wsp_spaces" name="css_wsp" value="spaces" checked="checked">
-          <!-- CSSLint -->
-            <input type="checkbox" name="css_lint" id="in_css_lint" value="true">
-              <label for="in_css_lint">CSSLint</label>
-          <!-- CSS Validate -->
-            <input type="checkbox" name="css_validate" id="in_css_validate" value="true">
-              <label for="in_css_validate">Validate</label>
-          <!-- CSS Prefixer -->
-            <input type="checkbox" name="css_prefixer" id="in_css_prefixer" value="true">
-              <label for="in_css_prefixer">Vendor Prefixes</label>
-          </div><!-- END #css_options -->
-        <!-- JS Options -->
-          <div id="in_js_options">
-          <!-- JS wsp (tabs/spaces)-->
-            <label for="in_js_wsp_tabs">Tabs</label>
-              <input type="radio" id="in_js_wsp_tabs" name="js_wsp" value="tabs">
-            <label for="in_js_wsp_spaces">Spaces</label>
+                <label for="in_css_wsp_tabs">Tabs</label><br>
+              <input type="radio" id="in_css_wsp_spaces" name="css_wsp" value="spaces">
+                <label for="in_css_wsp_spaces">Spaces</label><br>
+            <!-- CSSLint -->
+              <input type="checkbox" name="css_lint" id="in_css_lint" value="true">
+                <label for="in_css_lint">CSSLint</label><br>
+            <!-- CSS Validate -->
+              <input type="checkbox" name="css_validate" id="in_css_validate" value="true">
+                <label for="in_css_validate">Validate</label><br>
+            <!-- CSS Prefixer -->
+              <input type="checkbox" name="css_prefixer" id="in_css_prefixer" value="true">
+                <label for="in_css_prefixer">Vendor Prefixes</label>
+            </div><!-- END #css_options -->
+          <!-- JS Options -->
+            <div class="js_options">
+            <!-- JS wsp (tabs/spaces)-->
+              <input type="radio" id="in_js_wsp_tabs" name="js_wsp" value="tabs" checked="checked">
+                <label for="in_js_wsp_tabs">Tabs</label><br>
               <input type="radio" id="in_js_wsp_spaces" name="js_wsp" value="spaces">
-          <!-- JSLint -->
-            <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
-              <label for="in_js_lint">JSLint</label>
-            <input type="checkbox" name="js_concat" id="in_js_concat" value="true">
-              <label for="in_js_concat">Concatenate</label>
-          </div><!-- END #js_options -->
-
-          <input type="submit" value="Compress language">
+                <label for="in_js_wsp_spaces">Spaces</label><br>
+            <!-- JSLint -->
+              <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
+                <label for="in_js_lint">JSLint</label><br>
+              <input type="checkbox" name="js_concat" id="in_js_concat" value="true">
+                <label for="in_js_concat">Concatenate</label><br>
+            </div><!-- END #js_options -->
+          </section><!-- END #language_options -->
         </form>
       </section><!-- END #code_insert -->
   <!-- Code Upload Section -->
-     <section id="code_upload">
+    <section id="code_upload">
       <hgroup>
           <h2>Upload Files to decompress.</h2>
           <h3>Sit back and let CompressorBot do all the work. </h3>
-        </hgroup>
-        <ul>
-          <li><a href="#">Insert</a></li>
+      </hgroup>
+        <ul class="tool_selection">
+          <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
           <li>Upload</li>
         </ul>
       <form action="#" method="post" name="decompress_upload">
-      <!-- Upload Table -->
-        <table>
-          <tbody>
-            <tr>
-              <td>URL</td>
-              <td>SIZE</td>
-              <td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td>
-              <td>SIZE</td>
-              <td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td>
-              <td>SIZE</td>
-              <td>TYPE</td>
-            </tr>
-            <tr>
-              <td>URL</td>
-              <td>SIZE</td>
-              <td>TYPE</td>
-            </tr>
-          </tbody>
-        </table>
-        <button>Browse</button>
-      <!-- Languages -->
-        <h4>Languages</h4>
-        <input type="radio" name="language" id="up_html" value="html" checked="checked">
-          <label for="up_html">HTML</label><br>
-        <input type="radio" name="language" id="up_css" value="css">
-          <label for="up_css">CSS</label><br>
-        <input type="radio" name="language" id="up_js" value="js">
-          <label for="up_js">Javascript</label><br>
-      <!-- Options -->
+        <div id="file_upload">
+        <!-- Upload Table -->
+          <div id="table_wrapper">
+            <table>
+                <tbody>
+                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
+                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
+                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
+                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
+                </tbody>
+              </table>
+          </div><!-- #table_wrapper -->
+          <button>Browse <img src="../_assets/img/icons/small_up_arrow.png" alt="arrow up" width="18" height="18"></button>
+          <input type="submit" value="Compress language">
+        </div> <!-- END #file_upload -->
+        <section class="languages_options">
+        <!-- Languages -->
+          <h4>Languages</h4>
+          <input type="radio" name="language" id="up_html" value="html_options" checked="checked"><label for="up_html">HTML</label><br>
+          <input type="radio" name="language" id="up_css" value="css_options"><label for="up_css">CSS</label><br>
+          <input type="radio" name="language" id="up_js" value="js_options"><label for="up_js">Javascript</label><br>
+        <!-- Options -->
           <h4>Options</h4>
-      <!-- HTML Options -->
-        <div id="up_html_options">
-        <!-- HTML Validate -->
-          <input type="checkbox" name="html_validate" id="up_html_validate">
-            <label for="up_html_validate">Validate</label><br>
-        </div><!-- END #html_options -->
-        <!-- CSS Options -->
-          <div id="up_css_options">
-          <!-- CSS Keep Comments -->
-            <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
-              <label for="up_css_keep_comments">Keep Comments</label><br>
+          <!-- HTML Options -->
+            <div class="html_options">
+            <!-- HTML Validate -->
+              <input type="checkbox" name="html_validate" id="up_html_validate">
+                <label for="up_html_validate">Validate</label><br>
+            </div><!-- END #html_options -->
+          <!-- CSS Options -->
+            <div class="css_options">
+            <!-- CSS Whitespace-wsp (tabs/spaces)-->
+              <input type="radio" id="out_css_wsp_tabs" name="css_wsp" value="tabs" checked="checked">
+                <label for="out_css_wsp_tabs">Tabs</label><br>
+              <input type="radio" id="out_css_wsp_spaces" name="css_wsp" value="spaces">
+                <label for="out_css_wsp_spaces">Spaces</label><br>
+            <!-- CSS Keep Comments -->
+              <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
+                <label for="up_css_keep_comments">Keep Comments</label><br>
             <!-- CSSLint -->
               <input type="checkbox" name="css_lint" id="up_css_lint">
                 <label for="up_css_lint">CSSLint</label><br>
@@ -181,36 +174,37 @@
               <input type="checkbox" name="css_prefixer" id="up_css_prefixer">
                 <label for="up_css_prefixer">Vendor Prefixes</label><br>
             <!-- CSS Concatenate -->
-              <input type="checkbox" name="css_concat" id="up_css_concat" >
+              <input type="checkbox" name="css_concat" id="up_css_concat">
                 <label for="up_css_concat">Concatenate</label><br>
             </div><!-- END #css_options -->
-          <!-- JS Options -->
-            <div id="up_js_options">
-            <!-- JS Keep Comments -->
-              <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments">
-                <label for="up_js_keep_comments">Keep Comments</label><br>
-            <!-- JSLint -->
-              <input type="checkbox" name="js_lint" id="up_js_lint">
-                <label for="up_js_lint">JSLint</label><br>
-            <!-- JS Concat -->
-              <input type="checkbox" name="js_concat" id="up_js_concat">
-                <label for="up_js_concat">Concatenate</label><br>
-            </div><!-- END #js_options -->
-            <input type="submit" value="Compress language">
+            <!-- JS Options -->
+              <div class="js_options">
+              <!-- JS wsp (tabs/spaces)-->
+                <input type="radio" id="out_js_wsp_tabs" name="js_wsp" value="tabs" checked="checked">
+                  <label for="out_js_wsp_tabs">Tabs</label><br>
+                <input type="radio" id="out_js_wsp_spaces" name="js_wsp" value="spaces">
+                  <label for="out_js_wsp_spaces">Spaces</label><br>
+              <!-- JS Keep Comments -->
+                <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments"> <label for="up_js_keep_comments">Keep Comments</label><br>
+              <!-- JSLint -->
+                <input type="checkbox" name="js_lint" id="up_js_lint"> <label for="up_js_lint">JSLint</label><br>
+              <!-- JS Concat -->
+                <input type="checkbox" name="js_concat" id="up_js_concat"> <label for="up_js_concat">Concatenate</label><br>
+              </div><!-- END #js_options -->
+        </section><!-- END .languages_options -->
       </form>
      </section><!-- END #code_upload -->
-    </div> <!-- END #container -->
-  <!-- FOOTER Section -->
-    <footer>
-      <div class="wrapper">
-
-      </div><!-- END .wrapper -->
+    </div><!-- END #decompress_wrapper -->
+  </div> <!-- END #container -->
+<!-- FOOTER Section -->
+  <footer>
+    <div class="wrapper">
       <ul>
-        <li>Copyright CompressorBot 2012</li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </footer>
-</div> <!-- END #container DIV -->
+      <li>Copyright CompressorBot 2012</li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    </div><!-- END .wrapper -->
+  </footer><!-- END footer -->
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="_assets/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
