@@ -7,7 +7,7 @@ $(function(){
 	var modalLink = $('.modal_link'),
 		modalClose = $('.modal_close'),
 		modalWindow = $('.modal_wrapper section'),
-		winWidth = $(window).width(),
+		winWidth = $(document).width(),
 		toolSwitch = $('.tool_switch'),
 		languageChoice = $('.language_choice'),
 		htmlOptions = $('.html_options'),
@@ -23,6 +23,9 @@ $(function(){
 			modalWin = $(that.attr('href')),
 			modalWrap = modalWin.parent()
 		;
+		modalWrap.css({
+			'height': $(document).outerHeight()
+		});
 		// Set modal windows top/left location
 		modalWindow.css({
 			'top': (modalWrap.outerHeight()/2) - (modalWin.outerHeight()/2),
@@ -59,11 +62,15 @@ toolSwitch.on('click', function(e){
 		if(selected === "js"){
 			selected = "Javascript";
 		}else{
-			//selected.toUpper();
+			selected = selected.toUpperCase();
 		}
 		// For placeholder link
 		toolBtn.empty();
-		toolBtn.append('Compress ' + selected);
+		if($('.decompress_btn').length !== 0){
+			toolBtn.append('Decompress ' + selected);
+		}else{
+			toolBtn.append('Compress ' + selected);
+		}
 		// Use for submit button
 		//toolBtn.val('Compress ' + selected);
 	})();
@@ -79,11 +86,15 @@ toolSwitch.on('click', function(e){
 		if(langSelected === "js"){
 			langSelected = "Javascript";
 		}else{
-			//langSelected.toUpper();
+			langSelected = langSelected.toUpperCase();
 		}
 		// For placeholder link
 		toolBtn.empty();
-		toolBtn.append('Compress ' + langSelected);
+		if(toolBtn.find('.decompress_btn').length !== 0){
+			toolBtn.append('Decompress ' + langSelected);
+		}else{
+			toolBtn.append('Compress ' + langSelected);
+		}
 		// Use for submit button
 		//toolBtn.val('Compress ' + langSelected);
 	});
