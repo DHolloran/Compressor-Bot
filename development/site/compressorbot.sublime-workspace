@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"input",
+				"input	input - email"
+			],
+			[
+				"decompress",
+				"decompress_btn"
+			],
+			[
 				"language",
 				"languageOptions"
 			],
@@ -30,10 +38,6 @@
 			[
 				"pa",
 				"parent  (function)"
-			],
-			[
-				"input",
-				"input	input - submit"
 			],
 			[
 				"form",
@@ -191,38 +195,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "decompress/index.html",
-			"settings":
-			{
-				"buffer_size": 16116,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/js/script.js",
-			"settings":
-			{
-				"buffer_size": 2557,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/less/style.less",
-			"settings":
-			{
-				"buffer_size": 19913,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 10073,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -320,19 +292,21 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/modals.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/modals.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/plugins.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/modals.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
 		"/Users/dholloran/Sites/danholloran.com/_assets/css/site.min.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/img/home/vide_bg.png",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/templates/footer.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/Bitstream_Vera_Sans/demo.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/Bitstream_Vera_Sans/stylesheet.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/templates/modals.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/stylesheet.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/franchise_bold/FranchiseRegular-demo.html",
@@ -365,6 +339,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?v=1",
+			"modal_close",
+			".modal_close",
+			"font-family: 'FranchiseRegular';",
+			"$(window)",
+			"          height: 23px;",
+			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn\">Decompress</a>",
+			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn \">Decompress</a>",
+			"<input type=\"submit\" class=\"tool_btn\" value=\"Decompress\">",
+			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn\">Compress</a>",
+			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress\">",
 			"toolBtn",
 			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress\">",
 			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress language\">",
@@ -491,128 +476,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "decompress/index.html",
-					"settings":
-					{
-						"buffer_size": 16116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7381,
-								7370
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/js/script.js",
-					"settings":
-					{
-						"buffer_size": 2557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								477,
-								468
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_assets/less/style.less",
-					"settings":
-					{
-						"buffer_size": 19913,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14800,
-								14800
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 15054.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 10073,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8812,
-								8812
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5012.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -684,6 +549,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 141.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true
 }
