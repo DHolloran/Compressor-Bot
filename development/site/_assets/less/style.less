@@ -192,7 +192,7 @@
       width:100%;
       height:100%;
       position: absolute;
-      display: none;
+       display: none;
       top: 0;
       left: 0;
       background-color: rgba(102,102,102,.5);
@@ -202,20 +202,37 @@
       input{margin-bottom:10px;}
       select{margin-bottom:10px;}
       #contact_modal{
-        height:440px; width:375px;
+        height:475px; width:375px;
         textarea{
           width: 355px; height: 200px;
         }
-        h2{margin-bottom:15px;}
+        h2{padding-bottom:15px;}
       }
       #register_modal{
         height: 455px;
+        width: 220px;
       }
       #edit_modal{
-        height: 530px;
-      }
-      #edit_modal,#register_modal{
-        width: 220px;
+        width: 460px;
+        hgroup{
+          clear: both;
+        }
+        section{
+          float: left;
+          margin: 0 auto;
+          width: 220px;
+        }
+        #edit_profile{
+          border-right: 2px solid #ccc;
+          padding-right: 10px;
+        }
+        #edit_plan{
+          padding-left: 10px;
+          vertical-align: middle;
+        }
+        input[type="submit"]{
+          margin-right: 15px;
+        }
       }
       #decompress_modal, #compress_modal{
         width: 700px; height: 580px;
@@ -223,7 +240,7 @@
           width: 680px; height: 400px;
         }
       }
-      section{
+      #edit_modal, #contact_modal,#decompress_modal,  #register_modal, #compress_modal{
         padding: 10px;
         background: @bgColor;
         z-index: 10001;
@@ -250,6 +267,7 @@
           font-family: 'FranchiseRegular';
           font-weight: normal;
           text-decoration: none;
+
         }
       }
       input[type="submit"]{
@@ -388,8 +406,7 @@
       #intro{
         width: 410px;
         float: left;
-        margin: 75px 0 0 0;
-        padding: 0 15px;
+        padding: 75px 15px 0 15px;
         h2{
           /*Gradient #1b1b1b left -> #494949*/
           color: #333;
@@ -409,8 +426,8 @@
       } /* End #intro */
       /* ==== #showcase ==== */
         #showcase{
-          margin: 0 0 90px 0;
-          padding: 0;
+          margin: 0;
+          padding: 0 0 90px 0;
           width: 550px;
           float: left;
           video{
@@ -429,7 +446,6 @@
             }/* end #showcase li */
           } /* end #showcase ul */
         } /* end #showcase */
-      #clr{clear:both;} /*fixes background disappearing*/
     } /* End #home_wrapper */
   /*==== Compress & Decompress==== */
   #code_upload{

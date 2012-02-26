@@ -6,7 +6,8 @@ Copyright CompressorBot 2012 and beyond
 $(function(){
 	var modalLink = $('.modal_link'),
 		modalClose = $('.modal_close'),
-		modalWindow = $('.modal_wrapper section'),
+		modalWrapper = $('.modal_wrapper'),
+		modalWindow = modalWrapper.find('section'),
 		winWidth = $(document).width(),
 		toolSwitch = $('.tool_switch'),
 		languageChoice = $('.language_choice'),
@@ -14,17 +15,23 @@ $(function(){
 		cssOptions = $('.css_options'),
 		jsOptions = $('.js_options'),
 		toolBtn = $('.tool_btn'),
-		languageOptions = $('.languages_options')
+		languageOptions = $('.languages_options'),
+		inputText = $('input[type=text]'),
+		inputEmail = $('input[type=email]'),
+		textArea = $('textarea'),
+		contactUs = $('#contact_modal'),
+		contactSubject = contactUs.find('select'),
+		contactForm = $('#contact_form')
 	;
-
 /* ==== Modal Box Control (turn on modal) ==== */
 	modalLink.on('click',function(e){
 		var that = $(this),
 			modalWin = $(that.attr('href')),
 			modalWrap = modalWin.parent()
-		;
+		;console.log(contactForm);
 		modalWrap.css({
-			'height': $(document).outerHeight()
+			'height': $(document).outerHeight(),
+			'width': $(document).outerWidth()
 		});
 		// Set modal windows top/left location
 		modalWindow.css({
@@ -32,15 +39,15 @@ $(function(){
 			'left': (modalWrap.outerWidth()/2) - (modalWin.outerWidth()/2)
 		});
 		// Toggle Modal window on if it is off
-		modalWrap.toggle();
+		modalWrap.show();
 		e.preventDefault();
 		return false;
 	});
 /* ==== Modal Box Control (turn off modal) ==== */
 	modalClose.on('click',function(e){
 		var that = $(this);
-			// Toggle modal window off if it is on
-			that.parent().parent().toggle();
+			// Toggle modal window off
+			modalWrapper.hide();
 		e.preventDefault();
 		return false;
 	});
@@ -98,5 +105,20 @@ toolSwitch.on('click', function(e){
 		// Use for submit button
 		//toolBtn.val('Compress ' + langSelected);
 	});
+	// ==== Contact Us Bug Report Subject ====
+	contactSubject.on('change', function(e){
+		/*
+		Need to create for contact us modal so when
+		user changes subject to bug report the response
+		time lowers to something other than 24hrs
+		*/
+	});
+	// ==== Contact Form Send Mail ====
+	contactForm.on('submit',function(e){
+		var that = $('this');
+		console.log(that.find('textarea'))
 
+		e.preventDefault();
+		return false;
+	});
 });

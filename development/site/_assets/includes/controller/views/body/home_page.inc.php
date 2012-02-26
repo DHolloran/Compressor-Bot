@@ -25,6 +25,5 @@
         <li><img src="_assets/img/placeholders/home/output_thumb.png" alt="Compress Output" width="142" height="142"></li>
       </ul><!-- / -->
     </div> <!-- END #showcase_div -->
-    <div id="clr"></div>
   </div><!-- END #home_wrapper -->
 </div> <!-- END #container DIV -->

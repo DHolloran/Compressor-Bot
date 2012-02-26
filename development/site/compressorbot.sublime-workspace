@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"display",
+				"display	display: common-types"
+			],
+			[
+				"close",
+				"modal_close"
+			],
+			[
 				"input",
 				"input	input - email"
 			],
@@ -195,30 +203,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 10093,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "decompress/index.html",
-			"settings":
-			{
-				"buffer_size": 15863,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "compress/index.html",
-			"settings":
-			{
-				"buffer_size": 15612,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -299,7 +283,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 554.0
+		"width": 520.0
 	},
 	"console":
 	{
@@ -316,14 +300,54 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/templates/footer.inc.php",
+		"/Users/dholloran/Sites/test/post.php",
+		"/Users/dholloran/Sites/test/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/email_form.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/templates/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/index.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/modals 2.html",
+		"/Users/dholloran/Desktop/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/modals.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/decompress_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/compress_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/register_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
+		"/Users/dholloran/Sites/danholloran.com/includes/views/header.inc.php",
+		"/Users/dholloran/Sites/danholloran.com/includes/PageView.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/test.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/templates/header.inc.php",
+		"/Users/dholloran/Sites/danholloran.com/includes/views/intro.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PagView.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/pageView.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/decompress.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/compress_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/home_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/footer.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/footer.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/edit_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/register_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/compress_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/decompress_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/contact_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/modal/contact_modal.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/edit_modal.inc.php",
+		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/modals.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/plugins.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/modals.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
 		"/Users/dholloran/Sites/danholloran.com/_assets/css/site.min.less",
@@ -363,6 +387,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"contactSubmit",
+			"conso",
+			"margin-bottom",
+			"position: relat",
+			"position: relate",
+			"overflow:au",
+			"');",
+			"section",
+			" style=\"z-index:2000;float:right;\"",
+			"templates",
+			"footer",
+			"$rootDir",
+			"decompress",
+			"_assets",
+			"super",
 			"?v=1",
 			"modal_close",
 			".modal_close",
@@ -475,11 +514,7 @@
 			">",
 			"                            <",
 			"Steel ",
-			"<td>",
-			"td",
-			"oo",
-			"ooooo",
-			"oo"
+			"<td>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -491,108 +526,17 @@
 			"id=\"ceb",
 			"name=\"ceb"
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 10093,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								559,
-								559
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "decompress/index.html",
-					"settings":
-					{
-						"buffer_size": 15863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1162,
-								1162
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "compress/index.html",
-					"settings":
-					{
-						"buffer_size": 15612,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16,
-								97
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1451.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -642,6 +586,46 @@
 		"selected_items":
 		[
 			[
+				"footer",
+				"_assets/includes/controller/views/templates/footer.inc.php"
+			],
+			[
+				"cont",
+				"_assets/includes/controller/views/modals/contact_modal.inc.php"
+			],
+			[
+				"head",
+				"_assets/includes/controller/views/templates/header.inc.php"
+			],
+			[
+				"conta",
+				"_assets/includes/controller/views/modals/contact_modal.inc.php"
+			],
+			[
+				"ind",
+				"index.php"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"sc",
+				"_assets/js/script.js"
+			],
+			[
+				"edit_mo",
+				"_assets/includes/controller/views/modals/edit_modal.inc.php"
+			],
+			[
+				"sty",
+				"_assets/less/style.less"
+			],
+			[
+				"styel",
+				"_assets/less/style.less"
+			],
+			[
 				"style.lss",
 				"_assets/less/style.less"
 			],
@@ -667,7 +651,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 246.0,
 	"status_bar_visible": true
 }
