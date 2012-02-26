@@ -28,7 +28,7 @@ $(function(){
 		var that = $(this),
 			modalWin = $(that.attr('href')),
 			modalWrap = modalWin.parent()
-		;console.log(contactForm);
+		;
 		modalWrap.css({
 			'height': $(document).outerHeight(),
 			'width': $(document).outerWidth()

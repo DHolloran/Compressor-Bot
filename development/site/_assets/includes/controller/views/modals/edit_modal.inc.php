@@ -8,15 +8,15 @@
 					<h3>Update your profile below.</h3>
 				</hgroup>
 				<form action="#" method="post" accept-charset="utf-8">
-					<input type="text" name="edit_username" value="username" placeholder="username"><br>
-					<input type="email" name="edit_email" value="email" placeholder="email"><br>
-					<input type="text" name="edit_old_password" value="old password" placeholder="old password"><br>
-					<input type="text" name="edit_password1" value="password" placeholder="password"><br>
-					<input type="text" name="edit_password2" value="re-enter password" placeholder="re-enter password"><br>
+					<input type="text" name="edit_username" placeholder="username"><br>
+					<input type="email" name="edit_email"placeholder="email"><br>
+					<input type="text" name="edit_old_password" placeholder="old password"><br>
+					<input type="text" name="edit_password1" placeholder="password"><br>
+					<input type="text" name="edit_password2" placeholder="re-enter password"><br>
 					<!-- Edit Start Page -->
 					<h4>Start Page</h4>
 					<input type="radio" name="start_page" id="sp_compress" value="compress" checked="checked">
-						<label for="sp_compress">Compress</label>
+						<label for="sp_compress">Compress</label><br>
 					<input type="radio" name="start_page" id="sp_decompress" value="compress">
 						<label for="sp_decompress">Decompress</label>
 				</section>

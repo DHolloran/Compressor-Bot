@@ -13,7 +13,7 @@
         </ul>
         <form action="#" method="post" name="decompress_insert">
           <div id="text_input">
-            <textarea name="decompress_in"></textarea>
+            <textarea name="decompress_in" placeholder="Paste your code here."></textarea>
             <!-- <input type="submit" class="tool_btn decompress_btn" value="Decompress"> -->
             <a href="#decompress_modal" class="modal_link tool_btn decompress_btn">Decompress</a>
           </div><!-- END .text_input -->

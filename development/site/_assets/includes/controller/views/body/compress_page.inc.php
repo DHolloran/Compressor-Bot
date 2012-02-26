@@ -13,9 +13,8 @@
       </ul>
       <form action="#" method="post" name="compress_insert">
         <div id="text_input">
-          <textarea name="compress_in"></textarea>
-          <!-- <input type="submit" class="tool_btn" value="Compress"> -->
-          <a href="#compress_modal" class="modal_link tool_btn">Compress</a>
+          <textarea name="compress_in" placeholder="Paste your code here."></textarea>
+          <input type="submit" class="tool_btn" value="Compress">
         </div><!-- END .text_input -->
       <!-- .languages_options -->
         <section class="languages_options">

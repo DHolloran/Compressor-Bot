@@ -8,10 +8,10 @@
 			</hgroup>
 			<form action="#" method="post" accept-charset="utf-8">
 			<!-- Register User Info -->
-				<input type="text" name="register_username" value="username" placeholder="username"><br>
-				<input type="email" name="register_email" value="email" placeholder="email"><br>
-				<input type="text" name="register_password1" value="password" placeholder="password"><br>
-				<input type="text" name="register_password2" value="re-enter password" placeholder="re-enter password"><br>
+				<input type="text" name="register_username" placeholder="username"><br>
+				<input type="email" name="register_email" placeholder="email"><br>
+				<input type="text" name="register_password1" placeholder="password"><br>
+				<input type="text" name="register_password2" placeholder="re-enter password"><br>
 			<!-- Register Plan Info -->
 				<h4>Choose your plan</h4>
 				<input type="radio" name="plan_options" id="register_monthly_plan" value="monthly" checked="checked">

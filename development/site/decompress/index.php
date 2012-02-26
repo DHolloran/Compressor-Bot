@@ -4,11 +4,11 @@
 	$view = new PageView();
 
 	// Require Header
-	$view->show('header','templates');
+	$view->show('header','partials','Decompress,');
 	// Require Body
 	$view->show('decompress_page','body');
 	// Require Footer
-	$view->show('footer','templates');
+	$view->show('footer','partials');
 
 	// Require Modals
 	$view->show('contact_modal','modals'); // Contact Modal
