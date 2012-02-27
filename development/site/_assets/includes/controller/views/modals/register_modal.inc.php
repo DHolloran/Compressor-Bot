@@ -6,12 +6,12 @@
 				<h2>Register</h2>
 				<h3>Please fill out all fields.</h3>
 			</hgroup>
-			<form action="#" method="post" accept-charset="utf-8">
+			<form action="<?php echo "{$rootDir}/_assets/includes/controller/Register.php"?>" method="post" accept-charset="utf-8">
 			<!-- Register User Info -->
 				<input type="text" name="register_username" placeholder="username"><br>
 				<input type="email" name="register_email" placeholder="email"><br>
-				<input type="text" name="register_password1" placeholder="password"><br>
-				<input type="text" name="register_password2" placeholder="re-enter password"><br>
+				<input type="password" name="register_password1" placeholder="password"><br>
+				<input type="password" name="register_password2" placeholder="re-enter password"><br>
 			<!-- Register Plan Info -->
 				<h4>Choose your plan</h4>
 				<input type="radio" name="plan_options" id="register_monthly_plan" value="monthly" checked="checked">

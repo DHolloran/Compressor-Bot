@@ -21,7 +21,8 @@ $(function(){
 		textArea = $('textarea'),
 		contactUs = $('#contact_modal'),
 		contactSubject = contactUs.find('select'),
-		contactForm = $('#contact_form')
+		contactForm = $('#contact_form'),
+		contactSubmitBtn = contactForm.find('button')
 	;
 /* ==== Modal Box Control (turn on modal) ==== */
 	modalLink.on('click',function(e){
@@ -114,11 +115,8 @@ toolSwitch.on('click', function(e){
 		*/
 	});
 	// ==== Contact Form Send Mail ====
-	contactForm.on('submit',function(e){
+	contactSubmitBtn.click(function(e){
 		var that = $('this');
-		console.log(that.find('textarea'))
-
-		e.preventDefault();
-		return false;
+		console.log('button');
 	});
 });

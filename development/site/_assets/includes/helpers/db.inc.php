@@ -1,14 +1,14 @@
 <?php
-	// Database connect info
+	// Database Connection Info
 
 	// DSN
-	$DB_DSN = "";
+	$DB_DSN = 'mysql:host=localhost;dbname=compressorbot_text';
 
-	// User
-	$DB_USER  = "root";
+	// User Name
+	$DB_USER = 'root';
 
-	// Password
-	$DB_PASS  = "root";
+	// User Password
+	$DB_PASS = 'root';
 
 	// Salt
 	$DB_SALT  = "2q1edqkfEAVFAV23412";
