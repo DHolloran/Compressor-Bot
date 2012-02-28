@@ -187,6 +187,12 @@
     textarea{resize: none;overflow: scroll;.formBorder;
       background-color: @textAreaBG;color:@inputPlaceholder;
     }
+  /* ==== Error Field ==== */
+  .error_field{
+    color: #ff0000;
+    font-size: 12px;
+    display: none;
+  }
   /* ==== Modal Windows ==== */
     .modal_wrapper{
       width:100%;
@@ -215,7 +221,7 @@
       }
       #edit_modal{
         width: 460px;
-        height:460px;
+        height:320px;
         hgroup{
           clear: both;
         }
@@ -284,6 +290,11 @@
         margin-bottom: 0;
       }
     }
+  /* ==== Forms ==== */
+  input[readonly]{
+    color: #666;
+    background-color: #ccc;
+  }
   /* ==== Links ==== */
     a { color: @link; }
     a:visited { color: @link; }
@@ -491,7 +502,7 @@
         input[type="submit"]{
           .button(36pt);
           padding-right: 150px;
-          margin-top: 15px;
+          margin: 15px 0 40px 0;
           background-image: url('../img/icons/big_right_arrow.png');
           background-repeat: no-repeat;
           background-position: 95% center;
@@ -550,14 +561,6 @@
       }
     }
   }
-
-    /* ==== Compress Page ==== */
-    /* ==== Decompress Page ==== */
-  /* ==== Modals Section ==== */
-    /* ==== Compress/Decompress Output Modal ==== */
-    /* ==== Registration Modal ==== */
-    /* ==== Edit Profile Modal ==== */
-    /* ==== Contact us Modal ==== */
 /* ============ Footer ================= */
   footer{
     clear:both;

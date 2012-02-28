@@ -22,6 +22,15 @@ function saltPass($pass){
 	return $saltPass;
 }
 
+// Sanitize Input
+function sanitize($input,$lowercase = true){
+	if($lowercase){
+		return empty($input) ?'':strtolower(trim($input));
+	}else{
+		return empty($input) ?'':trim($input);
+	}
+}
+
 // Set renew date
 function setRenewDate($plan){
 	date_default_timezone_set( 'America/Chicago');
@@ -41,3 +50,7 @@ function setRenewDate($plan){
 		return date('m/d/Y', $date);
 	}
 }
+// Redirect after page is loaded
+	function afterHeaderRedirect($url){
+		echo "<META HTTP-EQUIV=\"Refresh\" Content=\"0; URL={$url}\">";
+	}

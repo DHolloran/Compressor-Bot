@@ -22,9 +22,11 @@ $(function(){
 		contactUs = $('#contact_modal'),
 		contactSubject = contactUs.find('select'),
 		contactForm = $('#contact_form'),
-		contactSubmitBtn = contactForm.find('button')
+		contactSubmitBtn = contactForm.find('button'),
+		pass1 = $('.pass1'),
+		pass2 = $('.pass2')
 	;
-/* ==== Modal Box Control (turn on modal) ==== */
+// ==== Modal Box Control (turn on modal) ====
 	modalLink.on('click',function(e){
 		var that = $(this),
 			modalWin = $(that.attr('href')),
@@ -40,73 +42,70 @@ $(function(){
 			'left': (modalWrap.outerWidth()/2) - (modalWin.outerWidth()/2)
 		});
 		// Toggle Modal window on if it is off
-		modalWrap.show();
+		modalWrap.fadeIn(300);
 		e.preventDefault();
 		return false;
 	});
-/* ==== Modal Box Control (turn off modal) ==== */
-	modalClose.on('click',function(e){
+// ==== Modal Box Control (turn off modal) ====
+		modalClose.on('click',function(e){
+			var that = $(this);
+				// Toggle modal window off
+				modalWrapper.fadeOut(300);
+			e.preventDefault();
+			return false;
+		});
+//==== Tool Control (switch to upload/insert)==== */
+	toolSwitch.on('click', function(e){
 		var that = $(this);
-			// Toggle modal window off
-			modalWrapper.hide();
+		// Show compress/decompress depending on what is already showing
+		$(that.attr('href')).fadeIn(300);
+		$('#'+that.data('tool')).fadeOut(300);
 		e.preventDefault();
 		return false;
 	});
-/* ==== Tool Control (switch to upload/insert)==== */
-toolSwitch.on('click', function(e){
-	var that = $(this);
-	// Show compress/decompress depending on what is already showing
-	$(that.attr('href')).show();
-	$('#'+that.data('tool')).hide();
-	e.preventDefault();
-	return false;
-});
-/* ==== Language/Options Control (change options for each language) ==== */
+// ==== Language/Options Control (change options for each language) ====
 	// Set what ever language is selected on page load to tool button
 	(function(){
-		var start = languageOptions.find('input[type=radio]:checked'),
-			selected = start.data('lang')
+		if(languageOptions.length !== 0){
+			var start = languageOptions.find('input[type=radio]:checked'),
+				selected = start.data('lang')
+			;
+			if(selected === "js"){
+			selected = "Javascript";
+			}else{
+				selected = selected.toUpperCase();
+			}
+			// Use for submit button
+			if(toolBtn.data('page') === 'decompress'){
+				toolBtn.val('Decompress ' + selected);
+			}else{
+				toolBtn.val('Compress ' + selected);
+			}
+		}
+
+	})();
+	languageChoice.on('click', function(e){
+		var that = $(this),
+			selected = that.data('lang')
 		;
+		htmlOptions.hide();
+		cssOptions.hide();
+		jsOptions.hide();
+		$('.' + that.val()).fadeIn(300);
+		$('.' + selected).prop('checked',true);
 		if(selected === "js"){
 			selected = "Javascript";
 		}else{
 			selected = selected.toUpperCase();
 		}
-		// For placeholder link
-		toolBtn.empty();
-		if($('.decompress_btn').length !== 0){
-			toolBtn.append('Decompress ' + selected);
-		}else{
-			toolBtn.append('Compress ' + selected);
-		}
 		// Use for submit button
-		//toolBtn.val('Compress ' + selected);
-	})();
-	languageChoice.on('click', function(e){
-		var that = $(this),
-			langSelected = that.data('lang')
-		;
-		htmlOptions.hide();
-		cssOptions.hide();
-		jsOptions.hide();
-		$('.' + that.val()).show();
-		$('.' + langSelected).prop('checked',true);
-		if(langSelected === "js"){
-			langSelected = "Javascript";
+		if(toolBtn.data('page') === 'decompress'){
+			toolBtn.val('Decompress ' + selected);
 		}else{
-			langSelected = langSelected.toUpperCase();
+			toolBtn.val('Compress ' + selected);
 		}
-		// For placeholder link
-		toolBtn.empty();
-		if(toolBtn.find('.decompress_btn').length !== 0){
-			toolBtn.append('Decompress ' + langSelected);
-		}else{
-			toolBtn.append('Compress ' + langSelected);
-		}
-		// Use for submit button
-		//toolBtn.val('Compress ' + langSelected);
 	});
-	// ==== Contact Us Bug Report Subject ====
+// ==== Contact Us Bug Report Subject ====
 	contactSubject.on('change', function(e){
 		/*
 		Need to create for contact us modal so when
@@ -114,9 +113,27 @@ toolSwitch.on('click', function(e){
 		time lowers to something other than 24hrs
 		*/
 	});
-	// ==== Contact Form Send Mail ====
-	contactSubmitBtn.click(function(e){
-		var that = $('this');
-		console.log('button');
+// ==== Contact Form Send Mail ====
+	contactForm.on('submit',function(e){
+		var that = $('this'),
+			param = that.serialize()
+		;
+		console.log(param);
+		e.preventDefault();
+		// $.post('../includes/helpers/sendmail.php',function(data){
+		//	console.log(data);
+		// });
+	});
+
+	//
+// ==== Make sure passwords match for Register/Edit===
+	pass2.on('change',function(e){
+		var that = $(this),
+			match = that.siblings('.pass1').val(),
+			error = that.siblings('.error_field').hide()
+		;
+		if(match !== that.val()){
+			error.empty().append('Passwords do not match').show();
+		}
 	});
 });

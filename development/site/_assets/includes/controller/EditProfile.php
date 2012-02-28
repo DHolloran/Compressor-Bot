@@ -4,9 +4,13 @@
 	// Require Functions
 	require_once "../helpers/functions.php";
 
-	//Gloabl Vars
+	//Global Vars
 	$model = new RegisterModel();
-	$userName = $_POST['register_username'];
-	$userEmail = $_POST['register_email'];
-	$userPass = $_POST['register_password1'];
-	$userPlan = $_POST['plan_options'];
+	$userName = sanitize($_POST['edit_username']);
+	$userEmail = sanitize($_POST['edit_email']);
+	$oldPass = sanitize($_POST['edit_old_password']);
+	$newPass = sanitize($_POST['edit_password1']);
+	$userPlan = sanitize($_POST['plan_options']);
+	$startPage = sanitize($_POST['start_page']);
+	// If user changes plan update new renew date;
+	// If an option is not choosen do not update it

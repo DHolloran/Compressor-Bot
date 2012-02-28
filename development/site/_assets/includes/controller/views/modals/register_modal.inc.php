@@ -10,8 +10,9 @@
 			<!-- Register User Info -->
 				<input type="text" name="register_username" placeholder="username"><br>
 				<input type="email" name="register_email" placeholder="email"><br>
-				<input type="password" name="register_password1" placeholder="password"><br>
-				<input type="password" name="register_password2" placeholder="re-enter password"><br>
+				<input type="password" name="register_password1" placeholder="password" class="pass1"><br>
+				<input type="password" name="register_password2" placeholder="re-enter password" class="pass2"><br>
+				<span class="error_field"></span>
 			<!-- Register Plan Info -->
 				<h4>Choose your plan</h4>
 				<input type="radio" name="plan_options" id="register_monthly_plan" value="monthly" checked="checked">

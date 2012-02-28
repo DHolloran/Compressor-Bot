@@ -7,10 +7,10 @@
 
 	//Gloabl Vars
 	$model = new RegisterModel();
-	$userName = $_POST['register_username'];
-	$userEmail = $_POST['register_email'];
-	$userPass = $_POST['register_password1'];
-	$userPlan = $_POST['plan_options'];
+	$userName = sanitize($_POST['register_username']);
+	$userEmail = sanitize($_POST['register_email']);
+	$userPass = sanitize($_POST['register_password1'],false);
+	$userPlan = sanitize($_POST['plan_options']);
 
 	// Check if user exists
 	if($model->usernameExists($userName, $userEmail)){
@@ -29,12 +29,12 @@
 	function completionRedirect($plan){
 		if($plan === 'basic'){
 			$rootDir =  checkHost();
-			echo "<META HTTP-EQUIV=\"Refresh\" Content=\"0; URL={$rootDir}/compress/\">";
+			afterHeaderRedirect("$rootDir}/compress/");
     		exit;
 		}elseif($plan === 'monthly'){
-			echo "<META HTTP-EQUIV=\"Refresh\" Content=\"0; URL=http://paypal.com\">";
+			afterHeaderRedirect('http://paypal.com');
     		exit;
 		}elseif($plan === 'yearly'){
-			echo "<META HTTP-EQUIV=\"Refresh\" Content=\"0; URL=http://paypal.com\">";
+			afterHeaderRedirect('http://paypal.com');
 		}
 	}

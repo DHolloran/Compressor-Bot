@@ -88,8 +88,7 @@
             </table>
         </div><!-- #table_wrapper -->
         <button>Browse <img src="../_assets/img/icons/small_up_arrow.png" alt="arrow up" width="18" height="18"></button>
-        <!-- <input type="submit" class="tool_btn" value="Compress"> -->
-        <a href="#compress_modal" class="modal_link tool_btn">Compress</a>
+        <input type="submit" class="tool_btn" value="Compress">
       </div> <!-- END #file_upload -->
       <section class="languages_options">
       <!-- Languages -->

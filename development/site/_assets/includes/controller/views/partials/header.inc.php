@@ -1,4 +1,16 @@
-<?php date_default_timezone_set('America/Chicago'); ?>
+<?php
+  // Require PageView
+  require_once "{$rootDir}/_assets/includes/controller/PageView.php";
+  $loginView = 'login_form';
+  //Check if user is logged in
+  session_start();
+  if(isset($_SESSION['logged_in'])&& $_SESSION['logged_in']=== true){
+    $loginView = 'logged_in';
+  }
+
+  // Set Default Timezone
+  date_default_timezone_set('America/Chicago');
+?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -45,16 +57,9 @@
               <li><a href="<?php echo"$rootDir"; ?>/decompress">Decompress</a></li>
             </ul>
           </nav>
-      <!-- Login Form -->
-          <form action="#" method="POST" name="login_form" id="login_form" class="hidden">
-            <input type="text" name="login_username" placeholder="user name">
-            <input type="password" name="login_password" placeholder="password">
-            <input type="submit" value="Login">
-          </form>
-      <!-- User Logged In/Logout -->
-        <ul id="logged_in">
-          <li>Welcome back <a href="#edit_modal" class="modal_link">DHolloran</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul><!-- END #logged_in -->
+          <?php
+            $model = new PageView();
+            $model->show($loginView,'partials')
+          ?>
       </div><!-- END .wrapper -->
     </header>
