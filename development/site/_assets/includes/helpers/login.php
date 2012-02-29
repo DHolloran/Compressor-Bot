@@ -15,7 +15,7 @@
 		$_SESSION['logged_in'] = true;
 		var_dump($results[0]['start_page']);
 		$rootDir = checkHost();
-		$page = $results[0]['start_page'];
+		$page = $results['start_page'];
 		echo "{$rootDir}/{$page}/";
 		afterHeaderRedirect("{$rootDir}/{$page}/");
 	}else{

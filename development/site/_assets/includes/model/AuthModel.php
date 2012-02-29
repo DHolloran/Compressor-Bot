@@ -32,7 +32,7 @@ class AuthModel
 			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			if(count($rows) === 1){
 				// If users pass/name exists
-				return $rows;
+				return $rows[0];
 			}else{
 				// If users pass/name does not exist
 				return false;

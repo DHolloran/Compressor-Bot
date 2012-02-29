@@ -56,37 +56,94 @@ public $pdo;
 			return false;
 		}
 	} // createUser()
+// ==== Get Users Existing Info getUserExisting() ====
+	public function getUserExisting($user){
+		// Prepare Statement
+		$stmt = $this->pdo->prepare("
+			SELECT `user_name`, `user_email`,`user_pass`,`start_page`,`tool_uses`,`user_plan`,`plan_renew`
+			FROM `users`
+			WHERE `user_name` = :uname
+		");
+		// Execute Statement
+		if($stmt->execute(array(':uname'=>$user))){
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			if(count($rows) === 1){
+				return $rows[0];
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
 // ==== Update Users Information updateInfo() ====
-		public function updateInfo($uname,$email,$pass,$start,$plan,$renew){
-			/*
-				SET
-				WHERE `user_name` = :uname
-			*/
-			// Update User Changed Info
+	public function updateInfo($uname,$email,$pass,$start,$plan,$renew){
+		// Update User Changed Info
 		// Update only changed info
-		/*
-		*/
-			// Build Query String
+	// == Build Query String ==
 			$query = "UPDATE `users` SET ";
+			// Build Query Array
+			$queryArr = array();
+		// == User Email ==
 			if(!empty($email)){
-				$query .= "`user_email` = :email,";
-			}elseif(!empty($pass)){
-				$query .= "`user_pass` = :pass,";
-			}elseif(!empty($start)){
-				$query .= "`start_page` = :start,";
-			}elseif(!empty($plan)){
-				$query .= "`user_plan` = :plan,";
-			}elseif(!empty($renew)){
-				$query .= "`plan_renew` = :renew,";
+				$existing = $this->getUserExisting($uname);
+				if($existing['user_email'] != $email){
+					// Add To Query
+					$query .= "`user_email` = :email,";
+					// Add To Query Array
+					$queryArr[':email'] = $email;
+				}
+			}
+		// == User Password ==
+			if(!empty($pass)){
+				$existing = $this->getUserExisting($uname);
+				if($existing['user_pass'] != $pass){
+					$pass = saltPass($pass);
+					// Add To Query
+					$query .= "`user_pass` = :pass,";
+					// Add To Query Array
+					$queryArr[':pass'] = $pass;
+				}
+			}
+		// == Start Page ==
+			if(!empty($start)){
+				$existing = $this->getUserExisting($uname);
+				if($existing['start_page'] != $start){
+					// Add To Query
+					$query .= "`start_page` = :start,";
+					// Add To Query Array
+					$queryArr[':start'] = $start;
+				}
+			}
+		// == User Plan ==
+			if(!empty($plan)){
+				// Check if plan has changed
+				$existing = $this->getUserExisting($uname);
+				if($existing['user_plan'] != $plan){
+					// Add To Query
+					$query .= "`user_plan` = :plan, `plan_renew` = :renew,";
+					// Add To Query Array
+					$queryArr[':plan'] = $plan;
+					$queryArr[':renew'] = $renew;
+				}
 			}
 			// Trim the last (,) off of the string
 			$query = substr($query, 0, -1);
 			// Add WHERE Clause for user_name
 			$query .= " WHERE `user_name` = :uname";
-		return $query;
-		// $pass = saltPass($pass);
-		// $renew = setRenewDate($renew);
-			// Prepare Statement
-			$this->pdo->prepare();
-		} // updateInfo()
+	// == Make Sure Something Has Been Changed ==
+		if($query === "UPDATE `users` SET WHERE `user_name` = :uname"){
+			return false;
+		}
+
+	// == Prepare Statement ==
+		$stmt = $this->pdo->prepare($query);
+	// == Execute Statement
+		if($stmt->execute($queryArr)){
+			return true;
+		}else{
+			return false;
+		}
+
+	} // updateInfo()
 } // class
