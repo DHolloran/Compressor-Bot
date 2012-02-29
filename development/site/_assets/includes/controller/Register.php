@@ -1,12 +1,12 @@
 <?php
 
 	// Require Register Model
-	require_once "../model/RegisterModel.php";
+	require_once "../model/ProfileModel.php";
 	// Require Functions
 	require_once "../helpers/functions.php";
 
 	//Gloabl Vars
-	$model = new RegisterModel();
+	$model = new ProfileModel();
 	$userName = sanitize($_POST['register_username']);
 	$userEmail = sanitize($_POST['register_email']);
 	$userPass = sanitize($_POST['register_password1'],false);

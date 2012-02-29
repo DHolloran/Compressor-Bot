@@ -4,7 +4,7 @@
 	$view = new PageView();
 
 	// Require Header
-	$view->show('header','partials','Decompress,');
+	$view->show('header','partials','Decompress');
 	// Require Body
 	$view->show('decompress_page','body');
 	// Require Footer

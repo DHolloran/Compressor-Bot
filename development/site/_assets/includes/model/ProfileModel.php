@@ -1,21 +1,20 @@
 <?php
 
 /**
-* RegisterModel
+* ProfileModel
 */
-class RegisterModel
+class ProfileModel
 {
 // Vars
 public $pdo;
-// Constructor
+// ==== Constructor() ====
 	public function __construct()
 	{
 		require_once "../helpers/functions.php";
 		$this->pdo = connectDB();
 	} // __construct()
-
-	// ==== Create User ====
-// Check if username already exists
+// ==== Create User usernameExists()====
+	// Check if username already exists
 	public function usernameExists($uname, $uemail){
 		// Prepare Statement
 		$stmt = $this->pdo->prepare("
@@ -37,9 +36,9 @@ public $pdo;
 		}
 
 	} // usernameExists()
-
+// ==== Create New User createUser() ====
 	// Add user info and plan info
-// Add User/Plan Info to Database
+	// Add User/Plan Info to Database
 	public function createUser($userName, $userEmail,$userPass,$userPlan){
 		// Prepare Statement
 		$stmt = $this->pdo->prepare("
@@ -57,4 +56,37 @@ public $pdo;
 			return false;
 		}
 	} // createUser()
+// ==== Update Users Information updateInfo() ====
+		public function updateInfo($uname,$email,$pass,$start,$plan,$renew){
+			/*
+				SET
+				WHERE `user_name` = :uname
+			*/
+			// Update User Changed Info
+		// Update only changed info
+		/*
+		*/
+			// Build Query String
+			$query = "UPDATE `users` SET ";
+			if(!empty($email)){
+				$query .= "`user_email` = :email,";
+			}elseif(!empty($pass)){
+				$query .= "`user_pass` = :pass,";
+			}elseif(!empty($start)){
+				$query .= "`start_page` = :start,";
+			}elseif(!empty($plan)){
+				$query .= "`user_plan` = :plan,";
+			}elseif(!empty($renew)){
+				$query .= "`plan_renew` = :renew,";
+			}
+			// Trim the last (,) off of the string
+			$query = substr($query, 0, -1);
+			// Add WHERE Clause for user_name
+			$query .= " WHERE `user_name` = :uname";
+		return $query;
+		// $pass = saltPass($pass);
+		// $renew = setRenewDate($renew);
+			// Prepare Statement
+			$this->pdo->prepare();
+		} // updateInfo()
 } // class

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sta",
+				"startPage"
+			],
+			[
 				"match",
 				"matchPass"
 			],
@@ -240,10 +244,18 @@
 	"buffers":
 	[
 		{
-			"file": "_assets/includes/controller/Register.php",
+			"file": "_assets/includes/controller/EditProfile.php",
 			"settings":
 			{
-				"buffer_size": 1047,
+				"buffer_size": 713,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/includes/model/ProfileModel.php",
+			"settings":
+			{
+				"buffer_size": 2503,
 				"line_ending": "Unix"
 			}
 		},
@@ -252,22 +264,6 @@
 			"settings":
 			{
 				"buffer_size": 1456,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/helpers/login.php",
-			"settings":
-			{
-				"buffer_size": 668,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/model/AuthModel.php",
-			"settings":
-			{
-				"buffer_size": 1385,
 				"line_ending": "Unix"
 			}
 		}
@@ -368,31 +364,32 @@
 	},
 	"file_history":
 	[
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/EditModel.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/RegisterModel.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/crossdomain.xml",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/logged_in.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/AuthModel.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/register_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/login_form.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/logged_in.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/logout.php",
 		"/Users/dholloran/Sites/danholloran.com/auth/logout.php",
 		"/Users/dholloran/Sites/danholloran.com/auth/index.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/AuthModel.php",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/login.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/RegisterModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/EditModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/date.php",
 		"/Users/dholloran/Sites/danholloran.com/includes/models/AuthModel.php",
 		"/Users/dholloran/Sites/danholloran.com/includes/models/PostModel.php",
@@ -479,6 +476,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Register",
+			"RegisterModel",
+			"register",
 			"type=\"text\"",
 			"true",
 			"placeholder",
@@ -603,10 +603,7 @@
 			"<section",
 			"</label>",
 			">",
-			"monthly",
-			"1",
-			"username",
-			".modal_wrapper"
+			"monthly"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -627,15 +624,73 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_assets/includes/controller/Register.php",
+					"file": "_assets/includes/controller/EditProfile.php",
 					"settings":
 					{
-						"buffer_size": 1047,
+						"buffer_size": 713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 164.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_assets/includes/model/ProfileModel.php",
+					"settings":
+					{
+						"buffer_size": 2503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1786,
+								1786
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 402.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_assets/includes/helpers/functions.php",
+					"settings":
+					{
+						"buffer_size": 1456,
 						"regions":
 						{
 						},
@@ -654,94 +709,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 932.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/helpers/functions.php",
-					"settings":
-					{
-						"buffer_size": 1456,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								494
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 508.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_assets/includes/helpers/login.php",
-					"settings":
-					{
-						"buffer_size": 668,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								646,
-								646
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 77.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_assets/includes/model/AuthModel.php",
-					"settings":
-					{
-						"buffer_size": 1385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								559,
-								559
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 558.0,
+						"translation.y": 949.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -795,6 +763,46 @@
 		"selected_items":
 		[
 			[
+				"func",
+				"_assets/includes/helpers/functions.php"
+			],
+			[
+				"edit",
+				"_assets/includes/controller/views/modals/edit_modal.inc.php"
+			],
+			[
+				"fucn",
+				"_assets/includes/helpers/functions.php"
+			],
+			[
+				"index",
+				"decompress/index.php"
+			],
+			[
+				"style",
+				"_assets/less/style.less"
+			],
+			[
+				"",
+				"crossdomain.xml"
+			],
+			[
+				"logge",
+				"_assets/includes/controller/views/partials/logged_in.inc.php"
+			],
+			[
+				"he",
+				"_assets/includes/controller/views/partials/header.inc.php"
+			],
+			[
+				"edit_",
+				"_assets/includes/controller/views/modals/edit_modal.inc.php"
+			],
+			[
+				"less",
+				"_assets/less/style.less"
+			],
+			[
 				"auth",
 				"_assets/includes/model/AuthModel.php"
 			],
@@ -821,14 +829,6 @@
 			[
 				"regist",
 				"_assets/includes/controller/views/modals/register_modal.inc.php"
-			],
-			[
-				"edit",
-				"_assets/includes/controller/views/modals/edit_modal.inc.php"
-			],
-			[
-				"style",
-				"_assets/less/style.less"
 			],
 			[
 				"decomp",
@@ -891,14 +891,6 @@
 				"_assets/includes/controller/views/partials/header.inc.php"
 			],
 			[
-				"func",
-				"_assets/includes/helpers/functions.php"
-			],
-			[
-				"less",
-				"_assets/less/style.less"
-			],
-			[
 				"pap",
 				"_assets/includes/controller/PageView.php"
 			],
@@ -935,20 +927,12 @@
 				"_assets/includes/controller/views/body/compress_page.inc.php"
 			],
 			[
-				"",
-				"_assets/includes/helpers/sendmail.php"
-			],
-			[
 				"inde",
 				"compress/index.php"
 			],
 			[
 				"ind",
 				"index.php"
-			],
-			[
-				"index",
-				"compress/index.php"
 			],
 			[
 				"ema",
@@ -987,11 +971,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/dholloran/Sites/compressorbot/development/site/compressorbot.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": true,

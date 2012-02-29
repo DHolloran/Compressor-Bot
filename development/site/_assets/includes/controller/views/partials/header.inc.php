@@ -1,13 +1,21 @@
 <?php
   // Require PageView
   require_once "{$rootDir}/_assets/includes/controller/PageView.php";
+  // Require Functions
+  require_once "{$rootDir}/_assets/includes/helpers/functions.php";
   $loginView = 'login_form';
   //Check if user is logged in
   session_start();
-  if(isset($_SESSION['logged_in'])&& $_SESSION['logged_in']=== true){
+  // Check if user has access to view page
+  // if($pageTitle === 'Compress' || $pageTitle === 'Decompress'){
+  //   if(!isset($_SESSION['logged_in'])){
+  //     header("Location: {$rootDir}");
+  //     exit;
+  //   }
+  // }
+  if(isset($_SESSION['logged_in'])&& $_SESSION['logged_in']){
     $loginView = 'logged_in';
   }
-
   // Set Default Timezone
   date_default_timezone_set('America/Chicago');
 ?>
