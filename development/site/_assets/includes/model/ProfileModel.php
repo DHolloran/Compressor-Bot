@@ -32,7 +32,7 @@ public $pdo;
 				return false;
 			}
 		}else{
-			return PDO::errorCode();
+			return false;
 		}
 
 	} // usernameExists()
@@ -52,6 +52,7 @@ public $pdo;
 
 		if($execute){
 			return true;
+			// redirect to home for now
 		}else{
 			return false;
 		}

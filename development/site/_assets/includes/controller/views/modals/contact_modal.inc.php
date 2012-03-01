@@ -7,7 +7,7 @@
           <h3>Someone will contact you within 24 hours.</h3>
         </hgroup>
         <span class="success"></span>
-        <form action="<?php echo "{$rootDir}/_assets/includes/helpers/sendmail.php";?>" id="contact_form">
+        <form action="<?php echo "{$assets}/includes/helpers/sendmail.php";?>" id="contact_form">
           <select name="contact_form_subject">
             <optgroup label="Subject">
               <option value="general_info">General Info</option>

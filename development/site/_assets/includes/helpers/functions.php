@@ -3,7 +3,11 @@
 // ==== Connect to database ====
 	function connectDB(){
 		// Create new PDO connection
-		return $pdo = new PDO('mysql:host=localhost;dbname=compressorbot_test','root','root');
+		if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' ){
+				return $pdo = new PDO('mysql:host=localhost;dbname=compressorbot_test','root','root');
+			}else{
+				return $pdo = new PDO('mysql:host=mysql.compressorbot.com;dbname=compressorbot_test','dholloran','N3xusS3g');
+			}
 	}
 // ==== Check if it is Development or Live ===
 	function checkHost(){
