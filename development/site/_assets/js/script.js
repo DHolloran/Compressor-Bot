@@ -49,8 +49,10 @@ $(function(){
 // ==== Modal Box Control (turn off modal) ====
 		modalClose.on('click',function(e){
 			var that = $(this);
-				// Toggle modal window off
-				modalWrapper.fadeOut(300);
+			// Toggle modal window off
+			modalWrapper.fadeOut(300);
+			// Clear success field
+			modalWrapper.find('.success').empty();
 			e.preventDefault();
 			return false;
 		});
@@ -107,6 +109,14 @@ $(function(){
 	});
 // ==== Contact Us Bug Report Subject ====
 	contactSubject.on('change', function(e){
+		var that = $(this),
+			msg = contactUs.find('hgroup h3')
+		;
+		if(that.val() === 'bug_submit'){
+			msg.empty().append('We will get working on this right away');
+		}else{
+			msg.empty().append('Someone will contact you within 24 hours.');
+		}
 		/*
 		Need to create for contact us modal so when
 		user changes subject to bug report the response
@@ -115,14 +125,12 @@ $(function(){
 	});
 // ==== Contact Form Send Mail ====
 	contactForm.on('submit',function(e){
-		var that = $('this'),
-			param = that.serialize()
-		;
-		console.log(param);
+		var that = $(this);
+		contactUs.find('.success').empty();
+		$.post('http://compressorbot.com/development/site/_assets/includes/helpers/sendmail.php',that.serialize(),function(data){
+			contactUs.find('.success').append('Mail sent successfully');
+		});
 		e.preventDefault();
-		// $.post('../includes/helpers/sendmail.php',function(data){
-		//	console.log(data);
-		// });
 	});
 
 	//

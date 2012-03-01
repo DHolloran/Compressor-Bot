@@ -13,7 +13,7 @@
 
 <!-- SCRIPTS -->
   <script defer src="<?php echo"{$rootDir}/_assets/js/plugins.js"; ?>"></script>
-  <script defer src="<?php echo"{$rootDir}/_assets/js/min/script.min.js?=v2"; ?>"></script>
+  <script defer src="<?php echo"{$rootDir}/_assets/js/script.js?=v2"; ?>"></script>
   <!-- END SCRIPTS -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

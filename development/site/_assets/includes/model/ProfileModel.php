@@ -131,15 +131,19 @@ public $pdo;
 			$query = substr($query, 0, -1);
 			// Add WHERE Clause for user_name
 			$query .= " WHERE `user_name` = :uname";
+			// Add user_name to query array
+			$queryArr[':uname'] = $uname;
 	// == Make Sure Something Has Been Changed ==
 		if($query === "UPDATE `users` SET WHERE `user_name` = :uname"){
 			return false;
 		}
-
 	// == Prepare Statement ==
 		$stmt = $this->pdo->prepare($query);
 	// == Execute Statement
 		if($stmt->execute($queryArr)){
+			// Update Session
+			session_start();
+			$_SESSION['user_info'] = $this->getUserExisting($uname);
 			return true;
 		}else{
 			return false;

@@ -6,7 +6,8 @@
           <h2>Contact Us</h2>
           <h3>Someone will contact you within 24 hours.</h3>
         </hgroup>
-        <form action="<?php echo "{$rootDir}/_assets/includes/helpers/sendmail.php";?>" id="contact_form" method="POST">
+        <span class="success"></span>
+        <form action="<?php echo "{$rootDir}/_assets/includes/helpers/sendmail.php";?>" id="contact_form">
           <select name="contact_form_subject">
             <optgroup label="Subject">
               <option value="general_info">General Info</option>
