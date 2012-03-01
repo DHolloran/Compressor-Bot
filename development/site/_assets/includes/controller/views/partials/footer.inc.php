@@ -9,11 +9,11 @@
   </footer>
 <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo"{$rootDir}/_assets/js/libs/jquery-1.7.1.min.js"; ?>"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="<?php echo"$assets/js/libs/jquery-1.7.1.min.js"; ?>"><\/script>')</script>
 
 <!-- SCRIPTS -->
-  <script defer src="<?php echo"{$rootDir}/_assets/js/plugins.js"; ?>"></script>
-  <script defer src="<?php echo"{$rootDir}/_assets/js/script.js?=v2"; ?>"></script>
+  <script defer src="<?php echo"$assets/js/plugins.js"; ?>"></script>
+  <script defer src="<?php echo"$assets/js/script.js?=v5"; ?>"></script>
   <!-- END SCRIPTS -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

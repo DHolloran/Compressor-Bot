@@ -13,8 +13,10 @@ class PageView
 	public function show($fileName,$folder='',$title=''){
 		if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' ){
 			$root = 'http://localhost/~dholloran/compressorbot/development/site';
+			$assets = $root . "/_assets";
 		}else{
 			$root = '/home/dholloran/compressorbot/development/site';
+			$assets = "http://compressorbot.com/development/site/_assets";
 		}
 
 		if(!file_exists($fileName)){

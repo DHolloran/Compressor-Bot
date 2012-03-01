@@ -6,13 +6,13 @@
   $loginView = 'login_form';
   //Check if user is logged in
   session_start();
-  // Check if user has access to view page
-  // if($pageTitle === 'Compress' || $pageTitle === 'Decompress'){
-  //   if(!isset($_SESSION['logged_in'])){
-  //     header("Location: {$rootDir}");
-  //     exit;
-  //   }
-  // }
+  //Check if user has access to view page
+  if($pageTitle === 'Compress' || $pageTitle === 'Decompress'){
+    if(!isset($_SESSION['logged_in'])){
+      header("Location: {$rootDir}");
+      exit;
+    }
+  }
   if(isset($_SESSION['logged_in'])&& $_SESSION['logged_in']){
     $loginView = 'logged_in';
   }
@@ -38,13 +38,13 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="<?php echo"$rootDir"; ?>/_assets/img/icons/favicon.ico">
+  <!-- <link rel="icon" type="image/png" href="<?php echo"$assets"; ?>/img/icons/favicon.ico"> -->
   <!-- CSS -->
-  <link rel="stylesheet" href="<?php echo"$rootDir"; ?>/_assets/css/style.css?v=2">
+  <link rel="stylesheet" href="<?php echo"$assets"; ?>/css/style.css?v=2">
   <!-- Prefix free to add vendor specific prefixes -->
-  <!--<script src="<?php echo"$rootDir"; ?>/_assets/js/libs/prefixfree.min.js"></script>-->
+  <!--<script src="<?php echo"$assets"; ?>/js/libs/prefixfree.min.js"></script>-->
   <!--Modenizer-->
-  <!--<script src="<?php echo"$rootDir"; ?>/_assets/js/libs/modernizr-2.5.2.min.js"></script>-->
+  <!--<script src="<?php echo"$assets"; ?>/js/libs/modernizr-2.5.2.min.js"></script>-->
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
