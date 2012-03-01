@@ -24,9 +24,13 @@
 		// Check If Re-enter Pass Matches New Pass
 		if($oldPass !== $newPass && $rePass === $newPass){
 			// Send To EditModel
-		var_dump($model->updateInfo($userName,$userEmail,$newPass,$startPage,$userPlan,$renewDate));
+		if($model->updateInfo($userName,$userEmail,$newPass,$startPage,$userPlan,$renewDate)){
+			afterHeaderRedirect('http://compressorbot.com/development/site/');
+		}
 		}
 	}else{
 		// Send To Edit Model With No Password Change
-		var_dump($model->updateInfo($userName,$userEmail,'',$startPage,$userPlan,$renewDate));
+		if($model->updateInfo($userName,$userEmail,'',$startPage,$userPlan,$renewDate)){
+			afterHeaderRedirect('http://compressorbot.com/development/site/');
+		}
 	}

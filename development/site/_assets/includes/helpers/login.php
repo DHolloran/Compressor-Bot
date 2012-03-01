@@ -13,13 +13,10 @@
 		session_start();
 		$_SESSION['user_info'] = $results;
 		$_SESSION['logged_in'] = true;
-		var_dump($results[0]['start_page']);
 		$rootDir = checkHost();
 		$page = $results['start_page'];
-		echo "{$rootDir}/{$page}/";
 		afterHeaderRedirect("{$rootDir}/{$page}/");
 	}else{
-		echo "user does not exist";
 		return false;
 	}
 

@@ -29,12 +29,12 @@
 	function completionRedirect($plan){
 		if($plan === 'basic'){
 			$rootDir =  checkHost();
-			afterHeaderRedirect("$rootDir}/compress/");
+			afterHeaderRedirect("http://compressorbot.com/development/site/");
     		exit;
 		}elseif($plan === 'monthly'){
-			afterHeaderRedirect('http://paypal.com');
+			afterHeaderRedirect('http://compressorbot.com/development/site/');
     		exit;
 		}elseif($plan === 'yearly'){
-			afterHeaderRedirect('http://paypal.com');
+			afterHeaderRedirect('http://compressorbot.com/development/site/');
 		}
 	}
