@@ -14,7 +14,7 @@ class PageView
 		if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' ){
 			$root = 'http://localhost/~dholloran/compressorbot/development/site';
 		}else{
-			$root = 'http://compressorbot.com/development/site';
+			$root = '/home/dholloran/compressorbot/development/site';
 		}
 
 		if(!file_exists($fileName)){
