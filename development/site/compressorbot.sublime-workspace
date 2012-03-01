@@ -268,42 +268,10 @@
 	"buffers":
 	[
 		{
-			"file": "sandbox.php",
+			"file": "_assets/includes/helpers/functions.php",
 			"settings":
 			{
-				"buffer_size": 43,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/PageView.php",
-			"settings":
-			{
-				"buffer_size": 792,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/partials/header.inc.php",
-			"settings":
-			{
-				"buffer_size": 3160,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/partials/footer.inc.php",
-			"settings":
-			{
-				"buffer_size": 1214,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/js/script.js",
-			"settings":
-			{
-				"buffer_size": 4302,
+				"buffer_size": 1766,
 				"line_ending": "Unix"
 			}
 		}
@@ -404,15 +372,16 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/ProfileModel.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
@@ -432,7 +401,6 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/logout.php",
 		"/Users/dholloran/Sites/danholloran.com/auth/logout.php",
 		"/Users/dholloran/Sites/danholloran.com/auth/index.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/login.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/date.php",
@@ -665,51 +633,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "sandbox.php",
+					"file": "_assets/includes/helpers/functions.php",
 					"settings":
 					{
-						"buffer_size": 43,
+						"buffer_size": 1766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/controller/PageView.php",
-					"settings":
-					{
-						"buffer_size": 792,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								316,
-								316
+								390,
+								390
 							]
 						],
 						"settings":
@@ -720,96 +660,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 302.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_assets/includes/controller/views/partials/header.inc.php",
-					"settings":
-					{
-						"buffer_size": 3160,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1602,
-								1602
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 897.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_assets/includes/controller/views/partials/footer.inc.php",
-					"settings":
-					{
-						"buffer_size": 1214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								690,
-								690
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 335.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "_assets/js/script.js",
-					"settings":
-					{
-						"buffer_size": 4302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3961,
-								3901
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3985.0,
+						"translation.y": 34.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -862,6 +713,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"func",
+				"_assets/includes/helpers/functions.php"
+			],
 			[
 				"foot",
 				"_assets/includes/controller/views/partials/footer.inc.php"
@@ -925,10 +780,6 @@
 			[
 				"auth",
 				"_assets/includes/model/AuthModel.php"
-			],
-			[
-				"func",
-				"_assets/includes/helpers/functions.php"
 			],
 			[
 				"fucn",
@@ -1100,7 +951,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 246.0,
 	"status_bar_visible": true
 }
