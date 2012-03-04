@@ -38,7 +38,7 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
   <!-- Favicon -->
-  <!-- <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.ico"; ?>"> -->
+  <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.png"; ?>">
   <!-- CSS -->
   <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=2";?>">
   <!-- Prefix free to add vendor specific prefixes -->

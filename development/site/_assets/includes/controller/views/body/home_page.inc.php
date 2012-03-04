@@ -16,8 +16,9 @@
     <!-- Showcase -->
       <div id="showcase">
       <!-- Showcase Video -->
-        <video poster="_assets/img/placeholders/home/video.png" width="480" height="315">
-        </video>
+        <div id="video_player">
+
+        </div><!-- /video_player -->
       <!-- Showcase Thumbnails -->
       <ul>
         <li><img src="_assets/img/placeholders/home/upload_thumb.png" alt="Compress Input Upload" width="142" height="142"></li>

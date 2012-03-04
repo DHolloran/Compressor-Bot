@@ -8,7 +8,7 @@
   html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
   html, button, input, select, textarea { font-family: sans-serif; color: #222; }
   body { margin: 0; padding:0; font-size: 1em; line-height: 1.4; }
-  html, body {height: 100%;}
+  html, body {min-height: 100%;}
   ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
   ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
   a:hover, a:active { outline: 0; }
@@ -77,6 +77,9 @@
   @border: #333;
   @formFieldBorder: rgba(102,102,102,.5);
   @inputPlaceholder: #888888;
+/* ============ @import ================ */
+  @import url(classes.less);
+  @import url(h5video.less);
 /* ============ @font-face ============= */
   /* Franchise Bold (buttons/logos) font-family: 'FranchiseRegular'; */
     @font-face {
@@ -451,7 +454,8 @@
           padding: 0 0 90px 0;
           width: 550px;
           float: left;
-          video{
+          #video_player{
+            width: 480px; height: 315px; background: #333;
             margin: 75px 0 0 0;
             float: right;
           } /* end #showcase video*/

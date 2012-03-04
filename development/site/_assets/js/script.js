@@ -181,4 +181,23 @@ $(function(){
 		});
 		e.preventDefault();
 	});
+// ==== H5Video Plugin ====
+	$("#video_player").H5Video({
+		events : {
+			pause : function(){},
+            play : function(){},
+            end : function(){}
+		},
+		animationDuration : 350,
+		source : {
+			"video/ogg"  : root+"/_assets/media/video/compressorbot_placeholder_video.theora.ogv",
+			"video/mp4"  : root+"/_assets/media/video/compressorbot_placeholder_video.mp4",
+			"video/webm" : root+"/_assets/media/video/compressorbot_placeholder_video.webm"
+		},
+		loop : false,
+		preload: true,
+		autoPlay : false,
+		poster : root+"/_assets/img/home/poster.png",
+		supportMessage : "This browser cannot playback HTML5 videos. We encourage you to upgrade your internet browser to one of the following modern browsers:"
+	});
 });

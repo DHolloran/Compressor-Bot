@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"class",
+				"classes"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"out",
+				"outerHeight  (function)"
+			],
+			[
+				"fad",
+				"fadeOut  (function)"
+			],
+			[
 				"e",
 				"em	<em>"
 			],
@@ -98,10 +114,6 @@
 			[
 				"code_",
 				"code_upload"
-			],
-			[
-				"class",
-				"class=  (attribute)"
 			],
 			[
 				"marg",
@@ -272,34 +284,26 @@
 	"buffers":
 	[
 		{
-			"file": "_assets/includes/controller/EditProfile.php",
-			"settings":
-			{
-				"buffer_size": 1322,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/modals/edit_modal.inc.php",
-			"settings":
-			{
-				"buffer_size": 2725,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "_assets/js/script.js",
 			"settings":
 			{
-				"buffer_size": 4502,
+				"buffer_size": 6011,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_assets/js/min/script.min.js",
+			"file": "_assets/less/style.less",
 			"settings":
 			{
-				"buffer_size": 2278,
+				"buffer_size": 21107,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/less/h5video.less",
+			"settings":
+			{
+				"buffer_size": 4465,
 				"line_ending": "Unix"
 			}
 		}
@@ -400,7 +404,26 @@
 	},
 	"file_history":
 	[
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5video.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
+		"/Users/dholloran/Desktop/jquery-html5-video-player/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/codecanyon-122055-jquery-html5-video-player/h5video.js",
+		"/Users/dholloran/Desktop/jquery-html5-video-player/h5video.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/codecanyon-122055-jquery-html5-video-player/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5video.css",
+		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/classes.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/ProfileModel.php",
+		"/Users/dholloran/Downloads/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js",
+		"/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/AuthModel.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
@@ -410,15 +433,7 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/ProfileModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/logged_in.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/EditModel.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/RegisterModel.php",
@@ -475,7 +490,6 @@
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/modals.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/plugins.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/danholloran.com/_assets/css/site.min.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/img/home/vide_bg.png",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/templates/footer.inc.php",
@@ -489,7 +503,6 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/bitstream_vera_sans/stylesheet.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/Bitstream_Vera_Serif/stylesheet.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/fonts/Bitstream_Vera_Serif/demo.html",
-		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/Franchise/stylesheet.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/franchise/FranchiseRegular-demo.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/fonts/franchise/stylesheet.css",
@@ -513,6 +526,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#video",
+			"poster.png",
+			"jQuery",
+			"controls",
+			".bind",
+			".h5",
+			"video",
+			"console",
+			"modalLink",
+			"modal.find('.output')",
+			"Modal.find('.output')",
+			"modal.find('.output')",
+			"Modal.find('.output')",
+			"modal.find('.output')",
+			"Modal.find('.output')",
+			"modal.find('.output')",
+			"http://compressorbot.com/development/site",
+			"console.log",
+			"editModal",
+			"hgroup",
+			"hgroup h3",
+			"hgroup",
+			"hgroup h3",
+			"output",
+			"return",
 			"\"http://compressorbot.com/development/site/\"",
 			"afterHeaderRedirect();",
 			"// afterHeaderRedirect($homePage);",
@@ -615,32 +653,7 @@
 			"modal_close",
 			".modal_close",
 			"font-family: 'FranchiseRegular';",
-			"$(window)",
-			"          height: 23px;",
-			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn\">Decompress</a>",
-			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn \">Decompress</a>",
-			"<input type=\"submit\" class=\"tool_btn\" value=\"Decompress\">",
-			"<a href=\"#decompress_modal\" class=\"modal_link tool_btn\">Compress</a>",
-			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress\">",
-			"toolBtn",
-			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress\">",
-			"<input type=\"submit\" class=\"tool_btn\" value=\"Compress language\">",
-			"langS",
-			"<input type=\"submit\" value=\"Compress language\">",
-			"class=\"language_choice\"",
-			"html",
-			"value=\"",
-			"id=\"in_",
-			"in_",
-			"<div id=\"in_",
-			"<div id=\"up_",
-			"<input type=\"submit\"",
-			"class=\"hidden",
-			"in_",
-			"in",
-			"<label",
-			"</label>",
-			" <label"
+			"$(window)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -661,81 +674,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_assets/includes/controller/EditProfile.php",
-					"settings":
-					{
-						"buffer_size": 1322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1280,
-								1280
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1429.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/controller/views/modals/edit_modal.inc.php",
-					"settings":
-					{
-						"buffer_size": 2725,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								505,
-								518
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "_assets/js/script.js",
 					"settings":
 					{
-						"buffer_size": 4502,
+						"buffer_size": 6011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4389,
-								4389
+								5484,
+								5484
 							]
 						],
 						"settings":
@@ -746,35 +701,65 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4929.0,
+						"translation.y": 7215.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "_assets/js/min/script.min.js",
+					"buffer": 1,
+					"file": "_assets/less/style.less",
 					"settings":
 					{
-						"buffer_size": 2278,
+						"buffer_size": 21107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								81,
-								81
+								14836,
+								14833
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5703.0,
+						"translation.y": 18428.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_assets/less/h5video.less",
+					"settings":
+					{
+						"buffer_size": 4465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -828,6 +813,38 @@
 		"selected_items":
 		[
 			[
+				"sty",
+				"_assets/less/style.less"
+			],
+			[
+				"foot",
+				"_assets/includes/controller/views/partials/footer.inc.php"
+			],
+			[
+				"hom",
+				"_assets/includes/controller/views/body/home_page.inc.php"
+			],
+			[
+				"edi",
+				"_assets/includes/controller/views/modals/edit_modal.inc.php"
+			],
+			[
+				"send",
+				"_assets/includes/helpers/sendmail.php"
+			],
+			[
+				"contac",
+				"_assets/includes/controller/views/modals/contact_modal.inc.php"
+			],
+			[
+				"styl",
+				"_assets/less/style.less"
+			],
+			[
+				"pro",
+				"_assets/includes/model/ProfileModel.php"
+			],
+			[
 				"scr",
 				"_assets/js/script.js"
 			],
@@ -842,10 +859,6 @@
 			[
 				"aut",
 				"_assets/includes/model/AuthModel.php"
-			],
-			[
-				"edi",
-				"_assets/includes/controller/views/modals/edit_modal.inc.php"
 			],
 			[
 				"hea",
@@ -866,10 +879,6 @@
 			[
 				"scri",
 				"_assets/js/min/script.min.js"
-			],
-			[
-				"foot",
-				"_assets/includes/controller/views/partials/footer.inc.php"
 			],
 			[
 				"func",
@@ -950,10 +959,6 @@
 			[
 				"regis",
 				"_assets/includes/controller/Register.php"
-			],
-			[
-				"styl",
-				"_assets/less/style.less"
 			],
 			[
 				"regist",
@@ -1052,10 +1057,6 @@
 				"_assets/includes/controller/views/modals/edit_modal.inc.php"
 			],
 			[
-				"sty",
-				"_assets/less/style.less"
-			],
-			[
 				"style.lss",
 				"_assets/less/style.less"
 			],
@@ -1081,7 +1082,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 246.0,
+	"side_bar_visible": true,
+	"side_bar_width": 127.0,
 	"status_bar_visible": true
 }
