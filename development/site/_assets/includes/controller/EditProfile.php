@@ -18,6 +18,7 @@
 	$startPage = sanitize($_POST['start_page']);
 	$renewDate = setRenewDate($userPlan);
 	$existingInfo = $model->getUserExisting($userName);
+	$rootDir = checkHost();
 	// Check If Users Old Password Is valid
 	if(!empty($oldPass) && !empty($newPass) && $auth->getUsernamePass($userName,$oldPass)){
 		// Check If New Pass Is not Old Pass
@@ -25,12 +26,16 @@
 		if($oldPass !== $newPass && $rePass === $newPass){
 			// Send To EditModel
 		if($model->updateInfo($userName,$userEmail,$newPass,$startPage,$userPlan,$renewDate)){
-			afterHeaderRedirect('http://compressorbot.com/development/site/');
+			echo json_encode('true');
+		}else{
+			echojson_encode('false');
 		}
 		}
 	}else{
 		// Send To Edit Model With No Password Change
 		if($model->updateInfo($userName,$userEmail,'',$startPage,$userPlan,$renewDate)){
-			afterHeaderRedirect('http://compressorbot.com/development/site/');
+			echo json_encode('true');
+		}else{
+			echo json_encode('false');
 		}
 	}

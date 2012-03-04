@@ -3,10 +3,8 @@
 	// Select radio button that users currently has
 	function selectRadio($input,$value){
 		if($input === $value){
-				echo 'checked="checked"';
-			}else{
-				echo "wtf";
-			}
+			echo 'checked="checked"';
+		}
 	}
 ?>
 	<div class="modal_wrapper">
@@ -16,7 +14,9 @@
 				<hgroup>
 					<h2>Edit Profile</h2>
 					<h3>Update your profile below.</h3>
+					<h3 class="output"><h3>
 				</hgroup>
+				<span ></span>
 				<form action="<?php echo "{$assets}/includes/controller/EditProfile.php"?>" method="post" accept-charset="utf-8">
 					<input type="text" name="edit_username" readonly="readonly" value="<?php echo $_SESSION['user_info']['user_name'];?>"><br>
 					<input type="email" name="edit_email"placeholder="email" value="<?php echo $_SESSION['user_info']['user_email'];?>"><br>

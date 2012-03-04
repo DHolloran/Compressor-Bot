@@ -14,7 +14,9 @@
 	//Send mail
 	if(!empty($subject)&&!empty($email)&&!empty($message)){
 		if(mail($to,$subject,$message,$headers)){
-			echo "mail sent!";
+			echo json_encode("true");
+		}else{
+			echo json_encode("false");
 		}
 	}
 
