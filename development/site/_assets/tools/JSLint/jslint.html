@@ -1,123 +1,125 @@
 <html>
-<head><title>JSLint, The JavaScript Code Quality Tool</title>
-<link rel="icon" type="image/gif" href="http://www.JSLint.com/favicon.gif">
-<style>
-#JSLINT_TABLE td span {
-    border: 2px solid black;
-}
-table {
-    cursor: pointer;
-}
-i {
-    font-family: serif;
-    font-style: italic;
-}
-p {
-    padding-left: 10pt;
-}
-input[type="button"] {
-    background-color: navajowhite;
-    border: 2px solid black;
-    color: black;
-}
-input[type="button"]:hover {
-    background-color: lightsteelblue;
-    text-decoration: underline;
-}
-input[type="button"]:active {
-    background-color: indianred;
-    text-decoration: none;
-}
-input[type="text"] {
-    border: 2px solid black;
-    text-align: center;
-}
-a:link {
-    color: darkblue;
-}
-a:visited {
-    color: purple;
-}
-a:hover {
-    color: blue;
-}
-a:active {
-    color: red;
-}
-body {
-    background-color: gainsboro;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: center;
-}
-.leftcolumn {
-    float: left;
-    margin: 1em;
-}
-#errors {
-    margin: 1em;
-    border: 2px solid black;
-    padding: 1em;
-    background-color: mistyrose;
-}
-#errors p {
-    margin-left: 2em;
-}
-#errors p.evidence {
-    margin-left: 0;
-    font-family: monospace;
-}
-#functions {
-    background-color: white;
-}
-#members {
-    background-color: peachpuff;
-}
-#functions, #members {
-    border: 2px solid black;
-    font-family: monospace;
-    margin: 1em;
-    padding: 1em;
-}
-#functions div {
-    margin-left: 10em;
-    text-indent: -5em;
-}
-#functions div.function {
-    margin-left: 0;
-    text-indent: 0;
-}
-#JSLINT_OUTPUT {
-    text-align: left;
-}
-#JSLINT_INPUT{
-    border: 2px solid black;
-    color: black;
-    font-family: monospace;
-    height: 3in;
-    overflow: auto;
-    padding: 0.5em;
-    width: 100%;
-}
-#JSLINT_JSLINTSTRING {
-    background-color: peachpuff;
-    border: 2px solid black;
-    font-family: monospace;
-    margin: 1em;
-    padding: 1em;
-}
-#JSLINT_OPTIONS {
-    border: 2px solid black;
-    color: black;
-    margin: 1em;
-    padding: 8px;
-    text-align: left;
-    background-color: linen;
-}
-#JSLINT_TREE, #JSLINT_FIELDS {
-    text-align: left;
-}
-</style></head>
+<head>
+  <title>JSLint, The JavaScript Code Quality Tool</title>
+  <link rel="icon" type="image/gif" href="http://www.JSLint.com/favicon.gif">
+  <style>
+    #JSLINT_TABLE td span {
+        border: 2px solid black;
+    }
+    table {
+        cursor: pointer;
+    }
+    i {
+        font-family: serif;
+        font-style: italic;
+    }
+    p {
+        padding-left: 10pt;
+    }
+    input[type="button"] {
+        background-color: navajowhite;
+        border: 2px solid black;
+        color: black;
+    }
+    input[type="button"]:hover {
+        background-color: lightsteelblue;
+        text-decoration: underline;
+    }
+    input[type="button"]:active {
+        background-color: indianred;
+        text-decoration: none;
+    }
+    input[type="text"] {
+        border: 2px solid black;
+        text-align: center;
+    }
+    a:link {
+        color: darkblue;
+    }
+    a:visited {
+        color: purple;
+    }
+    a:hover {
+        color: blue;
+    }
+    a:active {
+        color: red;
+    }
+    body {
+        background-color: gainsboro;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
+    .leftcolumn {
+        float: left;
+        margin: 1em;
+    }
+    #errors {
+        margin: 1em;
+        border: 2px solid black;
+        padding: 1em;
+        background-color: mistyrose;
+    }
+    #errors p {
+        margin-left: 2em;
+    }
+    #errors p.evidence {
+        margin-left: 0;
+        font-family: monospace;
+    }
+    #functions {
+        background-color: white;
+    }
+    #members {
+        background-color: peachpuff;
+    }
+    #functions, #members {
+        border: 2px solid black;
+        font-family: monospace;
+        margin: 1em;
+        padding: 1em;
+    }
+    #functions div {
+        margin-left: 10em;
+        text-indent: -5em;
+    }
+    #functions div.function {
+        margin-left: 0;
+        text-indent: 0;
+    }
+    #JSLINT_OUTPUT {
+        text-align: left;
+    }
+    #JSLINT_INPUT{
+        border: 2px solid black;
+        color: black;
+        font-family: monospace;
+        height: 3in;
+        overflow: auto;
+        padding: 0.5em;
+        width: 100%;
+    }
+    #JSLINT_JSLINTSTRING {
+        background-color: peachpuff;
+        border: 2px solid black;
+        font-family: monospace;
+        margin: 1em;
+        padding: 1em;
+    }
+    #JSLINT_OPTIONS {
+        border: 2px solid black;
+        color: black;
+        margin: 1em;
+        padding: 8px;
+        text-align: left;
+        background-color: linen;
+    }
+    #JSLINT_TREE, #JSLINT_FIELDS {
+        text-align: left;
+    }
+  </style>
+</head>
 <body>
 <table border="0" cols="2"><tbody>
   <tr>
