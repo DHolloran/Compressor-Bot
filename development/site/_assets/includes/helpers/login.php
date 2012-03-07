@@ -4,8 +4,10 @@
 	require_once "functions.php";
 	// Global Vars
 	$model = new AuthModel();
+	// $userName = sanitize($_POST['login_username']);
+	// $userPass = sanitize($_POST['login_password'], false);
 	$userName = sanitize($_POST['login_username']);
-	$userPass = sanitize($_POST['login_password'], false);
+	$userPass = sanitize($_POST['login_password'],false);
 
 	// Check user name and pass
 	$results = $model->getUsernamePass($userName, $userPass);
@@ -17,7 +19,7 @@
 		$page = $results['start_page'];
 		afterHeaderRedirect("{$rootDir}/{$page}/");
 	}else{
-		return false;
+		afterHeaderRedirect("{$rootDir}");
 	}
 
 

@@ -57,9 +57,7 @@
                 <label for="in_js_wsp_spaces">Spaces</label><br>
             <!-- JSLint -->
               <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
-                <label for="in_js_lint">JSLint</label><br>
-              <input type="checkbox" name="js_concat" id="in_js_concat" value="true">
-                <label for="in_js_concat">Concatenate</label><br>
+                <label for="in_js_lint">JSLint</label>
             </div><!-- END #js_options -->
           </section><!-- END #language_options -->
         </form>

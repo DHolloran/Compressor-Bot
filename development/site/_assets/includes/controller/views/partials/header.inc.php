@@ -38,13 +38,11 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
   <!-- Favicon -->
-  <!-- <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.ico"; ?>"> -->
+  <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.png"; ?>">
   <!-- CSS -->
   <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=2";?>">
   <!-- Prefix free to add vendor specific prefixes -->
   <!--<script src="<?php //echo"$assets/js/libs/prefixfree.min.js"; ?>"></script>-->
-  <!--Modenizer-->
-  <!--<script src="<?php //echo"$assets/js/libs/modernizr-2.5.2.min.js"; ?>></script>-->
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -57,12 +55,12 @@
         <!-- Site Nav -->
           <nav>
           <!--http://compressorbot.com-->
-            <h1><a href="<?php echo"http://compressorbot.com/development/site/"; ?>">Compressor<span>Bot</span></a></h1>
+            <h1><a href="<?php echo"{$homePage}"; ?>">Compressor<span>Bot</span></a></h1>
             <ul>
               <!--http://compressorbot.com/compress-->
-              <li><a href="<?php echo"http://compressorbot.com/development/site/compress";?>">Compress</a></li>
+              <li><a href="<?php echo"{$homePage}/compress";?>">Compress</a></li>
               <!--http://compressorbot.com/decompress-->
-              <li><a href="<?php echo"http://compressorbot.com/development/site/decompress";?>">Decompress</a></li>
+              <li><a href="<?php echo"{$homePage}/decompress";?>">Decompress</a></li>
             </ul>
           </nav>
           <?php

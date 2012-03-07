@@ -24,8 +24,37 @@ $(function(){
 		contactForm = $('#contact_form'),
 		contactSubmitBtn = contactForm.find('button'),
 		pass1 = $('.pass1'),
-		pass2 = $('.pass2')
+		pass2 = $('.pass2'),
+		editModal = $('#edit_modal'),
+		root = 'http://localhost/~dholloran/compressorbot/development/site/'
 	;
+// ==== Modal Output For AJAX Success ====
+	function modalOutput(height,data,modal){
+		var msg,
+			origHeight = height,
+			output = $('.output')
+		;
+		// Check if profile was updated
+		if($.parseJSON(data) === 'true'){
+			// Set and append message
+			msg = 'Success!';
+			output.empty().append(msg);
+			// Add space for msg
+			modal.css({height: height+=20});
+			// Setup timer to close window/cleanup
+			setTimeout(function(){
+				modal.parent().fadeOut(300,function(){
+					// reset css and html
+					modal.css({height: origHeight});
+					output.empty();
+				});
+			},2000);
+		}else{
+			msg = 'Please try again.';
+			output.empty().append(msg);
+			modal.css({height: height+=20});
+		}
+	}
 // ==== Modal Box Control (turn on modal) ====
 	modalLink.on('click',function(e){
 		var that = $(this),
@@ -53,6 +82,7 @@ $(function(){
 			modalWrapper.fadeOut(300);
 			// Clear success field
 			modalWrapper.find('.success').empty();
+			modalWrapper.find('.output').empty();
 			e.preventDefault();
 			return false;
 		});
@@ -117,18 +147,15 @@ $(function(){
 		}else{
 			msg.empty().append('Someone will contact you within 24 hours.');
 		}
-		/*
-		Need to create for contact us modal so when
-		user changes subject to bug report the response
-		time lowers to something other than 24hrs
-		*/
 	});
 // ==== Contact Form Send Mail ====
 	contactForm.on('submit',function(e){
-		var that = $(this);
+		var that = $(this),
+			height = that.parent().outerHeight()
+		;
 		contactUs.find('.success').empty();
-		$.post('http://compressorbot.com/development/site/_assets/includes/helpers/sendmail.php',that.serialize(),function(data){
-			contactUs.find('.success').append('Mail sent successfully');
+		$.post(root+'/_assets/includes/helpers/sendmail.php',that.serialize(),function(data){
+			modalOutput(height,data,contactUs);
 		});
 		e.preventDefault();
 	});
@@ -143,5 +170,34 @@ $(function(){
 		if(match !== that.val()){
 			error.empty().append('Passwords do not match').show();
 		}
+	});
+// ==== Submit Edit Modal AJAX ====
+	editModal.find('form').on('submit', function(e){
+		var that = $(this),
+			height = editModal.outerHeight()
+		;
+		$.post(root+'/_assets/includes/controller/EditProfile.php',that.serialize(),function(data){
+			modalOutput(height,data,editModal);
+		});
+		e.preventDefault();
+	});
+// ==== H5Video Plugin ====
+	$("#video_player").H5Video({
+		events : {
+			pause : function(){},
+            play : function(){},
+            end : function(){}
+		},
+		animationDuration : 350,
+		source : {
+			"video/ogg"  : root+"/_assets/media/video/compressorbot_placeholder_video.theora.ogv",
+			"video/mp4"  : root+"/_assets/media/video/compressorbot_placeholder_video.mp4",
+			"video/webm" : root+"/_assets/media/video/compressorbot_placeholder_video.webm"
+		},
+		loop : false,
+		preload: true,
+		autoPlay : false,
+		poster : root+"/_assets/img/home/poster.png",
+		supportMessage : "This browser cannot playback HTML5 videos. We encourage you to upgrade your internet browser to one of the following modern browsers:"
 	});
 });

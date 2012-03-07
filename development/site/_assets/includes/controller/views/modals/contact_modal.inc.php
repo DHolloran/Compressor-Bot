@@ -5,8 +5,8 @@
         <hgroup>
           <h2>Contact Us</h2>
           <h3>Someone will contact you within 24 hours.</h3>
+          <h3 class="output"><h3>
         </hgroup>
-        <span class="success"></span>
         <form action="<?php echo "{$assets}/includes/helpers/sendmail.php";?>" id="contact_form">
           <select name="contact_form_subject">
             <optgroup label="Subject">
