@@ -33,11 +33,6 @@
           </div><!-- END #html_options -->
         <!-- CSS Options -->
           <div class="css_options">
-          <!-- CSS Whitespace-wsp (tabs/spaces)-->
-            <input type="radio" id="in_css_wsp_tabs" name="css_wsp" value="tabs" checked="checked">
-              <label for="in_css_wsp_tabs">Tabs</label><br>
-            <input type="radio" id="in_css_wsp_spaces" name="css_wsp" value="spaces">
-              <label for="in_css_wsp_spaces">Spaces</label><br>
           <!-- CSSLint -->
             <input type="checkbox" name="css_lint" id="in_css_lint" value="true">
               <label for="in_css_lint">CSSLint</label><br>
@@ -46,15 +41,13 @@
               <label for="in_css_validate">Validate</label><br>
           <!-- CSS Prefixer -->
             <input type="checkbox" name="css_prefixer" id="in_css_prefixer" value="true">
-              <label for="in_css_prefixer">Vendor Prefixes</label>
+              <label for="in_css_prefixer">Vendor Prefixes</label><br>
+          <!-- CSS Concat -->
+             <input type="checkbox" name="css_concat" id="in_css_concat" value="true">
+              <label for="in_css_concat">Concatenate</label><br>
           </div><!-- END #css_options -->
         <!-- JS Options -->
           <div class="js_options">
-          <!-- JS wsp (tabs/spaces)-->
-            <input type="radio" id="in_js_wsp_tabs" name="js_wsp" value="tabs" checked="checked">
-              <label for="in_js_wsp_tabs">Tabs</label><br>
-            <input type="radio" id="in_js_wsp_spaces" name="js_wsp" value="spaces">
-              <label for="in_js_wsp_spaces">Spaces</label><br>
           <!-- JSLint -->
             <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
               <label for="in_js_lint">JSLint</label><br>
@@ -109,11 +102,6 @@
           </div><!-- END #html_options -->
         <!-- CSS Options -->
           <div class="css_options">
-          <!-- CSS Whitespace-wsp (tabs/spaces)-->
-            <input type="radio" id="out_css_wsp_tabs" name="css_wsp" value="tabs" checked="checked">
-              <label for="out_css_wsp_tabs">Tabs</label><br>
-            <input type="radio" id="out_css_wsp_spaces" name="css_wsp" value="spaces">
-              <label for="out_css_wsp_spaces">Spaces</label><br>
           <!-- CSS Keep Comments -->
             <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
               <label for="up_css_keep_comments">Keep Comments</label><br>
@@ -132,11 +120,6 @@
           </div><!-- END #css_options -->
           <!-- JS Options -->
             <div class="js_options">
-            <!-- JS wsp (tabs/spaces)-->
-              <input type="radio" id="out_js_wsp_tabs" name="js_wsp" value="tabs" checked="checked">
-                <label for="out_js_wsp_tabs">Tabs</label><br>
-              <input type="radio" id="out_js_wsp_spaces" name="js_wsp" value="spaces">
-                <label for="out_js_wsp_spaces">Spaces</label><br>
             <!-- JS Keep Comments -->
               <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments"> <label for="up_js_keep_comments">Keep Comments</label><br>
             <!-- JSLint -->
