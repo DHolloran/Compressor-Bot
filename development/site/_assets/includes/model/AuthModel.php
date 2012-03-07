@@ -40,7 +40,6 @@ class AuthModel
 		}else{
 			return false;
 		}
-		return $stmt;
 	} // getUsernamePass()
 // Get all users info
 	public function getUserInfo($user){

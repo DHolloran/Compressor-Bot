@@ -28,7 +28,7 @@
 		if($model->updateInfo($userName,$userEmail,$newPass,$startPage,$userPlan,$renewDate)){
 			echo json_encode('true');
 		}else{
-			echojson_encode('false');
+			echo json_encode('false');
 		}
 		}
 	}else{

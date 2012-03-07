@@ -17,9 +17,9 @@
 		$_SESSION['logged_in'] = true;
 		$rootDir = checkHost();
 		$page = $results['start_page'];
-		afterHeaderRedirect("{$rootDir}/{$page}/");
+		echo json_encode(array(true,"{$rootDir}/{$page}/"));
 	}else{
-		afterHeaderRedirect("{$rootDir}");
+		echo json_encode(false);
 	}
 
 

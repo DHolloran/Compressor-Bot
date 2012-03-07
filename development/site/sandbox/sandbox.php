@@ -1,4 +1,18 @@
 	<form action="?" method="post" >
+		<h2>Compress</h2>
+		<input type="radio" name="compress" id="compress_html" value="html">
+			<label for="compress_html">Compress HTML</label><br>
+		<input type="radio" name="compress" id="compress_css" value="css">
+			<label for="compress_css">Compress CSS</label><br>
+		<input type="radio" name="compress" id="compress_JS" value="JS">
+			<label for="compress_JS">Compress JS</label><br>
+		<h2>Decompress</h2>
+		<input type="radio" name="decompress" id="decompress_html" value="html">
+			<label for="decompress_html">Decompress HTML</label><br>
+		<input type="radio" name="decompress" id="decompress_css" value="css">
+			<label for="decompress_css">Decompress CSS</label><br>
+		<input type="radio" name="decompress" id="decompress_JS" value="JS">
+			<label for="decompress_JS">Decompress JS</label><br>
 		<textarea name="input" value="" rows="15" cols="50" placeholder="code">
 body{text-decoration:none; color:navy; font-family:"arial"; font-size:12pt; font-weight:medium;} .title{text-decoration:bold; color:green; font-family:"mssansserif"; font-size:24pt; font-weight:heavy;} .bold{text-decoration:bold; color:black; font-family:"courier,arial"; font-size:14pt; font-weight:heavy;} a:link{text-decoration:none; color:red; font-family:"mssansserif"; font-size:12pt; font-weight:heavy;} .head{color: font-family:"mssansserif"; font-size:35px; margin-top:35px; margin-left:28px;} .foo{text-decoration:underline; color: font-family:"courier"; font-size:14pt; font-weight:heavy;}
 		</textarea><br><br>

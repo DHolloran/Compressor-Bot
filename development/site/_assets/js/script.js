@@ -26,7 +26,8 @@ $(function(){
 		pass1 = $('.pass1'),
 		pass2 = $('.pass2'),
 		editModal = $('#edit_modal'),
-		root = 'http://localhost/~dholloran/compressorbot/development/site/'
+		root = 'http://localhost/~dholloran/compressorbot/development/site/',
+		login = $('#login_form')
 	;
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
@@ -179,6 +180,23 @@ $(function(){
 		$.post(root+'/_assets/includes/controller/EditProfile.php',that.serialize(),function(data){
 			modalOutput(height,data,editModal);
 		});
+		e.preventDefault();
+	});
+// ==== Login AJAX ====
+	login.on('submit', function(e){
+		var that = $(this),
+			error = login.find('.error_field')
+		;
+		error.hide();
+		$.post(root+'/_assets/includes/helpers/login.php',that.serialize(),function(data){
+				if($.parseJSON(data)){
+					error.hide();
+					window.location = $.parseJSON(data)[1];
+				}else{
+					error.show();
+				}
+			}
+		);
 		e.preventDefault();
 	});
 // ==== H5Video Plugin ====
