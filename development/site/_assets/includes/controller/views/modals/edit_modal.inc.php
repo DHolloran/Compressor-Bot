@@ -3,10 +3,8 @@
 	// Select radio button that users currently has
 	function selectRadio($input,$value){
 		if($input === $value){
-				echo 'checked="checked"';
-			}else{
-				echo "wtf";
-			}
+			echo 'checked="checked"';
+		}
 	}
 ?>
 	<div class="modal_wrapper">
