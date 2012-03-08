@@ -11,7 +11,7 @@
         <li>Insert</li>
         <li><a href="#code_upload" data-tool="code_insert" class="tool_switch">Upload</a></li>
       </ul>
-      <form action="<?php echo "$rootDir/_assets/includes/helpers/compress.php"?>" method="post" name="compress_insert" id="compress_insert" enctype="multipart/form-data">
+      <form action="<?php echo "$homePage/_assets/includes/helpers/compress.php"?>" method="post" name="compress_insert" id="compress_insert" enctype="multipart/form-data">
         <div id="text_input">
           <textarea name="input" placeholder="Paste your code here."></textarea>
           <input type="submit" class="tool_btn" value="Compress">
@@ -67,7 +67,7 @@
         <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
         <li>Upload</li>
       </ul>
-    <form action="<?php echo "$rootDir/_assets/includes/helpers/upload_files.php"; ?>" method="post" name="compress_upload"
+    <form action="<?php echo "$homePage/_assets/includes/helpers/upload_files.php"; ?>" method="post" name="compress_upload"
 enctype="multipart/form-data">
       <div id="file_upload">
       <!-- Upload Table -->
