@@ -7,10 +7,10 @@
  **/
 class UploadConfig
 {
-	public static $databaseHost = 'localhost';
+	public static $databaseHost = 'mysql.compressorbot.com';
 	public static $databaseName = 'compressorbot_test';
-	public static $databaseUsername = 'root';
-	public static $databasePassword = 'root';
+	public static $databaseUsername = 'dholloran';
+	public static $databasePassword = 'N3xusS3g';
 	public static $relativefolderPath = 'files'; 	//relative path, related to upload.php
 
 /*************** DO NOT CHANGE ANYTHING BELOW ***************/
@@ -547,7 +547,7 @@ class Upload {
 			return false;
 		}
 		//check destination folder permission
-		if( is_writable(dirname($this->_path))) {
+		if( !is_writable(dirname($this->_path))) {
 			$this->_setMsg($this->_path.' is not writable');
 			return false;
 		}

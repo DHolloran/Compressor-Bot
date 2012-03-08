@@ -5,6 +5,7 @@
 // Setup Downloader
   require_once "downloader.php";
   $downloader = new Downloader();
+  var_dump(is_writable('files/'));
 // Restrict .html,.js.css files
   $upload->setAllowExt(array('html','js','css'));
 // Upload Files
