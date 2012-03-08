@@ -26,6 +26,14 @@
 <!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if lt IE 7]>
+<style>
+h1 span {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='gradient.png', sizingMethod='scale');
+}
+</style>
+<![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">

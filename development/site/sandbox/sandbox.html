@@ -1,21 +1,8 @@
-<html>
-<head>
-	<title>HTML Sandbox</title>
-</head>
-<body>
+<form action="#" method="get"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file" multiple=""/>
+<br />
+<input type="submit" name="submit" value="Submit" />
+</form>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-	(function(){
-		// Query The Validator
-		$.getJSON('sandbox2.php',function(data){
-			var response = $.parseJSON(data)['messages']
-			;
-			console.log(response);
-		});
-	})();
-
-</script>
-</body>
-</html>

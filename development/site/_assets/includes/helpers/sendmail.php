@@ -1,5 +1,5 @@
 <?php
-	// Gloabl Vars
+	// Global Vars
 	$subject = $_POST['contact_form_subject'];
 	$name = $_POST['contact_form_name'];
 	$email = $_POST['contact_form_email'];
@@ -14,9 +14,9 @@
 	//Send mail
 	if(!empty($subject)&&!empty($email)&&!empty($message)){
 		if(mail($to,$subject,$message,$headers)){
-			echo json_encode("true");
+			echo json_encode(true);
 		}else{
-			echo json_encode("false");
+			echo json_encode(false);
 		}
 	}
 

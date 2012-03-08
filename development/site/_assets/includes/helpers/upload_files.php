@@ -16,9 +16,9 @@
         echo 'file has been uploaded, and file id is '.$file;
     }
   }
-  if($_POST['download'] === 'true'){
-    $downloader->setFolderName('compressorbot');
-    $folderPath = 'files/$fileid';
-    $downloader->setFiles('files/');
-  }
+  // if($_POST['download'] === 'true'){
+  //   $downloader->setFolderName('compressorbot');
+  //   $folderPath = 'files/$fileid';
+  //   $downloader->setFiles('files/');
+  // }
 ?>

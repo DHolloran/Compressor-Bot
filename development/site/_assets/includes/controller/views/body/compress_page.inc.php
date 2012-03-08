@@ -1,6 +1,6 @@
 <!-- Compress BODY Section -->
 <div id="content" class="wrapper" role="main">
-  <div id="decompress_wrapper" class="wrapper">
+  <div id="compress_wrapper" class="wrapper">
   <!-- Code Input Section -->
     <section id="code_insert">
       <hgroup>
@@ -11,20 +11,20 @@
         <li>Insert</li>
         <li><a href="#code_upload" data-tool="code_insert" class="tool_switch">Upload</a></li>
       </ul>
-      <form action="#" method="post" name="compress_insert">
+      <form action="<?php echo "$rootDir/_assets/includes/helpers/compress.php"?>" method="post" name="compress_insert" id="compress_insert" enctype="multipart/form-data">
         <div id="text_input">
-          <textarea name="compress_in" placeholder="Paste your code here."></textarea>
+          <textarea name="input" placeholder="Paste your code here."></textarea>
           <input type="submit" class="tool_btn" value="Compress">
         </div><!-- END .text_input -->
       <!-- .languages_options -->
         <section class="languages_options">
           <h4>Languages</h4>
-          <input type="radio" name="language" id="in_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">
-            <label for="in_html">HTML</label><br>
-          <input type="radio" name="language" id="in_css" data-lang="css" class="language_choice css" value="css_options">
-            <label for="in_css">CSS</label><br>
-          <input type="radio" name="language" id="in_js" data-lang="js" class="language_choice js" value="js_options">
-            <label for="in_js">Javascript</label>
+          <input type="radio" name="tool" id="compress_html" data-lang="html" class="language_choice html" value="compress_html" checked="checked">
+            <label for="compress_html">HTML</label><br>
+          <input type="radio" name="tool" id="compress_css" data-lang="css" class="language_choice css" value="compress_css">
+            <label for="compress_css">CSS</label><br>
+          <input type="radio" name="tool" id="compress_js" data-lang="js" class="language_choice js" value="compress_js">
+            <label for="compress_js">Javascript</label>
           <h4>Options</h4>
         <!-- HTML Options -->
           <div class="html_options">
@@ -67,20 +67,17 @@
         <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
         <li>Upload</li>
       </ul>
-    <form action="#" method="post" name="compress_upload">
+    <form action="<?php echo "$rootDir/_assets/includes/helpers/upload_files.php"; ?>" method="post" name="compress_upload"
+enctype="multipart/form-data">
       <div id="file_upload">
       <!-- Upload Table -->
         <div id="table_wrapper">
           <table>
               <tbody>
-                <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
               </tbody>
             </table>
         </div><!-- #table_wrapper -->
-        <button>Browse <img src="../_assets/img/icons/small_up_arrow.png" alt="arrow up" width="18" height="18"></button>
+        <input type="file" name="file" id="compress_upload" multiple="multiple">
         <input type="submit" class="tool_btn" value="Compress">
       </div> <!-- END #file_upload -->
       <section class="languages_options">

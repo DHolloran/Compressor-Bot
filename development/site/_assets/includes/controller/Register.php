@@ -14,13 +14,12 @@
 	$rootDir = checkHost();
 	// Check if user exists
 	if($model->usernameExists($userName, $userEmail)){
-		echo "User exists";
+		echo json_encode(true);
 	}else{
-
 		if($model->createUser($userName, $userEmail, $userPass,$userPlan)){
 			completionRedirect($userPlan);
 		}else{
-// Put something went wrong code here
+
 
 		}
 	}

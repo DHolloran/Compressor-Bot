@@ -481,7 +481,7 @@
         } /* end #showcase */
     } /* End #home_wrapper */
   /*==== Compress & Decompress==== */
-  #code_upload{
+  #code_insert{
     display: none;
   }
   #code_insert,#code_upload{
@@ -512,6 +512,10 @@
         button,input[type="submit"],textarea{
           float: left;
         }
+        input[type="file"]{
+          float: left;
+          margin: 15px 500px 0 0;
+        }
         button{
           .button(18pt);
           margin: 15px 500px 0 0;
@@ -534,7 +538,11 @@
         }
         #table_wrapper{
           float: left;
+          height: 300px;
+          background-color: #ccc;
+          border: 1px solid #ccc;
           border-bottom: 5px solid #A8A8A8;
+          overflow: scroll;
           table{
             width: 700px;
             background-color: #fff;

@@ -85,7 +85,7 @@
                 </tbody>
               </table>
           </div><!-- #table_wrapper -->
-          <button>Browse <img src="../_assets/img/icons/small_up_arrow.png" alt="arrow up" width="18" height="18"></button>
+          <input type="file" name="compress_upload">
           <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
         </div> <!-- END #file_upload -->
         <section class="languages_options">

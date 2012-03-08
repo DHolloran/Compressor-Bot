@@ -1,4 +1,4 @@
-/* Author:
+			/* Author:
 Dan Holloran http://danholloran.com
 http://compressorbot.com
 Copyright CompressorBot 2012 and beyond
@@ -26,12 +26,7 @@ $(function(){
 		pass1 = $('.pass1'),
 		pass2 = $('.pass2'),
 		editModal = $('#edit_modal'),
-		root = 'http://localhost/~dholloran/compressorbot/development/site/',
-		login = $('#login_form'),
-		videoPlayer = $("#video_player"),
-		compressForm = $('#compress_insert'),
-		compressModal = $('#compress_modal'),
-		compressUpload = $('#compress_upload')
+		root = 'http://localhost/~dholloran/compressorbot/development/site/'
 	;
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
@@ -40,7 +35,7 @@ $(function(){
 			output = $('.output')
 		;
 		// Check if profile was updated
-		if($.parseJSON(data)){
+		if($.parseJSON(data) === 'true'){
 			// Set and append message
 			msg = 'Success!';
 			output.empty().append(msg);
@@ -125,21 +120,17 @@ $(function(){
 		var that = $(this),
 			selected = that.data('lang')
 		;
-		// Close all options
 		htmlOptions.hide();
 		cssOptions.hide();
 		jsOptions.hide();
-		// Open selected option
-		$('.' + that.data('lang')+'_options').fadeIn(300);
-		// Make all selected options marked
+		$('.' + that.val()).fadeIn(300);
 		$('.' + selected).prop('checked',true);
-		// Set language text value for button
 		if(selected === "js"){
 			selected = "Javascript";
 		}else{
 			selected = selected.toUpperCase();
 		}
-		// Set button text
+		// Use for submit button
 		if(toolBtn.data('page') === 'decompress'){
 			toolBtn.val('Decompress ' + selected);
 		}else{
@@ -160,11 +151,9 @@ $(function(){
 // ==== Contact Form Send Mail ====
 	contactForm.on('submit',function(e){
 		var that = $(this),
-			height = that.parent().outerHeight(),
-			error = contactUs.find('.error_field')
+			height = that.parent().outerHeight()
 		;
 		contactUs.find('.success').empty();
-		error.hide();
 		$.post(root+'/_assets/includes/helpers/sendmail.php',that.serialize(),function(data){
 			modalOutput(height,data,contactUs);
 		});
@@ -192,131 +181,23 @@ $(function(){
 		});
 		e.preventDefault();
 	});
-// ==== Login AJAX ====
-	login.on('submit', function(e){
-		var that = $(this),
-			error = login.find('.error_field')
-		;
-		error.hide();
-		$.post(root+'/_assets/includes/helpers/login.php',that.serialize(),function(data){
-				if($.parseJSON(data)){
-					error.hide();
-					window.location = $.parseJSON(data)[1];
-				}else{
-					error.show();
-				}
-			}
-		);
-		e.preventDefault();
-	});
 // ==== H5Video Plugin ====
-	if(videoPlayer.length !== 0){
-		videoPlayer.H5Video({
-			events : {
-				pause:function(){},
-				play:function(){},
-				end:function(){}
-			},
-			animationDuration : 350,
-			source : {
-				"video/ogg"  : root+"/_assets/media/video/compressorbot_placeholder_video.theora.ogv",
-				"video/mp4"  : root+"/_assets/media/video/compressorbot_placeholder_video.mp4",
-				"video/webm" : root+"/_assets/media/video/compressorbot_placeholder_video.webm"
-			},
-			loop : false,
-			preload: true,
-			autoPlay : false,
-			poster : root+"/_assets/img/home/poster.png",
-			supportMessage : "This browser cannot playback HTML5 videos. We encourage you to upgrade your internet browser to one of the following modern browsers:"
-		});
-	}
-// ==== Validator ====
-	function queryValidator(){
-		// Query The Validator
-		$.getJSON('sandbox2.php',function(data){
-			var response = $.parseJSON(data.messages)
-			;
-			console.log(response);
-		});
-	}
-// ==== Submit Compress AJAX ====
-	compressForm.on('submit', function(e){
-		var that = $(this),
-			modalWrap = compressModal.parent()
-		;
-		// Send to compress.php
-		$.post(root+'/_assets/includes/helpers/compress.php',
-		that.serialize(),function(data){
-			// Set compressor modal wrapper width/height
-			modalWrap.css({
-				'height': $(document).outerHeight(),
-				'width': $(document).outerWidth()
-			});
-			// Set modal windows top/left location
-			modalWindow.css({
-				'top': (modalWrap.outerHeight()/2) - (compressModal.outerHeight()/2),
-				'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
-			});
-			// Set textarea to returned value
-			compressModal.find('textarea').val($.parseJSON(data));
-			compressModal.parent().fadeIn(300);
-		});
-		e.preventDefault();
-	});
-// ==== Submit Upload AJAX ====
-	compressUpload.on('change',function(e){
-		var that  = $(this),
-			uploadTable = $('#table_wrapper').find('table tbody')
-		;
-		uploadTable.empty();
-		$.each(e.target.files, function(index, value){
-			// Set file size in b/kb/mb/gb
-			var fileSize=0;
-			if(value.fileSize < 1024){
-				fileSize = fileSize +'b';
-			}else if(value.fileSize >= 1024 && value.fileSize <= 1048576){
-				// Make bytes equal kilobytes
-				fileSize = (value.fileSize/1024);
-				// Round to 2 places
-				fileSize = Math.round(fileSize*100)/100;
-				// Append kilobyte abbreviation
-				fileSize = fileSize + "kb";
-			}else if(value.fileSize >= 1048576 && value.fileSize <= 10485760){
-				// Make bytes equal kilobytes
-				fileSize = (value.fileSize/1048576);
-				// Round to 2 places
-				fileSize = Math.round(fileSize*100)/100;
-				// Append kilobyte abbreviation
-				fileSize = fileSize + "mb";
-			}
-			// Set file type as js/css/html/unknown
-			var fileType = value.type;
-			switch(fileType){
-				case 'application/x-javascript':
-					fileType = 'js';
-					break;
-				case 'text/css':
-					fileType = 'css';
-					break;
-				case 'text/html':
-					fileType = 'html';
-					break;
-				default:
-					fileType ="?";
-				break;
-			}
-
-			uploadTable.append(
-				'<tr><td>'+ value.fileName +'</td><td>'+ fileSize+'</td><td>' + fileType +'</td></tr>'
-			);
-			// fileName = value.fileName;
-			// fileSize = value.fileSize;
-			// fileType = value.type
-				// JS = application/x-javascript;
-				// CSS = text/css
-				// HTML = text/html
-				//
-			console.log(value.type);
-		});
+	$("#video_player").H5Video({
+		events : {
+			pause : function(){},
+            play : function(){},
+            end : function(){}
+		},
+		animationDuration : 350,
+		source : {
+			"video/ogg"  : root+"/_assets/media/video/compressorbot_placeholder_video.theora.ogv",
+			"video/mp4"  : root+"/_assets/media/video/compressorbot_placeholder_video.mp4",
+			"video/webm" : root+"/_assets/media/video/compressorbot_placeholder_video.webm"
+		},
+		loop : false,
+		preload: true,
+		autoPlay : false,
+		poster : root+"/_assets/img/home/poster.png",
+		supportMessage : "This browser cannot playback HTML5 videos. We encourage you to upgrade your internet browser to one of the following modern browsers:"
 	});
 });
