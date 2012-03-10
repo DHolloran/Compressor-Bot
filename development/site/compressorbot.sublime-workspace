@@ -340,34 +340,26 @@
 	"buffers":
 	[
 		{
+			"file": "_assets/less/style.less",
+			"settings":
+			{
+				"buffer_size": 21522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/dholloran/Desktop/examplehtml.html",
+			"settings":
+			{
+				"buffer_size": 248,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "_assets/js/script.js",
 			"settings":
 			{
 				"buffer_size": 9422,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/body/compress_page.inc.php",
-			"settings":
-			{
-				"buffer_size": 6833,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
-			"settings":
-			{
-				"buffer_size": 679,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/PageView.php",
-			"settings":
-			{
-				"buffer_size": 931,
 				"line_ending": "Unix"
 			}
 		}
@@ -468,8 +460,10 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
+		"/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/upload_files.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload.php",
@@ -540,7 +534,6 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/ProfileModel.php",
 		"/Users/dholloran/Downloads/jQuery.jPlayer.2.1.0/jquery.jplayer.min.js",
 		"/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/logged_in.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/EditModel.php",
@@ -594,8 +587,7 @@
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/modals.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/plugins.js",
-		"/Users/dholloran/Sites/danholloran.com/_assets/css/site.min.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/img/home/vide_bg.png"
+		"/Users/dholloran/Sites/danholloran.com/_assets/css/site.min.less"
 	],
 	"find":
 	{
@@ -766,6 +758,64 @@
 			[
 				{
 					"buffer": 0,
+					"file": "_assets/less/style.less",
+					"settings":
+					{
+						"buffer_size": 21522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15598,
+								15598
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 19022.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/dholloran/Desktop/examplehtml.html",
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								248
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "_assets/js/script.js",
 					"settings":
 					{
@@ -776,8 +826,8 @@
 						"selection":
 						[
 							[
-								793,
-								793
+								0,
+								9422
 							]
 						],
 						"settings":
@@ -788,100 +838,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 816.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/controller/views/body/compress_page.inc.php",
-					"settings":
-					{
-						"buffer_size": 6833,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								542,
-								542
-							],
-							[
-								3605,
-								3605
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 604.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
-					"settings":
-					{
-						"buffer_size": 679,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_assets/includes/controller/PageView.php",
-					"settings":
-					{
-						"buffer_size": 931,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								504,
-								504
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 434.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
