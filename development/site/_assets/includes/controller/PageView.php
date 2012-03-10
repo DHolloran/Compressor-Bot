@@ -14,11 +14,11 @@ class PageView
 		if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' ){
 			$root = 'http://localhost/~dholloran/compressorbot/development/site';
 			$assets = $root . "/_assets";
-			$homePage = "http://localhost/~dholloran/compressorbot/development/site/";
+			$homePage = "http://localhost/~dholloran/compressorbot/development/site";
 		}else{
 			$root = '/home/dholloran/compressorbot/development/site';
 			$assets = "http://compressorbot.com/development/site/_assets";
-			$homePage = "http://compressorbot.com/development/site/";
+			$homePage = "http://compressorbot.com/development/site";
 		}
 
 		if(!file_exists($fileName)){

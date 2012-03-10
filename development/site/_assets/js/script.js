@@ -26,7 +26,7 @@ $(function(){
 		pass1 = $('.pass1'),
 		pass2 = $('.pass2'),
 		editModal = $('#edit_modal'),
-		root = 'http://compressorbot.com/development/site/',
+		root = 'http://compressorbot.com/development/site',
 		//root = 'http://localhost/~dholloran/compressorbot/development/site/',
 		login = $('#login_form'),
 		videoPlayer = $("#video_player"),
@@ -246,7 +246,7 @@ $(function(){
 			modalWrap = compressModal.parent()
 		;
 		// Send to compress.php
-		$.post(root+'/_assets/includes/helpers/compress.php',
+		$.post('../_assets/includes/helpers/compress.php',
 		that.serialize(),function(data){
 			// Set compressor modal wrapper width/height
 			modalWrap.css({
