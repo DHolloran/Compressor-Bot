@@ -1,3 +1,28 @@
+  .button(@fontSize){
+    background-color: @buttonBg;
+    font-size: @fontSize;
+    border: solid 2px @border;
+    text-decoration: none;
+    color: @textColor;
+    padding: 10px;
+    font-family: 'FranchiseRegular';
+    display: block;
+    font-weight: normal;
+  }
+  .listNav{
+    list-style-type: none;
+    margin: 0;
+    li{
+      float: left;
+    }
+  }
+  .hidden{
+    display: none;
+  }
+
+  .formBorder{
+    border: 1px solid @formFieldBorder;
+  }
     .border-radius( @radius: 3px ) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;

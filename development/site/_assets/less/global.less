@@ -1,0 +1,96 @@
+/* ============ Global ================= */
+  /* ==== Body ==== */
+    body{
+      margin: 0;
+      padding: 0;
+      font-family:'BitstreamVeraSerifRoman', Arial, sans-serif;
+      font-size: 12pt;
+    }
+  /* ==== Container ==== */
+    /* #container */
+    #container{
+      min-height: 100%;
+      padding: 0;
+      margin: 0 auto;
+    } /* END #container */
+
+    /* .wrapper */
+    .wrapper{
+      width: 960px;
+      margin: 0 auto;
+    } /* END .wrapper */
+
+  /* ==== Default Headers ==== */
+    /* Default Headers H1-H6 */
+    h1,h2,h3,h4,h5,h6{color: @heading;font-family: 'BitstreamVeraSansBold', Arial, sans-serif;}
+
+    /* Default Headers H1-H6 HGroup */
+    h1,h2,h3,h4,h5,h6,hgroup{margin:0;padding:0;}
+
+    /* Default Headers HGroup */
+    hgroup{
+      /* Default Headers HGroup H2 */
+      h2{ font-size: 16pt; }
+
+      /* Default Headers HGroup H3 */
+      h3{
+        color: @subHeading;
+        font-size: 10pt;
+        font-family:'BitstreamVeraSerifRoman', Arial, sans-serif;
+      } /* END Default Headers HGroup H3 */
+
+      /* Default Headers HGroup H3 .output */
+      h3.output{
+        font-size: 10pt;
+        color: @heading;
+        font-family:'BitstreamVeraSerifRoman', Arial, sans-serif;
+      } /* END Default Headers HGroup H3 */
+
+    } /* END Default Headers HGroup */
+
+  /* ==== Default Form Fields ==== */
+    /* Default Form Fields Placeholder*/
+    [placeholder]{color: #888888;}
+
+    /* Default Form Fields Input Email & Text */
+    input[type="email"],input[type="text"]{ background-color: #fafafa; }
+
+    /* Default Form Fields Textarea */
+    textarea{
+      resize: none;
+      overflow: scroll;
+      .formBorder;
+      background-color:
+      @textAreaBG;
+      color:@inputPlaceholder;
+    } /* END Default Form Fields Textarea */
+
+    /* Default Form Fields */
+    input[readonly]{ color: #666; background-color: #ccc; }
+
+  /* ==== Error Field ==== */
+    .error_field{
+      color: #ff0000;
+      font-size: 10px;
+      padding: 0;
+      margin: 0;
+      display: block;
+      font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
+      display: none;
+    } /* END Error Field */
+  /* ==== Links ==== */
+    a{
+      color: @link;
+
+      /* a:visited */
+      &:visited { color: @link; }
+
+      /* a:hover */
+      &:hover { color: @linkAction; }
+
+      /*a:active*/
+      &:active { color: @linkAction; }
+
+      /* a:focus */
+      &:focus { outline: thin dotted; }
+    } /* END Links */

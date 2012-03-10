@@ -1,0 +1,173 @@
+/* ============ Body =================== */
+  /* ==== Content === */
+    #content{
+      clear: both;
+      width: 100%;
+      overflow:auto;
+      padding-bottom: 50px;
+    }
+
+  /* ==== Home Page ==== */
+    .home{
+      background-image: url('../img/home/homebg_overflow.png');
+      background-repeat: repeat-x;
+      background-position: right top;
+    } /* End .home */
+
+    #home_wrapper{
+      background-image: url('../img/home/vide_bg.png');
+      background-repeat: no-repeat;
+      background-position: right top;
+      width: 960px;
+      /* ==== #intro ==== */
+
+      #intro{
+        width: 410px;
+        float: left;
+        padding: 75px 15px 0 15px;
+
+        h2{
+          /*Gradient #1b1b1b left -> #494949*/
+          color: #333;
+          font-size: 38pt;
+          font-family: 'FranchiseRegular';
+          font-weight: normal;
+          margin-bottom:0;
+        } /* End #intro h2 */
+
+        p{ margin: 0; }
+
+        a{ margin-top: 75px; .button(28pt); text-align: center; } /* End #intro a */
+      } /* End #intro */
+      /* ==== #showcase ==== */
+        #showcase{
+          margin: 0;
+          padding: 0 0 90px 0;
+          width: 550px;
+          float: left;
+
+          #video_player{
+            width: 480px; height: 315px; background: #333;
+            margin: 75px 0 0 0;
+            float: right;
+          } /* end #showcase video*/
+
+          ul{
+            list-style-type: none;
+            float: right;
+            margin-right: 10px;
+
+            li{
+              float: left;
+              &:nth-child(2){ margin: 0 17px; } /* end #showcase li:nth-child() */
+            }/* end #showcase li */
+          } /* end #showcase ul */
+        } /* end #showcase */
+    } /* End #home_wrapper */
+  /*==== Compress & Decompress==== */
+  #code_upload{display: none;}
+
+  #code_insert,#code_upload{
+    clear: both;
+
+    hgroup{ float: left; margin: 90px 0 10px 0; }
+
+    .tool_selection{
+
+      .listNav;
+        margin: 120px 265px 10px 0;
+        float: right;
+        font-size: 12pt;
+        li:nth-child(1){ padding-right: 8px; border-right: 2px solid #ccc; }
+        li:nth-child(2){ padding-left: 8px; }
+      }
+
+    form{
+
+      #text_input,#file_upload{
+        float: left;
+        width: 760px;
+        margin: 0;
+        padding:0;
+
+        button,input[type="submit"],textarea{ float: left; }
+
+        input[type="file"]{ float: left; margin: 15px 500px 0 0; }
+
+        button{
+          .button(18pt);
+          margin: 15px 500px 0 0;
+
+          img{ margin: 0 0 2px 35px; }
+        }
+
+        input[type="submit"]{
+          .button(36pt);
+          padding-right: 150px;
+          margin: 15px 0 40px 0;
+          background-image: url('../img/icons/big_right_arrow.png');
+          background-repeat: no-repeat;
+          background-position: 95% center;
+        }
+
+        textarea{ width: 700px; height: 350px; }
+
+        #table_wrapper{
+          float: left;
+          height: 300px;
+          background-color: #ccc;
+          border: 1px solid #ccc;
+          border-bottom: 5px solid #A8A8A8;
+          overflow: scroll;
+
+          table{
+            width: 700px;
+            background-color: #fff;
+            color: #555555;
+            font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
+            font-size: 13pt;
+
+              tr{
+                height: 40px;
+
+                td{
+                  &:nth-child(1){
+                    padding-left: 10px;
+                  }
+                  &:nth-child(1n+2){
+                    width: 60px;
+                    text-align: center;
+                  }
+                  vertical-align: middle;
+                }
+                &:nth-child(even){
+                  background-color: #efefef;
+                }
+              }
+          }
+        }
+      }
+
+      .languages_options{
+        width: 200px;
+        float: left;
+
+        .css_options,.js_options{display: none;}
+        h4{
+          color: #333333;
+          &:nth-child(1){
+            margin-top: 30px;
+          }
+          &:nth-child(1n+2){
+            margin-top: 60px;
+          }
+        }
+
+        label{
+          font-size: 13pt;
+          margin-left: 15px;
+          font-family: 'BitstreamVeraSansRoman', Arial, sans-serif;
+        }
+      }
+    }
+  }
