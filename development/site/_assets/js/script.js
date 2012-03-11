@@ -32,7 +32,9 @@ $(function(){
 		videoPlayer = $("#video_player"),
 		compressForm = $('#compress_insert'),
 		compressModal = $('#compress_modal'),
-		compressUpload = $('#compress_upload')
+		compressUpload = $('#compress_upload'),
+		decompressForm = $('#decompress_insert'),
+		decompressModal = $('#decompress_modal')
 	;
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
@@ -261,6 +263,36 @@ $(function(){
 			// Set textarea to returned value
 			compressModal.find('textarea').val($.parseJSON(data));
 			compressModal.parent().fadeIn(300);
+		});
+		e.preventDefault();
+	});
+// ==== Submit Decompress Ajax ====
+	decompressForm.on('submit', function(e){
+		var that = $(this),
+			modalWrap = decompressModal.parent()
+		;
+		// Send to decompress.php
+		$.post('../_assets/includes/helpers/decompress.php',
+		that.serialize(),function(data){
+			// Set decompressor modal wrapper width/height
+			modalWrap.css({
+				'height': $(document).outerHeight(),
+				'width': $(document).outerWidth()
+			});
+			// Set modal windows top/left location
+			modalWindow.css({
+				'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
+				'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
+			});
+			console.log(data);
+			// Set textarea to returned value
+			var response = $.parseJSON(data);
+			if(response.value){
+				decompressModal.find('textarea').val(response.value);
+			}else{
+				decompressModal.find('textarea').val(response);
+			}
+			decompressModal.parent().fadeIn(300);
 		});
 		e.preventDefault();
 	});

@@ -11,19 +11,22 @@
           <li>Insert</li>
           <li><a href="#code_upload" data-tool="code_insert" class="tool_switch">Upload</a></li>
         </ul>
-        <form action="#" method="post" name="decompress_insert">
+        <form action="#" method="post" name="decompress_insert" id="decompress_insert">
           <div id="text_input">
-            <textarea name="decompress_in" placeholder="Paste your code here."></textarea>
+            <textarea name="input" placeholder="Paste your code here."></textarea>
             <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
           </div><!-- END .text_input -->
         <!-- .languages_options -->
           <section class="languages_options">
             <h4>Languages</h4>
-            <input type="radio" name="language" id="in_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">
+
+            <input type="radio" name="tool" id="in_html" data-lang="html" class="language_choice html" value="decompress_html" checked="checked">
               <label for="in_html">HTML</label><br>
-            <input type="radio" name="language" id="in_css" data-lang="css" class="language_choice css" value="css_options">
+
+            <input type="radio" name="tool" id="in_css" data-lang="css" class="language_choice css" value="decompress_css">
               <label for="in_css">CSS</label><br>
-            <input type="radio" name="language" id="in_js" data-lang="js" class="language_choice js" value="js_options">
+
+            <input type="radio" name="tool" id="in_js" data-lang="js" class="language_choice js" value="decompress_js">
               <label for="in_js">Javascript</label>
             <h4>Options</h4>
           <!-- HTML Options -->

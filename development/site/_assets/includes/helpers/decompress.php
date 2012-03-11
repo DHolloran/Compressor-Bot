@@ -27,24 +27,49 @@
 		}
 	// ==== decompressCSS() ====
 		function decompressCSS($in){
-			// Add line break after ;
-			$out = str_replace(";",";\r\n\t",$in);
-			// Add Space After ;
-			$out = str_replace(";",";\r\n ",$in);
-			// Add line break after { With Tab
-			$out = str_replace("{","{\r\n\t",$out);
-			// Add line break after { With Space
-			$out = str_replace("{","{\r\n ",$out);
-			// Add line break after }
-			$out = str_replace("}","}\r\n",$out);
-			// Fix Tab Before }
-			$out = str_replace("\t}", "}", $out);
-			echo json_encode($out);
+			include('csstidy/class.csstidy.php');
+
+			$css = new csstidy();
+
+			$css->set_cfg('remove_last_;',TRUE);
+
+			$css->parse($in);
+
+			$in = $css->print->formatted();
+			// // Add line break after ;
+			// $in = str_replace(";",";\r\n\t",$in);
+			// // Add Space After ;
+			// $in = str_replace(";",";\r\n ",$in);
+			// // Add line break after { With Tab
+			// $in = str_replace("{","{\r\n\t",$in);
+			// // Add line break after { With Space
+			// $in = str_replace("{","{\r\n ",$in);
+			// // Add line break after }
+			// $in = str_replace("}","}\r\n",$in);
+			// // Fix Tab Before }
+			// $in = str_replace("\t}", "}", $in);
+			echo json_encode($in);
 		}
 	// ==== decompressHTML() ====
 		function decompressHTML($in){
-			$out;
-			echo json_encode($out);
+			ob_start();
+
+			echo $in;
+
+			$html = ob_get_clean();
+
+			// Specify configuration
+			$config = array(
+			           'indent'         => true,
+			           'output-html'   => true,
+			           'wrap'           => 200);
+
+			// Tidy
+			$tidy = new tidy;
+			$tidy->parseString($html, $config, 'utf8');
+			$tidy->cleanRepair();
+			// Output
+			echo json_encode($tidy);
 		}
 
 

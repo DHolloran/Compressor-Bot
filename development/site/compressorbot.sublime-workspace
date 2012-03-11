@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"decompress",
+				"decompressForm"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"str_rep",
+				"str_replace  (function)"
+			],
+			[
+				"code",
+				"codeIn"
+			],
+			[
 				"butto",
 				"button"
 			],
@@ -168,10 +184,6 @@
 				"modal_close"
 			],
 			[
-				"decompress",
-				"decompress_btn"
-			],
-			[
 				"language",
 				"languageOptions"
 			],
@@ -308,10 +320,6 @@
 				"meta"
 			],
 			[
-				"html",
-				"html	html"
-			],
-			[
 				"em",
 				"email"
 			],
@@ -344,34 +352,34 @@
 	"buffers":
 	[
 		{
-			"file": "_assets/less/body.less",
+			"file": "sample_code/examplehtml.html",
 			"settings":
 			{
-				"buffer_size": 4267,
+				"buffer_size": 248,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_assets/less/header.less",
+			"file": "_assets/includes/helpers/decompress.php",
 			"settings":
 			{
-				"buffer_size": 2038,
+				"buffer_size": 1747,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_assets/less/classes.less",
+			"file": "_assets/js/script.js",
 			"settings":
 			{
-				"buffer_size": 3000,
+				"buffer_size": 10461,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_assets/less/style.less",
+			"file": "sample_code/samplecss.css",
 			"settings":
 			{
-				"buffer_size": 4173,
+				"buffer_size": 1005,
 				"line_ending": "Unix"
 			}
 		}
@@ -480,10 +488,29 @@
 	},
 	"file_history":
 	[
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplecss.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/compress.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplejs.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadCSS.php",
+		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadJS.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/classes.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/header.less",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/body.less",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/global.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/modals.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style2.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5video.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5vide.less",
@@ -491,30 +518,21 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/helpers.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/media.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/footer.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/header.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/body.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/classes.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/reset.less",
 		"/Users/dholloran/Desktop/examplehtml.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
 		"/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/upload_files.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox3.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/compress/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.html",
 		"/Users/dholloran/Desktop/samplecss.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/compress_modal.inc.php",
 		"/Users/dholloran/Desktop/samplejs.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/compress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/ompress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Compress.php",
@@ -526,14 +544,11 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixer.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/register_modal.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/login_form.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/AuthModel.php",
 		"/Users/dholloran/Desktop/test.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox2.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.html",
@@ -559,7 +574,6 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/codecanyon-122055-jquery-html5-video-player/h5video.js",
 		"/Users/dholloran/Desktop/jquery-html5-video-player/h5video.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/codecanyon-122055-jquery-html5-video-player/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5video.css",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
@@ -601,13 +615,7 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/decompress.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/compress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/home_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/templates/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/compress/index.html"
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/footer.inc.php"
 	],
 	"find":
 	{
@@ -625,6 +633,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"require",
+			"$css_code",
+			"$.parseJSON(data)",
+			"out",
+			"name=\"",
+			"name=\"tool",
+			"tool",
+			"compress",
+			"<>",
+			"-->",
+			"<!--",
+			"code",
+			"your code here.\">",
+			"d.cre",
+			"d.create",
+			"validate",
+			"buffer",
+			"//",
+			"out",
+			"h5video",
+			"			// Add Space After ;\n",
+			"			// ",
+			"str_replace",
+			"out",
+			"$content",
 			"====",
 			"a:",
 			"A",
@@ -727,32 +760,7 @@
 			"function",
 			"var",
 			"output",
-			"#error",
-			"ogg",
-			"mp4",
-			".mp4",
-			"#video",
-			"poster.png",
-			"jQuery",
-			"controls",
-			".bind",
-			".h5",
-			"video",
-			"console",
-			"modalLink",
-			"modal.find('.output')",
-			"Modal.find('.output')",
-			"modal.find('.output')",
-			"Modal.find('.output')",
-			"modal.find('.output')",
-			"Modal.find('.output')",
-			"modal.find('.output')",
-			"http://compressorbot.com/development/site",
-			"console.log",
-			"editModal",
-			"hgroup",
-			"hgroup h3",
-			"hgroup"
+			"#error"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -773,79 +781,15 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_assets/less/body.less",
+					"file": "sample_code/examplehtml.html",
 					"settings":
 					{
-						"buffer_size": 4267,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2582,
-								2589
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2827.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/less/header.less",
-					"settings":
-					{
-						"buffer_size": 2038,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								892,
-								892
-							],
-							[
-								979,
-								979
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 37.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_assets/less/classes.less",
-					"settings":
-					{
-						"buffer_size": 3000,
+						"buffer_size": 248,
 						"regions":
 						{
 						},
@@ -853,49 +797,105 @@
 						[
 							[
 								0,
-								0
+								248
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "_assets/less/style.less",
+					"buffer": 1,
+					"file": "_assets/includes/helpers/decompress.php",
 					"settings":
 					{
-						"buffer_size": 4173,
+						"buffer_size": 1747,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3822,
-								3822
+								670,
+								670
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1409.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_assets/js/script.js",
+					"settings":
+					{
+						"buffer_size": 10461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8720,
+								8720
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3117.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sample_code/samplecss.css",
+					"settings":
+					{
+						"buffer_size": 1005,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1005
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 6,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1311.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -949,16 +949,72 @@
 		"selected_items":
 		[
 			[
+				"sampo",
+				"sample_code/samplecss.css"
+			],
+			[
+				"sampl",
+				"sample_code/samplecss.css"
+			],
+			[
+				"compress.p",
+				"_assets/includes/helpers/compress.php"
+			],
+			[
+				"compress",
+				"_assets/includes/controller/views/body/compress_page.inc.php"
+			],
+			[
+				"comp",
+				"_assets/includes/controller/views/body/compress_page.inc.php"
+			],
+			[
+				"dec",
+				"_assets/includes/controller/views/body/decompress_page.inc.php"
+			],
+			[
+				"scrip",
+				"_assets/js/script.js"
+			],
+			[
+				"deco",
+				"_assets/includes/helpers/decompress.php"
+			],
+			[
+				"sandbox",
+				"sandbox/sandbox2.php"
+			],
+			[
+				"style",
+				"_assets/less/style.less"
+			],
+			[
+				"logi",
+				"_assets/includes/helpers/login.php"
+			],
+			[
+				"home",
+				"_assets/includes/controller/views/body/home_page.inc.php"
+			],
+			[
+				"compress.php",
+				"_assets/includes/helpers/compress.php"
+			],
+			[
+				"decomp",
+				"_assets/includes/helpers/decompress.php"
+			],
+			[
+				"sa",
+				"sandbox/sandbox.html"
+			],
+			[
 				"cla",
 				"_assets/less/classes.less"
 			],
 			[
 				"pa",
 				"_assets/includes/controller/PageView.php"
-			],
-			[
-				"comp",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
 			],
 			[
 				"",
@@ -975,14 +1031,6 @@
 			[
 				"sand",
 				"sandbox/sandbox3.php"
-			],
-			[
-				"style",
-				"_assets/less/style.less"
-			],
-			[
-				"compress",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
 			],
 			[
 				"decom",
@@ -1009,15 +1057,7 @@
 				"_assets/includes/controller/views/partials/header.inc.php"
 			],
 			[
-				"dec",
-				"_assets/includes/controller/views/body/decompress_page.inc.php"
-			],
-			[
 				"script",
-				"_assets/js/script.js"
-			],
-			[
-				"scrip",
 				"_assets/js/script.js"
 			],
 			[
@@ -1035,10 +1075,6 @@
 			[
 				"regis",
 				"_assets/includes/controller/views/modals/register_modal.inc.php"
-			],
-			[
-				"home",
-				"_assets/includes/controller/views/body/home_page.inc.php"
 			],
 			[
 				"reg",
@@ -1077,10 +1113,6 @@
 				"_assets/includes/controller/EditProfile.php"
 			],
 			[
-				"logi",
-				"_assets/includes/helpers/login.php"
-			],
-			[
 				"scr",
 				"_assets/js/script.js"
 			],
@@ -1091,10 +1123,6 @@
 			[
 				"compress_p",
 				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"deco",
-				"_assets/includes/controller/views/body/decompress_page.inc.php"
 			],
 			[
 				"s",
@@ -1195,10 +1223,6 @@
 			[
 				"regist",
 				"_assets/includes/controller/views/modals/register_modal.inc.php"
-			],
-			[
-				"decomp",
-				"_assets/includes/controller/views/body/decompress_page.inc.php"
 			],
 			[
 				"compress_pa",
