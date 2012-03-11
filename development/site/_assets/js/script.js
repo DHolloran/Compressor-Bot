@@ -26,8 +26,6 @@ $(function(){
 		pass1 = $('.pass1'),
 		pass2 = $('.pass2'),
 		editModal = $('#edit_modal'),
-		//root = 'http://compressorbot.com/development/site',
-		root = 'http://localhost/~dholloran/compressorbot/development/site/',
 		login = $('#login_form'),
 		videoPlayer = $("#video_player"),
 		compressForm = $('#compress_insert'),
@@ -36,6 +34,14 @@ $(function(){
 		decompressForm = $('#decompress_insert'),
 		decompressModal = $('#decompress_modal')
 	;
+// ==== Set ROOT to Development/Live ===
+var root = "";
+if(document.location.hostname === "localhost"){
+	root = 'http://localhost/~dholloran/compressorbot/development/site/';
+}else{
+	root = 'http://compressorbot.com/development/site';
+}
+
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
 		var msg,
