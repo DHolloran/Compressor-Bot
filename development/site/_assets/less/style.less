@@ -22,9 +22,7 @@
   @border: #333;
   @formFieldBorder: rgba(102,102,102,.5);
   @inputPlaceholder: #888888;
-/* ============ @import ================ */
-  @import url(classes.less);
-  @import url(h5video.less);
+
 /* ============ @font-face ============= */
   /* Franchise Bold (buttons/logos) font-family: 'FranchiseRegular'; */
     @font-face {
@@ -70,15 +68,43 @@
     font-weight: normal;
     font-style: normal;
   }
-/* ==== Imports ==== */
-@import url(classes.less);
-@import url(reset.less);
-@import url(global.less);
-@import url(modals.less);
-@import url(header.less);
-@import url(body.less);
-@import url(footer.less);
-@import url(media.less);
-@import url(helpers.less);
-@import url(print.less);
-@import url(h5video.less);
+/* ============= Mixins ================ */
+  .button(@fontSize){
+  background-color: @buttonBg;
+  font-size: @fontSize;
+  border: solid 2px @border;
+  text-decoration: none;
+  color: @textColor;
+  padding: 10px;
+  font-family: 'FranchiseRegular';
+  display: block;
+  font-weight: normal;
+  }
+
+  .listNav{
+  list-style-type: none;
+  margin: 0;
+      li{
+        float: left;
+      }
+  }
+
+  .hidden{
+  display: none;
+  }
+
+  .formBorder{
+  border: 1px solid @formFieldBorder;
+  }
+/* ============ Imports ================ */
+  @import url(classes.less);
+  @import url(reset.less);
+  @import url(global.less);
+  @import url(modals.less);
+  @import url(header.less);
+  @import url(body.less);
+  @import url(footer.less);
+  @import url(media.less);
+  @import url(helpers.less);
+  @import url(print.less);
+  @import url(h5video.less);

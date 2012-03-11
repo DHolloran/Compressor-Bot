@@ -21,73 +21,58 @@
 // ==== Compress ====
 	// ==== compressJS() ====
 		function compressJS($in){
-			// Remove White Space
-			$out = removeWhiteSpace($in);
-			// Remove Comments
-			$out = removeComments($out);
-			// Put spaces After Vars
-			$out = str_replace('var', 'var ', $out);
-			// Put Spaces After Functions
-			$out = str_replace('function', 'function ', $out);
-			// Except For Anonymous Functions
-			$out = str_replace('function (', 'function(', $out);
-			echo json_encode($out);
+			/* REMOVE TABS, SPACES, COMMENTS & LINE BREAKS */
+			$in = preg_replace('{\t}', '', $in);
+			$in = str_replace(array('  ', '    ', '    '), '', $in);
+			$in = preg_replace('{(^[\/]{2}[^\n]*)|([\n|\s]{1}[\/]{2}[^\n]*)}', '', $in);
+			$in = preg_replace('{(^[\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})|([\n|\r][\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})}', '', $in);
+			$in = preg_replace('{(?<=\s)\/\/.+}', '', $in);
+
+			$in = preg_replace('{\n}', ' ', $in);
+			$in = preg_replace('{\r}', '', $in);
+
+			/* REMOVE UNNECESSARY SPACES */
+			$in = str_replace('{ ', '{', $in);
+			$in = str_replace(' }', '}', $in);
+			$in = str_replace('; ', ';', $in);
+			$in = str_replace(', ', ',', $in);
+			$in = str_replace(' {', '{', $in);
+			$in = str_replace('} ', '}', $in);
+			$in = str_replace(': ', ':', $in);
+			$in = str_replace(' ,', ',', $in);
+			$in = str_replace(' ;', ';', $in);
+			$in = str_replace(' (', '(', $in);
+			$in = str_replace('( ', '(', $in);
+			$in = str_replace(' )', ')', $in);
+			$in = str_replace(') ', ')', $in);
+			$in = str_replace(' = ','=',$in);
+			echo json_encode($in);
 		}
 	// ==== compressCSS() ====
 		function compressCSS($in){
-			$out = removeWhiteSpace($in);
-			$out = removeComments($out);
-			echo json_encode($out);
-		}
+			/* REMOVE COMMENTS */
+			$in = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $in);
+			/* REMOVE TABS, SPACES, NEW LINES, ETC */
+			$in = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $in);
+			/* REMOVE UNNECESSARY SPACES */
+			$in = str_replace('{ ', '{', $in);
+			$in = str_replace(' }', '}', $in);
+			$in = str_replace('; ', ';', $in);
+			$in = str_replace(', ', ',', $in);
+			$in = str_replace(' {', '{', $in);
+			$in = str_replace('} ', '}', $in);
+			$in = str_replace(': ', ':', $in);
+			$in = str_replace(' ,', ',', $in);
+			$in = str_replace(' ;', ';', $in);
+			echo json_encode($in);
+		} // compressCSS()
 	// ==== compressHTML() ====
 		function compressHTML($in){
-			$out = removeWhiteSpace($in);
-			$out = removeComments($out);
-			echo json_encode($out);
-		}
-	// ==== removeWhiteSpace() ====
-		function removeWhiteSpace($in){
-			// Remove Spaces
-			$out = str_replace(array("\t", " "), "", $in );
-			return $out;
-		}
-	// ==== removeComments() ====
-		function removeComments($in){
-			// HTML Comments
-			$out = preg_replace('/<!(.*?)(--.*?--\s*)+(.*?)>/', '', $in);
-			// CSS & JS Comments
-		    $out = preg_replace('/#.*/','',preg_replace('#//.*#','',preg_replace('#/\*(?:[^*]*(?:\*(?!/))*)*\*/#','',($out))));
-		    return $out;
-		}
-// ==== Decompress ====
-	// ==== decompressJS() ====
-	function decompressJS($in){
-		// Add line break after ;
-			$out = "In Progress";
-		echo json_encode($out);
-	}
-	// ==== decompressCSS() ====
-		function decompressCSS($in){
-			// Add line break after ;
-			$out = str_replace(";",";\r\n\t",$in);
-			// Add Space After ;
-			$out = str_replace(";",";\r\n ",$in);
-			// Add line break after { With Tab
-			$out = str_replace("{","{\r\n\t",$out);
-			// Add line break after { With Space
-			$out = str_replace("{","{\r\n ",$out);
-			// Add line break after }
-			$out = str_replace("}","}\r\n",$out);
-			// Fix Tab Before }
-			$out = str_replace("\t}", "}", $out);
-			echo json_encode($out);
-		}
-	// ==== decompressHTML() ====
-		function decompressHTML($in){
-			$out;
-			echo json_encode($out);
-		}
-
-
-
-
+			$in = preg_replace('{\t}', '', $in);
+			$in = str_replace(array('  ', '    ', '    '), '', $in);
+			$in = preg_replace('{\n}', ' ', $in);
+				$in = preg_replace('{\r}', '', $in);
+			// Remove Comments
+			$in = preg_replace('/<!(.*?)(--.*?--\s*)+(.*?)>/', '', $in);
+			echo json_encode($in);
+		} // compressHTML()
