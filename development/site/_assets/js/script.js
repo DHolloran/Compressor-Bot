@@ -245,7 +245,6 @@ if(document.location.hostname === "localhost"){
 		$.getJSON('sandbox2.php',function(data){
 			var response = $.parseJSON(data.messages)
 			;
-			console.log(response);
 		});
 	}
 // ==== Submit Compress AJAX ====
@@ -290,8 +289,7 @@ if(document.location.hostname === "localhost"){
 				'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
 				'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
 			});
-			console.log(data);
-			// Set textarea to returned value
+			//Set textarea to returned value
 			var response = $.parseJSON(data);
 			if(response.value){
 				decompressModal.find('textarea').val(response.value);

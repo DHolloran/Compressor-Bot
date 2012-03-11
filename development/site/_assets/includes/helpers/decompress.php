@@ -69,7 +69,8 @@
 			$tidy->parseString($html, $config, 'utf8');
 			$tidy->cleanRepair();
 			// Output
-			echo json_encode($tidy);
+			//echo json_encode($tidy);
+			echo $tidy;
 		}
 
 
