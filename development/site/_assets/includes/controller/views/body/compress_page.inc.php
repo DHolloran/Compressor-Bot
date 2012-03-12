@@ -18,6 +18,9 @@
         </div><!-- END .text_input -->
       <!-- .languages_options -->
         <section class="languages_options">
+        <!-- Uses Left -->
+        <span class="uses_left"></span>
+        <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
 
           <h4>Languages</h4>
 
@@ -50,20 +53,12 @@
           <!-- CSS Prefixer -->
             <input type="checkbox" class="css_prefixer" name="css_prefixer" id="in_css_prefixer" value="true">
               <label for="in_css_prefixer">Vendor Prefixes</label><br>
-
-          <!-- CSS Concat -->
-             <input type="checkbox" class="css_concat" name="css_concat" id="in_css_concat" value="true">
-              <label for="in_css_concat">Concatenate</label><br>
           </div><!-- END #css_options -->
         <!-- JS Options -->
           <div class="js_options">
           <!-- JSLint -->
             <input type="checkbox" class="js_lint" name="js_lint" id="in_js_lint" value="true">
               <label for="in_js_lint">JSLint</label><br>
-
-          <!-- Concat -->
-            <input type="checkbox" class="js_concat" name="js_concat" id="in_js_concat" value="true">
-              <label for="in_js_concat">Concatenate</label><br>
           </div><!-- END #js_options -->
         </section><!-- END #language_options -->
       </form>
@@ -92,6 +87,9 @@ enctype="multipart/form-data">
         <input type="submit" class="tool_btn" value="Compress">
       </div> <!-- END #file_upload -->
       <section class="languages_options">
+      <!-- Uses Left -->
+        <span class="uses_left"></span>
+        <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
       <!-- Languages -->
         <h4>Languages</h4>
           <input type="radio" name="language" id="out_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">

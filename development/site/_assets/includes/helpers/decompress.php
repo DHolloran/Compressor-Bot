@@ -6,6 +6,7 @@
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
+	$accessAllowed = true;
 // ==== INIT ====
 	switch ($action) {
 		case 'decompress_html':
@@ -25,11 +26,14 @@
 	// ==== decompressJS() ====
 		function decompressJS($in){
 			// Add line break after ;
-				$out = "In Progress";
-
+			$out = "In Progress";
 			// Output
-			addOneBasic();
-			echo json_encode($out);
+			/* Check if access is allowed */
+			if(addOneBasic()){
+				echo json_encode($out);
+			}else{
+				echo json_encode('access denied');
+			}
 		}
 	// ==== decompressCSS() ====
 		function decompressCSS($in){
@@ -44,8 +48,12 @@
 			$css->set_cfg('compress_colors', TRUE);
 			$css->parse($in);
 			// Output
-			addOneBasic();
-			echo json_encode(strip_tags($css->print->formatted()));
+			/* Check if access is allowed */
+			if(addOneBasic()){
+				echo json_encode(strip_tags($css->print->formatted()));
+			}else{
+				echo json_encode('access denied');
+			}
 		}
 	// ==== decompressHTML() ====
 		function decompressHTML($in){
@@ -67,8 +75,12 @@
 			$tidy->cleanRepair();
 
 			// Output
-			addOneBasic();
-			echo json_encode($tidy);
+			/* Check if access is allowed */
+			if(addOneBasic()){
+				echo json_encode($tidy);
+			}else{
+				echo json_encode('access denied');
+			}
 		}
 // ==== Add 1 to Users Limit if Basic ====
 	function addOneBasic(){
@@ -80,8 +92,13 @@
 			if($plan['tool_uses']<10){
 				$uses = $plan['tool_uses'] + 1;
 				$_SESSION['user_info']['tool_uses'] = $uses;
-				$model->updatePlan($user_name,$uses)){
+				$model->updatePlan($user_name,$uses);
+				return true;
+			}else{
+				return false;
 			}
+		}else{
+			return true;
 		}
 	}
 

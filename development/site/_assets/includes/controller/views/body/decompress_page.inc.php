@@ -18,6 +18,8 @@
           </div><!-- END .text_input -->
         <!-- .languages_options -->
           <section class="languages_options">
+            <span class="uses_left"></span>
+            <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
             <h4>Languages</h4>
 
             <input type="radio" name="tool" id="in_html" data-lang="html" class="language_choice html" value="decompress_html" checked="checked">
@@ -81,10 +83,6 @@
           <div id="table_wrapper">
             <table>
                 <tbody>
-                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
-                  <tr><td>URL</td><td>SIZE</td><td>TYPE</td></tr>
                 </tbody>
               </table>
           </div><!-- #table_wrapper -->
@@ -92,6 +90,8 @@
           <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
         </div> <!-- END #file_upload -->
         <section class="languages_options">
+          <span class="uses_left"></span>
+            <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
         <!-- Languages -->
           <h4>Languages</h4>
             <input type="radio" name="language" id="out_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">

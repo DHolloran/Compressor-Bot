@@ -50,14 +50,18 @@
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="V9GVS7ACWNXN2">
 				<table>
-				<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+				<tr><td><input type="hidden" name="on0" value=""></td></tr>
+				<tr><td><h4 class="uses_left"></h4></td></tr>
+				<tr><td id="current_plan">Current plan: <?php echo $_SESSION['user_info']['user_plan']; ?></td></tr>
+				<tr>
+					<td><select name="os0">
 					<option value="Monthly">Monthly : $1.99USD - monthly</option>
 					<option value="Yearly">Yearly : $19.99USD - yearly</option>
 					<option value="Basic">Basic : $0.00USD - yearly</option>
 				</select> </td></tr>
 				</table>
 				<input type="hidden" name="currency_code" value="USD">
-				<input type="image" src="<?php echo "{$rootDir}/_assets/img/buttons/edit_btn.png"; ?>" border="0" name="submit" alt="EDIT">
+				<input type="submit" border="0" name="submit" value="EDIT" alt="EDIT">
 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 			</section><!-- / -->
 			</form>

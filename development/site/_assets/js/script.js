@@ -35,13 +35,38 @@ $(function(){
 		decompressModal = $('#decompress_modal'),
 		root,
 		registerModal = $('#register_modal'),
-		registerForm = registerModal.find('form')
+		registerForm = registerModal.find('form'),
+		usesLeft = $('.uses_left'),
+		signupLink = $('.signup_link')
 	;
 // ==== Set ROOT to Development/Live ===
 	if(document.location.hostname === "localhost"){
 		root = 'http://localhost/~dholloran/compressorbot/development/site/';
 	}else{
 		root = 'http://compressorbot.com/development/site';
+	}
+// ==== Set Uses Left ====
+	function setUsesLeft(){
+			$.getJSON(root+'_assets/includes/helpers/uses_left.php',function(data){
+				//var response = $.parseJSON(data);
+				usesLeft.empty();
+				console.log(data);
+				if(data === 'Unlimited'){
+					usesLeft.hide();
+					signupLink.hide();
+				}else{
+					usesLeft.show();
+					signupLink.show();
+					if(data < 10){
+						usesLeft.append('Uses left '+ data + '/10');
+					}else{
+						usesLeft.append('No uses left');
+					}
+				}
+			});
+	}
+	if(usesLeft.length !== 0){
+		setUsesLeft();
 	}
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
@@ -101,6 +126,10 @@ $(function(){
 			modalWrapper.find('.success').empty();
 			// Set Succes Output
 			modalWrapper.find('.output').empty();
+			// Reset Uses Left (if it exists)
+			if(usesLeft.length !== 0){
+				setUsesLeft();
+			}
 			e.preventDefault();
 			return false;
 		});
@@ -210,6 +239,7 @@ $(function(){
 			}else if(response === 'monthly' || response === 'yearly'){
 				window.location = 'https://www.paypal.com/cgi-bin/webscr?'+post;
 			}
+			setUsesLeft();
 		});
 		e.preventDefault();
 	});
@@ -277,14 +307,6 @@ $(function(){
 			var response = $.parseJSON(data.messages);
 		});
 	}
-// ==== Prefix With CSS-Crush ====
-	function prefixCSS(that){
-		$.post('../_assets/includes/helpers/prefixer.php',
-			that.serialize(),
-			function(data){
-				console.log(data);
-			});
-	}
 // ==== Submit Compress AJAX ====
 	compressForm.on('submit', function(e){
 		var that = $(this),
@@ -307,19 +329,24 @@ $(function(){
 
 		// Send to compress.php
 		$.post('../_assets/includes/helpers/compress.php',that.serialize(),function(data){
-			// Set compressor modal wrapper width/height
-			modalWrap.css({
-			'height': $(document).outerHeight(),
-			'width': $(document).outerWidth()
-			});
-			// Set modal windows top/left location
-			modalWindow.css({
-			'top': (modalWrap.outerHeight()/2) - (compressModal.outerHeight()/2),
-			'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
-			});
-			// Set textarea to returned value
-			compressModal.find('textarea').val($.parseJSON(data));
-			compressModal.parent().fadeIn(300);
+			var response = $.parseJSON(data);
+			if(response !== 'access denied'){
+				// Set compressor modal wrapper width/height
+				modalWrap.css({
+				'height': $(document).outerHeight(),
+				'width': $(document).outerWidth()
+				});
+				// Set modal windows top/left location
+				modalWindow.css({
+				'top': (modalWrap.outerHeight()/2) - (compressModal.outerHeight()/2),
+				'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
+				});
+				// Set textarea to returned value
+				compressModal.find('textarea').val(response);
+				compressModal.parent().fadeIn(300);
+			}else{
+				usesLeft.empty().append('No uses left!');
+			}
 
 		});
 		e.preventDefault();
@@ -335,25 +362,31 @@ $(function(){
 		// Preifxer (CSS)
 		// Send to decompress.php
 		$.post('../_assets/includes/helpers/decompress.php', that.serialize(), function(data){
-			// Set decompressor modal wrapper width/height
-			modalWrap.css({
-				'height': $(document).outerHeight(),
-				'width': $(document).outerWidth()
-			});
-
-			// Set modal windows top/left location
-			modalWindow.css({
-				'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
-				'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
-			});
-			// Set textarea to returned value
 			var response = $.parseJSON(data);
-			if(response.value){
-			decompressModal.find('textarea').val(response.value);
+			console.log(data);
+			if( response !== 'access denied'){
+				// Set decompressor modal wrapper width/height
+				modalWrap.css({
+					'height': $(document).outerHeight(),
+					'width': $(document).outerWidth()
+				});
+
+				// Set modal windows top/left location
+				modalWindow.css({
+					'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
+					'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
+				});
+				// Set textarea to returned value
+				if(response.value){
+				decompressModal.find('textarea').val(response.value);
+				}else{
+				decompressModal.find('textarea').val(response);
+				}
+				decompressModal.parent().fadeIn(300);
 			}else{
-			decompressModal.find('textarea').val(response);
+				usesLeft.empty().append('No uses left!');
+				console.log('no uses left');
 			}
-			decompressModal.parent().fadeIn(300);
 		});
 		e.preventDefault();
 	});
