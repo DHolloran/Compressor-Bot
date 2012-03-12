@@ -33,7 +33,9 @@ $(function(){
 		compressUpload = $('#compress_upload'),
 		decompressForm = $('#decompress_insert'),
 		decompressModal = $('#decompress_modal'),
-		root
+		root,
+		registerModal = $('#register_modal'),
+		registerForm = registerModal.find('form')
 	;
 // ==== Set ROOT to Development/Live ===
 	if(document.location.hostname === "localhost"){
@@ -41,7 +43,6 @@ $(function(){
 	}else{
 		root = 'http://compressorbot.com/development/site';
 	}
-
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
 		var msg,
@@ -200,10 +201,37 @@ $(function(){
 			height = editModal.outerHeight()
 		;
 		$.post(root+'/_assets/includes/controller/EditProfile.php',that.serialize(),function(data){
-			modalOutput(height,data,editModal);
+			var post = that.serialize(),
+				response = $.parseJSON(data)
+			;
+			console.log(data);
+			if(response === 'basic'){
+				modalOutput(height,data,editModal);
+			}else if(response === 'monthly' || response === 'yearly'){
+				window.location = 'https://www.paypal.com/cgi-bin/webscr?'+post;
+			}
 		});
 		e.preventDefault();
 	});
+// ==== Submit Register Modal AJAX ====
+	registerForm.on('submit', function(e){
+		var that = $(this);
+		$.post(root+'/_assets/includes/controller/Register.php',
+			that.serialize(),
+			function(data){
+				var post = that.serialize(),
+					response = $.parseJSON(data)
+				;
+				if(response === 'basic'){
+					window.location = root;
+				}else if(response === 'paypal'){
+					window.location = 'https://www.paypal.com/cgi-bin/webscr?'+post;
+					/*https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V9GVS7ACWNXN2&on0=&os0=Yearly&currency_code=USD*/
+				}
+			});
+		e.preventDefault();
+	});
+// ==== Submit Paypal AJAX ====
 // ==== Login AJAX ====
 	login.on('submit', function(e){
 		var that = $(this),
@@ -318,7 +346,6 @@ $(function(){
 				'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
 				'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
 			});
-
 			// Set textarea to returned value
 			var response = $.parseJSON(data);
 			if(response.value){

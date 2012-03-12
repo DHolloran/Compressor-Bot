@@ -7,11 +7,13 @@ class ProfileModel
 {
 // Vars
 public $pdo;
+public $planChanged;
 // ==== Constructor() ====
 	public function __construct()
 	{
 		require_once "../helpers/functions.php";
 		$this->pdo = connectDB();
+		$this->planChanged = false;
 	} // __construct()
 // ==== Create User usernameExists()====
 	// Check if username already exists
@@ -121,6 +123,8 @@ public $pdo;
 				// Check if plan has changed
 				$existing = $this->getUserExisting($uname);
 				if($existing['user_plan'] != $plan){
+					// Set plan to changed
+					$this->planChanged = true;
 					// Add To Query
 					$query .= "`user_plan` = :plan, `plan_renew` = :renew,";
 					// Add To Query Array
@@ -151,4 +155,22 @@ public $pdo;
 		}
 
 	} // updateInfo()
+
+// ==== Update Plan ====
+	public function updatePlan($uname,$uses){
+		// Prepare Statement
+		$stmt = $this->pdo->prepare("
+		UPDATE users
+		SET `tool_uses`=:uses
+		WHERE `user_name`=:uname
+		");
+
+		// Execute Statement
+		if($stmt->execute(array(':uname'=>$uname, ':uses'=>$uses))){
+			return true;
+		}else{
+			return false;
+		}
+
+	}
 } // class

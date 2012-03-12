@@ -352,18 +352,18 @@
 	"buffers":
 	[
 		{
-			"file": "_assets/js/script.js",
+			"file": "sandbox/sandbox2.php",
 			"settings":
 			{
-				"buffer_size": 10663,
+				"buffer_size": 753,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_assets/includes/helpers/Prefixer.php",
+			"file": "files/file_handler.php",
 			"settings":
 			{
-				"buffer_size": 1844,
+				"buffer_size": 524,
 				"line_ending": "Unix"
 			}
 		}
@@ -472,20 +472,32 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefix_properties",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/output_script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/output_script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplecss.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/decompress/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/decompress/index.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/compress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefixer.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplecss.css",
+		"/Users/dholloran/Downloads/peteboere-css-crush-d729cf8/lib/Rule.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixr.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixer.php",
+		"/Users/dholloran/Downloads/peteboere-css-crush-d729cf8/CssCrush.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefix_properties",
+		"/Users/dholloran/Downloads/LeaVerou-prefixfree-7031ff1/prefixfree.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
 		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplejs.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
 		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadCSS.php",
@@ -524,9 +536,7 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/upload.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/download_files.php",
 		"/Users/dholloran/Downloads/application/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixer.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/register_modal.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
@@ -589,17 +599,7 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/templates/header.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/modals 2.html",
 		"/Users/dholloran/Desktop/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/modals.html",
-		"/Users/dholloran/Sites/danholloran.com/includes/views/header.inc.php",
-		"/Users/dholloran/Sites/danholloran.com/includes/PageView.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/test.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/templates/header.inc.php",
-		"/Users/dholloran/Sites/danholloran.com/includes/views/intro.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PagView.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/pageView.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/decompress.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/compress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/home_page.inc.php"
+		"/Users/dholloran/Sites/compressorbot/development/site/modals.html"
 	],
 	"find":
 	{
@@ -617,6 +617,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"output_",
+			"decompressOutWrite",
+			"files/decompress/",
+			"$f ",
+			"file",
+			"name=\"js_concat\"",
+			"name=\"js_lint\"",
+			"name=\"css_concat\"",
+			"name=\"css_prefixer\"",
+			"name=\"css_validate\"",
+			"name=\"css_lint\"",
+			"name=\"html_validate\"",
+			"_html_validate",
+			"css_prefixer",
+			"out_css_pref",
+			"compiled_file",
+			"'",
+			"value",
+			"$fp",
 			"CSSLint",
 			"CSS",
 			"console.log",
@@ -725,26 +744,7 @@
 			"box",
 			"sizing",
 			"animation",
-			"name",
-			"border-image",
-			"clip",
-			"visibility",
-			"appearance",
-			"animation",
-			"iteration",
-			"delay",
-			"timing",
-			":width;",
-			": width 2s;",
-			": 10% 10%;",
-			"transform",
-			":rotate(7deg);",
-			": 500;",
-			"/* Safari and Chrome */",
-			"/* Firefox */",
-			"errors",
-			"#errors",
-			"function"
+			"name"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -770,57 +770,58 @@
 			[
 				{
 					"buffer": 0,
-					"file": "_assets/js/script.js",
+					"file": "sandbox/sandbox2.php",
 					"settings":
 					{
-						"buffer_size": 10663,
+						"buffer_size": 753,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9563,
-								9563
+								308,
+								753
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 9236.0,
+						"translation.y": 745.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_assets/includes/helpers/Prefixer.php",
+					"file": "files/file_handler.php",
 					"settings":
 					{
-						"buffer_size": 1844,
+						"buffer_size": 524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1547,
-								1547
+								372,
+								372
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 983.0,
+						"translation.y": 633.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -874,7 +875,47 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"_assets/includes/helpers/functions.php"
+			],
+			[
+				"func",
+				"_assets/includes/helpers/functions.php"
+			],
+			[
+				"styl",
+				"_assets/css/style.css"
+			],
+			[
+				"decomp",
+				"_assets/includes/controller/views/body/decompress_page.inc.php"
+			],
+			[
+				"dec",
+				"_assets/includes/helpers/decompress.php"
+			],
+			[
+				"compress_",
+				"_assets/includes/controller/views/body/compress_page.inc.php"
+			],
+			[
+				"sampl",
+				"sample_code/samplecss.css"
+			],
+			[
+				"compress",
+				"_assets/includes/helpers/compress.php"
+			],
+			[
 				"pref",
+				"_assets/includes/helpers/Prefixer.php"
+			],
+			[
+				"san",
+				"sandbox/sandbox2.php"
+			],
+			[
+				"pre",
 				"_assets/includes/helpers/Prefixer.php"
 			],
 			[
@@ -906,24 +947,12 @@
 				"sample_code/samplecss.css"
 			],
 			[
-				"sampl",
-				"sample_code/samplecss.css"
-			],
-			[
 				"compress.p",
 				"_assets/includes/helpers/compress.php"
 			],
 			[
-				"compress",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
 				"comp",
 				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"dec",
-				"_assets/includes/controller/views/body/decompress_page.inc.php"
 			],
 			[
 				"scrip",
@@ -948,10 +977,6 @@
 			[
 				"compress.php",
 				"_assets/includes/helpers/compress.php"
-			],
-			[
-				"decomp",
-				"_assets/includes/helpers/decompress.php"
 			],
 			[
 				"sa",
@@ -990,14 +1015,6 @@
 				"_assets/less/style.less"
 			],
 			[
-				"compress_",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"san",
-				"sandbox/sandbox.php"
-			],
-			[
 				"foo",
 				"_assets/includes/controller/views/partials/footer.inc.php"
 			],
@@ -1008,14 +1025,6 @@
 			[
 				"compre",
 				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"func",
-				"_assets/includes/helpers/functions.php"
-			],
-			[
-				"pre",
-				"_assets/includes/helpers/Prefixer.php"
 			],
 			[
 				"regis",
@@ -1084,10 +1093,6 @@
 			[
 				"contac",
 				"_assets/includes/controller/views/modals/contact_modal.inc.php"
-			],
-			[
-				"styl",
-				"_assets/less/style.less"
 			],
 			[
 				"pro",
@@ -1243,7 +1248,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 185.0,
 	"status_bar_visible": true
 }

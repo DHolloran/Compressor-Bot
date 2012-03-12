@@ -2,6 +2,7 @@
 	require_once "functions.php";
 	require_once 'csstidy/class.csstidy.php';
 	require_once 'css-crush/CssCrush.php';
+	require_once '../model/ProfileModel.php';
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
@@ -25,6 +26,9 @@
 		function decompressJS($in){
 			// Add line break after ;
 				$out = "In Progress";
+
+			// Output
+			addOneBasic();
 			echo json_encode($out);
 		}
 	// ==== decompressCSS() ====
@@ -39,8 +43,8 @@
 			$css->set_cfg('remove_last_;',TRUE);
 			$css->set_cfg('compress_colors', TRUE);
 			$css->parse($in);
-			// // Add Space After ;
-			// $in = str_replace(";",";\r\n ",$in);
+			// Output
+			addOneBasic();
 			echo json_encode(strip_tags($css->print->formatted()));
 		}
 	// ==== decompressHTML() ====
@@ -61,10 +65,25 @@
 			$tidy = new tidy;
 			$tidy->parseString($html, $config, 'utf8');
 			$tidy->cleanRepair();
+
 			// Output
+			addOneBasic();
 			echo json_encode($tidy);
 		}
-
+// ==== Add 1 to Users Limit if Basic ====
+	function addOneBasic(){
+		session_start();
+		$model = new ProfileModel();
+		$user_name = $_SESSION['user_info']['user_name'];
+		$plan = $model->getUserExisting($user_name);
+		if($plan['user_plan'] === 'basic'){
+			if($plan['tool_uses']<10){
+				$uses = $plan['tool_uses'] + 1;
+				$_SESSION['user_info']['tool_uses'] = $uses;
+				$model->updatePlan($user_name,$uses)){
+			}
+		}
+	}
 
 
 

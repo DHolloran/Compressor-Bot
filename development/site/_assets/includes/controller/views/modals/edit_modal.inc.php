@@ -39,15 +39,26 @@
 					<h3>Update your plan below</h3>
 				</hgroup>
 
-				<input type="radio" name="plan_options" id="edit_monthly_plan" value="monthly" <?php selectRadio($_SESSION['user_info']['user_plan'],'monthly');?>>
+				<!-- <input type="radio" name="plan_options" id="edit_monthly_plan" value="monthly" <?php selectRadio($_SESSION['user_info']['user_plan'],'monthly');?>>
 					<label for="edit_monthly_plan">Unlimited Monthly ($1.99)</label><br>
 				<input type="radio" name="plan_options" id="edit_yearly_plan" value="yearly" <?php selectRadio($_SESSION['user_info']['user_plan'],'yearly');?>>
 					<label for="edit_yearly_plan">Unlimited Yearly ($19.99)</label><br>
 				<input type="radio" name="plan_options" id="edit_basic_plan" value="basic"<?php selectRadio($_SESSION['user_info']['user_plan'],'basic');?>>
 					<label for="edit_basic_plan">10 Uses Per Month (Free)</label><br>
 					<p>You will be redirected to Paypal to complete your transaction</p>
-				<!-- Submit Form -->
-					<input type="submit" name="edit_submit" value="EDIT">
+					<input type="submit" name="edit_submit" value="EDIT"> -->
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="V9GVS7ACWNXN2">
+				<table>
+				<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+					<option value="Monthly">Monthly : $1.99USD - monthly</option>
+					<option value="Yearly">Yearly : $19.99USD - yearly</option>
+					<option value="Basic">Basic : $0.00USD - yearly</option>
+				</select> </td></tr>
+				</table>
+				<input type="hidden" name="currency_code" value="USD">
+				<input type="image" src="<?php echo "{$rootDir}/_assets/img/buttons/edit_btn.png"; ?>" border="0" name="submit" alt="EDIT">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 			</section><!-- / -->
 			</form>
 		</section><!-- END #edit_modal -->

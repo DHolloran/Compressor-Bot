@@ -14,7 +14,7 @@
 	$oldPass = sanitize($_POST['edit_old_password']);
 	$newPass = sanitize($_POST['edit_password1']);
 	$rePass = sanitize($_POST['edit_password2']);
-	$userPlan = sanitize($_POST['plan_options']);
+	$userPlan = sanitize($_POST['os0']);
 	$startPage = sanitize($_POST['start_page']);
 	$renewDate = setRenewDate($userPlan);
 	$existingInfo = $model->getUserExisting($userName);
@@ -26,7 +26,11 @@
 		if($oldPass !== $newPass && $rePass === $newPass){
 			// Send To EditModel
 		if($model->updateInfo($userName,$userEmail,$newPass,$startPage,$userPlan,$renewDate)){
-			echo json_encode('true');
+			if($model->planChanged){
+				echo json_encode('paypal');
+			}else{
+				echo json_encode('basic');
+			}
 		}else{
 			echo json_encode('false');
 		}
@@ -34,7 +38,9 @@
 	}else{
 		// Send To Edit Model With No Password Change
 		if($model->updateInfo($userName,$userEmail,'',$startPage,$userPlan,$renewDate)){
-			echo json_encode('true');
+			if($model->planChanged){
+				echo json_encode($userPlan);
+			}
 		}else{
 			echo json_encode('false');
 		}
