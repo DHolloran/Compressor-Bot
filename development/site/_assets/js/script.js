@@ -32,15 +32,15 @@ $(function(){
 		compressModal = $('#compress_modal'),
 		compressUpload = $('#compress_upload'),
 		decompressForm = $('#decompress_insert'),
-		decompressModal = $('#decompress_modal')
+		decompressModal = $('#decompress_modal'),
+		root
 	;
 // ==== Set ROOT to Development/Live ===
-var root = "";
-if(document.location.hostname === "localhost"){
-	root = 'http://localhost/~dholloran/compressorbot/development/site/';
-}else{
-	root = 'http://compressorbot.com/development/site';
-}
+	if(document.location.hostname === "localhost"){
+		root = 'http://localhost/~dholloran/compressorbot/development/site/';
+	}else{
+		root = 'http://compressorbot.com/development/site';
+	}
 
 // ==== Modal Output For AJAX Success ====
 	function modalOutput(height,data,modal){
@@ -64,6 +64,7 @@ if(document.location.hostname === "localhost"){
 				});
 			},2000);
 		}else{
+			// Error
 			msg = 'Please try again.';
 			output.empty().append(msg);
 			modal.css({height: height+=20});
@@ -75,6 +76,7 @@ if(document.location.hostname === "localhost"){
 			modalWin = $(that.attr('href')),
 			modalWrap = modalWin.parent()
 		;
+		// Set Wrapper to Document Size
 		modalWrap.css({
 			'height': $(document).outerHeight(),
 			'width': $(document).outerWidth()
@@ -96,6 +98,7 @@ if(document.location.hostname === "localhost"){
 			modalWrapper.fadeOut(300);
 			// Clear success field
 			modalWrapper.find('.success').empty();
+			// Set Succes Output
 			modalWrapper.find('.output').empty();
 			e.preventDefault();
 			return false;
@@ -243,31 +246,53 @@ if(document.location.hostname === "localhost"){
 	function queryValidator(){
 		// Query The Validator
 		$.getJSON('sandbox2.php',function(data){
-			var response = $.parseJSON(data.messages)
-			;
+			var response = $.parseJSON(data.messages);
 		});
+	}
+// ==== Prefix With CSS-Crush ====
+	function prefixCSS(that){
+		$.post('../_assets/includes/helpers/prefixer.php',
+			that.serialize(),
+			function(data){
+				console.log(data);
+			});
 	}
 // ==== Submit Compress AJAX ====
 	compressForm.on('submit', function(e){
 		var that = $(this),
 			modalWrap = compressModal.parent()
 		;
+		// Query Validator (HTML & CSS)
+		if(that.find('.css_validate:checked').length !== 0 || that.find('.html_validate:checked').length !== 0){
+			console.log('validator');
+		}
+		// CSSLint (CSS)
+		if(that.find('.css_lint:checked').length !== 0){
+			// $input = cssLint(that);
+			console.log('csslint');
+		}
+		// JSLint (JS)
+		if(that.find('.js_lint:checked').length !== 0){
+			// $input = cssLint(that);
+			console.log('jslint');
+		}
+
 		// Send to compress.php
-		$.post('../_assets/includes/helpers/compress.php',
-		that.serialize(),function(data){
+		$.post('../_assets/includes/helpers/compress.php',that.serialize(),function(data){
 			// Set compressor modal wrapper width/height
 			modalWrap.css({
-				'height': $(document).outerHeight(),
-				'width': $(document).outerWidth()
+			'height': $(document).outerHeight(),
+			'width': $(document).outerWidth()
 			});
 			// Set modal windows top/left location
 			modalWindow.css({
-				'top': (modalWrap.outerHeight()/2) - (compressModal.outerHeight()/2),
-				'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
+			'top': (modalWrap.outerHeight()/2) - (compressModal.outerHeight()/2),
+			'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
 			});
 			// Set textarea to returned value
 			compressModal.find('textarea').val($.parseJSON(data));
 			compressModal.parent().fadeIn(300);
+
 		});
 		e.preventDefault();
 	});
@@ -276,25 +301,30 @@ if(document.location.hostname === "localhost"){
 		var that = $(this),
 			modalWrap = decompressModal.parent()
 		;
+		// Query Validator (HTML & CSS)
+		// CSSLint (CSS)
+		// JSLint (JS)
+		// Preifxer (CSS)
 		// Send to decompress.php
-		$.post('../_assets/includes/helpers/decompress.php',
-		that.serialize(),function(data){
+		$.post('../_assets/includes/helpers/decompress.php', that.serialize(), function(data){
 			// Set decompressor modal wrapper width/height
 			modalWrap.css({
 				'height': $(document).outerHeight(),
 				'width': $(document).outerWidth()
 			});
+
 			// Set modal windows top/left location
 			modalWindow.css({
 				'top': (modalWrap.outerHeight()/2) - (decompressModal.outerHeight()/2),
 				'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
 			});
-			//Set textarea to returned value
+
+			// Set textarea to returned value
 			var response = $.parseJSON(data);
 			if(response.value){
-				decompressModal.find('textarea').val(response.value);
+			decompressModal.find('textarea').val(response.value);
 			}else{
-				decompressModal.find('textarea').val(response);
+			decompressModal.find('textarea').val(response);
 			}
 			decompressModal.parent().fadeIn(300);
 		});
@@ -307,25 +337,36 @@ if(document.location.hostname === "localhost"){
 		;
 		uploadTable.empty();
 		$.each(e.target.files, function(index, value){
+
 			// Set file size in b/kb/mb/gb
+
 			var fileSize=0;
+
 			if(value.fileSize < 1024){
+				// Add b for Bytes
 				fileSize = fileSize +'b';
 			}else if(value.fileSize >= 1024 && value.fileSize <= 1048576){
 				// Make bytes equal kilobytes
 				fileSize = (value.fileSize/1024);
+
 				// Round to 2 places
 				fileSize = Math.round(fileSize*100)/100;
+
 				// Append kilobyte abbreviation
 				fileSize = fileSize + "kb";
+
 			}else if(value.fileSize >= 1048576 && value.fileSize <= 10485760){
+
 				// Make bytes equal kilobytes
 				fileSize = (value.fileSize/1048576);
+
 				// Round to 2 places
 				fileSize = Math.round(fileSize*100)/100;
+
 				// Append kilobyte abbreviation
 				fileSize = fileSize + "mb";
 			}
+
 			// Set file type as js/css/html/unknown
 			var fileType = value.type;
 			switch(fileType){
@@ -343,17 +384,10 @@ if(document.location.hostname === "localhost"){
 				break;
 			}
 
+			// Set The Values For Each Row
 			uploadTable.append(
 				'<tr><td>'+ value.fileName +'</td><td>'+ fileSize+'</td><td>' + fileType +'</td></tr>'
 			);
-			// fileName = value.fileName;
-			// fileSize = value.fileSize;
-			// fileType = value.type
-				// JS = application/x-javascript;
-				// CSS = text/css
-				// HTML = text/html
-				//
-			console.log(value.type);
 		});
 	});
 });

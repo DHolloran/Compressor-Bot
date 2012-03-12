@@ -352,34 +352,18 @@
 	"buffers":
 	[
 		{
-			"file": "sample_code/examplehtml.html",
-			"settings":
-			{
-				"buffer_size": 248,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/helpers/decompress.php",
-			"settings":
-			{
-				"buffer_size": 1747,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "_assets/js/script.js",
 			"settings":
 			{
-				"buffer_size": 10461,
+				"buffer_size": 10663,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sample_code/samplecss.css",
+			"file": "_assets/includes/helpers/Prefixer.php",
 			"settings":
 			{
-				"buffer_size": 1005,
+				"buffer_size": 1844,
 				"line_ending": "Unix"
 			}
 		}
@@ -488,19 +472,22 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefix_properties",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplecss.css",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
+		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/compress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplejs.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
 		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadCSS.php",
 		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadJS.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.html",
@@ -531,8 +518,6 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/compress_modal.inc.php",
 		"/Users/dholloran/Desktop/samplejs.js",
 		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/ompress.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Compress.php",
@@ -614,8 +599,7 @@
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/pageView.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/decompress.inc.php",
 		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/compress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/home_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/footer.inc.php"
+		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/views/body/home_page.inc.php"
 	],
 	"find":
 	{
@@ -633,6 +617,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CSSLint",
+			"CSS",
+			"console.log",
 			"require",
 			"$css_code",
 			"$.parseJSON(data)",
@@ -757,10 +744,7 @@
 			"/* Firefox */",
 			"errors",
 			"#errors",
-			"function",
-			"var",
-			"output",
-			"#error"
+			"function"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -786,75 +770,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "sample_code/examplehtml.html",
-					"settings":
-					{
-						"buffer_size": 248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								248
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/helpers/decompress.php",
-					"settings":
-					{
-						"buffer_size": 1747,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								670,
-								670
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1409.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "_assets/js/script.js",
 					"settings":
 					{
-						"buffer_size": 10461,
+						"buffer_size": 10663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8720,
-								8720
+								9563,
+								9563
 							]
 						],
 						"settings":
@@ -865,37 +792,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3117.0,
+						"translation.y": 9236.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "sample_code/samplecss.css",
+					"buffer": 1,
+					"file": "_assets/includes/helpers/Prefixer.php",
 					"settings":
 					{
-						"buffer_size": 1005,
+						"buffer_size": 1844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1005
+								1547,
+								1547
 							]
 						],
 						"settings":
 						{
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 6,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 983.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -949,6 +874,34 @@
 		"selected_items":
 		[
 			[
+				"pref",
+				"_assets/includes/helpers/Prefixer.php"
+			],
+			[
+				"scri",
+				"_assets/js/script.js"
+			],
+			[
+				"scr",
+				"_assets/js/script.js"
+			],
+			[
+				"foot",
+				"_assets/includes/controller/views/partials/footer.inc.php"
+			],
+			[
+				"he",
+				"_assets/includes/controller/views/partials/header.inc.php"
+			],
+			[
+				"deco",
+				"_assets/includes/helpers/decompress.php"
+			],
+			[
+				"sam",
+				"sample_code/samplecss.css"
+			],
+			[
 				"sampo",
 				"sample_code/samplecss.css"
 			],
@@ -975,10 +928,6 @@
 			[
 				"scrip",
 				"_assets/js/script.js"
-			],
-			[
-				"deco",
-				"_assets/includes/helpers/decompress.php"
 			],
 			[
 				"sandbox",
@@ -1053,10 +1002,6 @@
 				"_assets/includes/controller/views/partials/footer.inc.php"
 			],
 			[
-				"he",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
 				"script",
 				"_assets/js/script.js"
 			],
@@ -1097,10 +1042,6 @@
 				"_assets/includes/helpers/login.php"
 			],
 			[
-				"foot",
-				"_assets/includes/controller/views/partials/footer.inc.php"
-			],
-			[
 				"hea",
 				"_assets/includes/controller/views/partials/header.inc.php"
 			],
@@ -1111,10 +1052,6 @@
 			[
 				"edit",
 				"_assets/includes/controller/EditProfile.php"
-			],
-			[
-				"scr",
-				"_assets/js/script.js"
 			],
 			[
 				"sandbo",
@@ -1167,10 +1104,6 @@
 			[
 				"lo",
 				"_assets/includes/helpers/login.php"
-			],
-			[
-				"scri",
-				"_assets/js/min/script.min.js"
 			],
 			[
 				"page",
@@ -1310,7 +1243,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 185.0,
 	"status_bar_visible": true
 }

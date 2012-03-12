@@ -1,5 +1,7 @@
 <?php
 	require_once "functions.php";
+	require_once 'csstidy/class.csstidy.php';
+	require_once 'css-crush/CssCrush.php';
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
@@ -27,28 +29,19 @@
 		}
 	// ==== decompressCSS() ====
 		function decompressCSS($in){
-			include('csstidy/class.csstidy.php');
+			/* Prefix */
+			if(!empty($_POST['css_prefixer'])){
+				$in = CssCrush::string($in);
+			}
 
+			/* CSSTidy */
 			$css = new csstidy();
-
 			$css->set_cfg('remove_last_;',TRUE);
-
+			$css->set_cfg('compress_colors', TRUE);
 			$css->parse($in);
-
-			$in = $css->print->formatted();
-			// // Add line break after ;
-			// $in = str_replace(";",";\r\n\t",$in);
 			// // Add Space After ;
 			// $in = str_replace(";",";\r\n ",$in);
-			// // Add line break after { With Tab
-			// $in = str_replace("{","{\r\n\t",$in);
-			// // Add line break after { With Space
-			// $in = str_replace("{","{\r\n ",$in);
-			// // Add line break after }
-			// $in = str_replace("}","}\r\n",$in);
-			// // Fix Tab Before }
-			// $in = str_replace("\t}", "}", $in);
-			echo json_encode($in);
+			echo json_encode(strip_tags($css->print->formatted()));
 		}
 	// ==== decompressHTML() ====
 		function decompressHTML($in){
@@ -69,8 +62,7 @@
 			$tidy->parseString($html, $config, 'utf8');
 			$tidy->cleanRepair();
 			// Output
-			//echo json_encode($tidy);
-			echo $tidy;
+			echo json_encode($tidy);
 		}
 
 

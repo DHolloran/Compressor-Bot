@@ -13,45 +13,56 @@
       </ul>
       <form action="<?php echo "$homePage/_assets/includes/helpers/compress.php"?>" method="post" name="compress_insert" id="compress_insert" enctype="multipart/form-data">
         <div id="text_input">
-          <textarea name="input" placeholder="Paste your code here."></textarea>
+          <textarea name="input" placeholder="Paste your code here.">.class{border-radius: 5px;}</textarea>
           <input type="submit" class="tool_btn" value="Compress">
         </div><!-- END .text_input -->
       <!-- .languages_options -->
         <section class="languages_options">
+
           <h4>Languages</h4>
+
           <input type="radio" name="tool" id="compress_html" data-lang="html" class="language_choice html" value="compress_html" checked="checked">
             <label for="compress_html">HTML</label><br>
+        <!-- Tool === Compress CSS -->
           <input type="radio" name="tool" id="compress_css" data-lang="css" class="language_choice css" value="compress_css">
             <label for="compress_css">CSS</label><br>
+        <!-- Tool === Compress JS-->
           <input type="radio" name="tool" id="compress_js" data-lang="js" class="language_choice js" value="compress_js">
             <label for="compress_js">Javascript</label>
+        <!-- Tool Options -->
           <h4>Options</h4>
         <!-- HTML Options -->
           <div class="html_options">
-            <input type="checkbox" name="html_validate" id="in_html_validate" value="true">
+            <input type="checkbox" class="html_validate" name="html_validate" id="in_html_validate" value="true">
               <label for="in_html_validate">Validate</label><br>
           </div><!-- END #html_options -->
+
         <!-- CSS Options -->
           <div class="css_options">
+
           <!-- CSSLint -->
-            <input type="checkbox" name="css_lint" id="in_css_lint" value="true">
+            <input type="checkbox" class="css_lint" name="css_lint" id="in_css_lint" value="true">
               <label for="in_css_lint">CSSLint</label><br>
           <!-- CSS Validate -->
-            <input type="checkbox" name="css_validate" id="in_css_validate" value="true">
+            <input type="checkbox" class="css_validate" name="css_validate" id="in_css_validate" value="true">
               <label for="in_css_validate">Validate</label><br>
+
           <!-- CSS Prefixer -->
-            <input type="checkbox" name="css_prefixer" id="in_css_prefixer" value="true">
+            <input type="checkbox" class="css_prefixer" name="css_prefixer" id="in_css_prefixer" value="true">
               <label for="in_css_prefixer">Vendor Prefixes</label><br>
+
           <!-- CSS Concat -->
-             <input type="checkbox" name="css_concat" id="in_css_concat" value="true">
+             <input type="checkbox" class="css_concat" name="css_concat" id="in_css_concat" value="true">
               <label for="in_css_concat">Concatenate</label><br>
           </div><!-- END #css_options -->
         <!-- JS Options -->
           <div class="js_options">
           <!-- JSLint -->
-            <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
+            <input type="checkbox" class="js_lint" name="js_lint" id="in_js_lint" value="true">
               <label for="in_js_lint">JSLint</label><br>
-            <input type="checkbox" name="js_concat" id="in_js_concat" value="true">
+
+          <!-- Concat -->
+            <input type="checkbox" class="js_concat" name="js_concat" id="in_js_concat" value="true">
               <label for="in_js_concat">Concatenate</label><br>
           </div><!-- END #js_options -->
         </section><!-- END #language_options -->
@@ -94,7 +105,7 @@ enctype="multipart/form-data">
         <!-- HTML Options -->
           <div class="html_options">
           <!-- HTML Validate -->
-            <input type="checkbox" name="html_validate" id="up_html_validate">
+            <input type="checkbox" class="html_validate" name="html_validate" id="up_html_validate">
               <label for="up_html_validate">Validate</label><br>
           </div><!-- END #html_options -->
         <!-- CSS Options -->
@@ -103,16 +114,16 @@ enctype="multipart/form-data">
             <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
               <label for="up_css_keep_comments">Keep Comments</label><br>
           <!-- CSSLint -->
-            <input type="checkbox" name="css_lint" id="up_css_lint">
+            <input type="checkbox" class="css_lint" name="css_lint" id="up_css_lint">
               <label for="up_css_lint">CSSLint</label><br>
           <!-- CSS Validate -->
-            <input type="checkbox" name="css_validate" id="up_css_validate">
+            <input type="checkbox" class="css_validate" name="css_validate" id="up_css_validate">
               <label for="up_css_validate">Validate</label><br>
           <!-- CSS Prefixer -->
-            <input type="checkbox" name="css_prefixer" id="up_css_prefixer">
+            <input type="checkbox" class="css_prefixer" name="css_prefixer" id="up_css_prefixer">
               <label for="up_css_prefixer">Vendor Prefixes</label><br>
           <!-- CSS Concatenate -->
-            <input type="checkbox" name="css_concat" id="up_css_concat">
+            <input type="checkbox" class="css_concat" name="css_concat" id="up_css_concat">
               <label for="up_css_concat">Concatenate</label><br>
           </div><!-- END #css_options -->
           <!-- JS Options -->
@@ -120,9 +131,9 @@ enctype="multipart/form-data">
             <!-- JS Keep Comments -->
               <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments"> <label for="up_js_keep_comments">Keep Comments</label><br>
             <!-- JSLint -->
-              <input type="checkbox" name="js_lint" id="up_js_lint"> <label for="up_js_lint">JSLint</label><br>
+              <input type="checkbox" class="js_lint" name="js_lint" id="up_js_lint"> <label for="up_js_lint">JSLint</label><br>
             <!-- JS Concat -->
-              <input type="checkbox" name="js_concat" id="up_js_concat"> <label for="up_js_concat">Concatenate</label><br>
+              <input type="checkbox" class="js_concat" name="js_concat" id="up_js_concat"> <label for="up_js_concat">Concatenate</label><br>
             </div><!-- END #js_options -->
       </section><!-- END .languages_options -->
     </form>

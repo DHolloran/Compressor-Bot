@@ -1,5 +1,6 @@
 <?php
 	require_once "functions.php";
+	require_once 'css-crush/CssCrush.php';
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
@@ -50,6 +51,10 @@
 	}
 // ==== compressCSS() ====
 	function compressCSS($in){
+		/* Prefix */
+		if(!empty($_POST['css_prefixer'])){
+			$in = CssCrush::string($in);
+		}
 		/* REMOVE COMMENTS */
 		$in = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $in);
 		/* REMOVE TABS, SPACES, NEW LINES, ETC */
