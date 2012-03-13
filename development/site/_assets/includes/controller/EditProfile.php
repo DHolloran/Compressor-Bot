@@ -40,6 +40,8 @@
 		if($model->updateInfo($userName,$userEmail,'',$startPage,$userPlan,$renewDate)){
 			if($model->planChanged){
 				echo json_encode($userPlan);
+			}else{
+				echo json_encode('basic');
 			}
 		}else{
 			echo json_encode('false');
