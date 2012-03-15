@@ -13,7 +13,7 @@
         </ul>
         <form action="#" method="post" name="decompress_insert" id="decompress_insert">
           <div id="text_input">
-            <textarea name="input" placeholder="Paste your code here.">.class{border-radius: 5px;}</textarea>
+            <textarea name="input" placeholder="Paste your code here."></textarea>
             <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
           </div><!-- END .text_input -->
         <!-- .languages_options -->
