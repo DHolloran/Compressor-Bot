@@ -3,9 +3,11 @@
 	require_once 'csstidy/class.csstidy.php';
 	require_once 'css-crush/CssCrush.php';
 	require_once '../model/ProfileModel.php';
+	require_once "../files/file_handler.php";
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
+	//whiteSpace = $_POST['tabs'];
 	$accessAllowed = true;
 // ==== INIT ====
 	switch ($action) {
@@ -25,16 +27,60 @@
 // ==== Decompress ====
 	// ==== decompressJS() ====
 		function decompressJS($in){
-			// Add line break after ;
-			$out = "In Progress";
-			// Output
-			/* Check if access is allowed */
-			if(addOneBasic()){
-				echo json_encode($out);
-			}else{
-				echo json_encode('access denied');
-			}
-		}
+		    $in = str_replace("\n", '', $in);
+		    $in = str_replace("\t", '', $in);
+		    $tabcount = 0;
+		    $result = '';
+		    $inquote = false;
+		    $ignorenext = false;
+		    $tab = "\t";
+		    $newline = "\n";
+
+		    for($i = 0; $i < strlen($in); $i++) {
+		        $char = $in[$i];
+
+		        if ($ignorenext) {
+		            $result .= $char;
+		            $ignorenext = false;
+		        } else {
+		            switch($char) {
+		                case '{':
+		                    $tabcount++;
+		                    $result .= $char . $newline . str_repeat($tab, $tabcount);
+		                    break;
+		                case '}':
+		                    $tabcount--;
+		                    $result = trim($result) . $newline . str_repeat($tab, $tabcount) . $char;
+		                    break;
+
+		                case ';':
+		                    $result .= $char . $newline . str_repeat($tab, $tabcount);
+		                    break;
+		                case '"':
+		                    $inquote = !$inquote;
+		                    $result .= $char;
+		                    break;
+		                case '\\':
+		                    if ($inquote) $ignorenext = true;
+		                    $result .= $char;
+		                    break;
+		                default:
+		                    $result .= $char;
+		            }
+		        }
+		    }
+		    // Output
+		    /* Check if access is allowed */
+		    if(addOneBasic()){
+		        // Return Result AJAX
+		    	$url = outputWrite($result,'js','decompress');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
+		    }else{
+		        // Return Access Denied AJAX
+		        echo json_encode('access denied');
+		    }
+		} // decompressJS()
 	// ==== decompressCSS() ====
 		function decompressCSS($in){
 			/* Prefix */
@@ -50,7 +96,10 @@
 			// Output
 			/* Check if access is allowed */
 			if(addOneBasic()){
-				echo json_encode(strip_tags($css->print->formatted()));
+				$result = strip_tags($css->print->formatted());
+				$url = outputWrite($result,'css','decompress');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
 			}else{
 				echo json_encode('access denied');
 			}
@@ -77,7 +126,9 @@
 			// Output
 			/* Check if access is allowed */
 			if(addOneBasic()){
-				echo json_encode($tidy);
+				$url = outputWrite($tidy,'html','decompress');
+		    	$output = array($tidy, $url);
+		    	echo json_encode($output);
 			}else{
 				echo json_encode('access denied');
 			}

@@ -13,7 +13,7 @@
       </ul>
       <form action="<?php echo "$homePage/_assets/includes/helpers/compress.php"?>" method="post" name="compress_insert" id="compress_insert" enctype="multipart/form-data">
         <div id="text_input">
-          <textarea name="input" placeholder="Paste your code here.">.class{border-radius: 5px;}</textarea>
+          <textarea name="input" placeholder="Paste your code here."></textarea>
           <input type="submit" class="tool_btn" value="Compress">
         </div><!-- END .text_input -->
       <!-- .languages_options -->

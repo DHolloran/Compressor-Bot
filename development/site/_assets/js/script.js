@@ -50,7 +50,6 @@ $(function(){
 			$.getJSON(root+'_assets/includes/helpers/uses_left.php',function(data){
 				//var response = $.parseJSON(data);
 				usesLeft.empty();
-				console.log(data);
 				if(data === 'Unlimited'){
 					usesLeft.hide();
 					signupLink.hide();
@@ -224,20 +223,32 @@ $(function(){
 			error.empty().append('Passwords do not match').show();
 		}
 	});
+// ==== Submit Paypal ====
+	function submitPaypal(param){
+		var url = 'https://www.paypal.com/cgi-bin/webscr?cmd=' + param[0] +
+		'&hosted_button_id=' + param[1] +
+		'&on0=&os0=' + param[2] +
+		'&currency_code=' + param[3];
+		window.location = url;
+	}
 // ==== Submit Edit Modal AJAX ====
 	editModal.find('form').on('submit', function(e){
 		var that = $(this),
-			height = editModal.outerHeight()
+			height = editModal.outerHeight(),
+			p1 = $('.paypal1').val(),
+			p2 = $('.paypal2').val(),
+			p3 = $('.paypal3').val(),
+			p4 = $('.paypal4').val(),
+			paypal = [p1,p2,p3,p4]
 		;
 		$.post(root+'/_assets/includes/controller/EditProfile.php',that.serialize(),function(data){
 			var post = that.serialize(),
 				response = $.parseJSON(data)
 			;
-			console.log(data);
 			if(response === 'basic'){
 				modalOutput(height,data,editModal);
 			}else if(response === 'monthly' || response === 'yearly'){
-				window.location = 'https://www.paypal.com/cgi-bin/webscr?'+post;
+				submitPaypal(paypal);
 			}
 			setUsesLeft();
 		});
@@ -245,23 +256,27 @@ $(function(){
 	});
 // ==== Submit Register Modal AJAX ====
 	registerForm.on('submit', function(e){
-		var that = $(this);
+		var that = $(this),
+			p1 = $('.paypal1').val(),
+			p2 = $('.paypal2').val(),
+			p3 = $('.paypal3').val(),
+			p4 = $('.paypal4').val(),
+			paypal = [p1,p2,p3,p4]
+		;
 		$.post(root+'/_assets/includes/controller/Register.php',
 			that.serialize(),
 			function(data){
-				var post = that.serialize(),
+				var post = that,
 					response = $.parseJSON(data)
 				;
 				if(response === 'basic'){
 					window.location = root;
 				}else if(response === 'paypal'){
-					window.location = 'https://www.paypal.com/cgi-bin/webscr?'+post;
-					/*https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V9GVS7ACWNXN2&on0=&os0=Yearly&currency_code=USD*/
+					submitPaypal(paypal);
 				}
 			});
 		e.preventDefault();
 	});
-// ==== Submit Paypal AJAX ====
 // ==== Login AJAX ====
 	login.on('submit', function(e){
 		var that = $(this),
@@ -314,17 +329,14 @@ $(function(){
 		;
 		// Query Validator (HTML & CSS)
 		if(that.find('.css_validate:checked').length !== 0 || that.find('.html_validate:checked').length !== 0){
-			console.log('validator');
 		}
 		// CSSLint (CSS)
 		if(that.find('.css_lint:checked').length !== 0){
 			// $input = cssLint(that);
-			console.log('csslint');
 		}
 		// JSLint (JS)
 		if(that.find('.js_lint:checked').length !== 0){
 			// $input = cssLint(that);
-			console.log('jslint');
 		}
 
 		// Send to compress.php
@@ -362,8 +374,8 @@ $(function(){
 		// Preifxer (CSS)
 		// Send to decompress.php
 		$.post('../_assets/includes/helpers/decompress.php', that.serialize(), function(data){
-			var response = $.parseJSON(data);
 			console.log(data);
+			/*var response = $.parseJSON(data);
 			if( response !== 'access denied'){
 				// Set decompressor modal wrapper width/height
 				modalWrap.css({
@@ -385,8 +397,7 @@ $(function(){
 				decompressModal.parent().fadeIn(300);
 			}else{
 				usesLeft.empty().append('No uses left!');
-				console.log('no uses left');
-			}
+			}*/
 		});
 		e.preventDefault();
 	});
