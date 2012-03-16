@@ -73,9 +73,9 @@
 		    /* Check if access is allowed */
 		    if(addOneBasic()){
 		        // Return Result AJAX
-		    	$url = outputWrite($result,'js','decompress');
-		    	$output = array($result, $url);
-		        echo json_encode($output);
+		    	// $url = outputWrite($result,'js','decompress');
+		    	// $output = array($result, $url);
+		        echo json_encode($result);
 		    }else{
 		        // Return Access Denied AJAX
 		        echo json_encode('access denied');
@@ -97,9 +97,9 @@
 			/* Check if access is allowed */
 			if(addOneBasic()){
 				$result = strip_tags($css->print->formatted());
-				$url = outputWrite($result,'css','decompress');
-		    	$output = array($result, $url);
-		        echo json_encode($output);
+				// $url = outputWrite($result,'css','decompress');
+		    	//$output = array($result, $url);
+		        echo json_encode($result);
 			}else{
 				echo json_encode('access denied');
 			}
@@ -126,9 +126,9 @@
 			// Output
 			/* Check if access is allowed */
 			if(addOneBasic()){
-				$url = outputWrite($tidy,'html','decompress');
-		    	$output = array($tidy, $url);
-		    	echo json_encode($output);
+				// $url = outputWrite($tidy,'html','decompress');
+		    	//$output = array($tidy, $url);
+		    	echo json_encode($tidy);
 			}else{
 				echo json_encode('access denied');
 			}

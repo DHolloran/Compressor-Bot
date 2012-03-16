@@ -374,8 +374,7 @@ $(function(){
 		// Preifxer (CSS)
 		// Send to decompress.php
 		$.post('../_assets/includes/helpers/decompress.php', that.serialize(), function(data){
-			console.log(data);
-			/*var response = $.parseJSON(data);
+			var response = $.parseJSON(data);
 			if( response !== 'access denied'){
 				// Set decompressor modal wrapper width/height
 				modalWrap.css({
@@ -397,7 +396,7 @@ $(function(){
 				decompressModal.parent().fadeIn(300);
 			}else{
 				usesLeft.empty().append('No uses left!');
-			}*/
+			}
 		});
 		e.preventDefault();
 	});
