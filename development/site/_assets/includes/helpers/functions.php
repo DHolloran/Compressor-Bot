@@ -96,3 +96,29 @@
 	  }
 	}
 
+// ==== Write Output To File ====
+	function outputWrite($output,$type){
+		$root = checkHost();
+			// Set Language Type
+			switch ($type) {
+				case 'html':
+					$f = fopen("files/download/index.html", "w");
+					$url = "index.html";
+					break;
+				case 'css':
+					$f = fopen("files/download/style.css", "w");
+					$url = "style.css";
+					break;
+				case 'js':
+					$f = fopen("files/download/script.js", "w");
+					$url = "script.js";
+					break;
+
+				default:
+					$file = '';
+					break;
+			}
+		fwrite($f, $output);
+		fclose($f);
+		return $url;
+	}

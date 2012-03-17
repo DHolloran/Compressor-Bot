@@ -37,7 +37,8 @@ $(function(){
 		registerModal = $('#register_modal'),
 		registerForm = registerModal.find('form'),
 		usesLeft = $('.uses_left'),
-		signupLink = $('.signup_link')
+		signupLink = $('.signup_link'),
+		outputModal = $('.output_modal')
 	;
 // ==== Set ROOT to Development/Live ===
 	if(document.location.hostname === "localhost"){
@@ -229,7 +230,7 @@ $(function(){
 		'&hosted_button_id=' + param[1] +
 		'&on0=&os0=' + param[2] +
 		'&currency_code=' + param[3];
-		window.location = url;
+		window.open(url);
 	}
 // ==== Submit Edit Modal AJAX ====
 	editModal.find('form').on('submit', function(e){
@@ -340,9 +341,9 @@ $(function(){
 		}
 
 		// Send to compress.php
-		$.post('../_assets/includes/helpers/compress.php',that.serialize(),function(data){
+		$.post(root + '/_assets/includes/helpers/compress.php',that.serialize(),function(data){
 			var response = $.parseJSON(data);
-			if(response !== 'access denied'){
+			if( typeof response !== 'string' && response !== 'access denied'){
 				// Set compressor modal wrapper width/height
 				modalWrap.css({
 				'height': $(document).outerHeight(),
@@ -354,12 +355,18 @@ $(function(){
 				'left': (modalWrap.outerWidth()/2) - (compressModal.outerWidth()/2)
 				});
 				// Set textarea to returned value
-				compressModal.find('textarea').val(response);
-				compressModal.parent().fadeIn(300);
+				if(response[0].value){
+					compressModal.find('textarea').val(response[0].value);
+				}else{
+					compressModal.find('textarea').val(response[0]);
+				}
 			}else{
 				usesLeft.empty().append('No uses left!');
 			}
-
+			// Set Download Link
+			compressModal.find('.dl_url').val(response[1]);
+			// Fade in Compress Modal
+				compressModal.parent().fadeIn(300);
 		});
 		e.preventDefault();
 	});
@@ -371,11 +378,11 @@ $(function(){
 		// Query Validator (HTML & CSS)
 		// CSSLint (CSS)
 		// JSLint (JS)
-		// Preifxer (CSS)
 		// Send to decompress.php
-		$.post('../_assets/includes/helpers/decompress.php', that.serialize(), function(data){
+		$.post(root + '/_assets/includes/helpers/decompress.php', that.serialize(), function(data){
 			var response = $.parseJSON(data);
-			if( response !== 'access denied'){
+
+			if( typeof response !== 'string' && response !== 'access denied'){
 				// Set decompressor modal wrapper width/height
 				modalWrap.css({
 					'height': $(document).outerHeight(),
@@ -388,11 +395,14 @@ $(function(){
 					'left': (modalWrap.outerWidth()/2) - (decompressModal.outerWidth()/2)
 				});
 				// Set textarea to returned value
-				if(response.value){
-				decompressModal.find('textarea').val(response.value);
+				if(response[0].value){
+					decompressModal.find('textarea').val(response[0].value);
 				}else{
-				decompressModal.find('textarea').val(response);
+					decompressModal.find('textarea').val(response[0]);
 				}
+				// Set Download Link
+				decompressModal.find('.dl_url').val(response[1]);
+				// Fade in Decompress Modal
 				decompressModal.parent().fadeIn(300);
 			}else{
 				usesLeft.empty().append('No uses left!');

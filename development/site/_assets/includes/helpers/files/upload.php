@@ -11,7 +11,7 @@ class UploadConfig
 	public static $databaseName = 'compressorbot_test';
 	public static $databaseUsername = 'root';
 	public static $databasePassword = 'root';
-	public static $relativefolderPath = 'upload/'; 	//relative path, related to upload.php
+	public static $relativefolderPath = 'upload'; 	//relative path, related to upload.php
 
 /*************** DO NOT CHANGE ANYTHING BELOW ***************/
 	public static $baseDir;
@@ -547,8 +547,8 @@ class Upload {
 			return false;
 		}
 		//check destination folder permission
-		if( is_writable(dirname($this->_path))) {
-			$this->setMsg($this->_path.' is not writable');
+		if( !is_writable(dirname($this->_path))) {
+			$this->_setMsg($this->_path.' is not writable');
 			return false;
 		}
 		//insert into database

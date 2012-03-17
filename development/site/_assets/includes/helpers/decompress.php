@@ -1,9 +1,7 @@
 <?php
 	require_once "functions.php";
 	require_once 'csstidy/class.csstidy.php';
-	require_once 'css-crush/CssCrush.php';
 	require_once '../model/ProfileModel.php';
-	require_once "../files/file_handler.php";
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
@@ -73,9 +71,9 @@
 		    /* Check if access is allowed */
 		    if(addOneBasic()){
 		        // Return Result AJAX
-		    	// $url = outputWrite($result,'js','decompress');
-		    	// $output = array($result, $url);
-		        echo json_encode($result);
+		    	$url = outputWrite($result,'js');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
 		    }else{
 		        // Return Access Denied AJAX
 		        echo json_encode('access denied');
@@ -97,13 +95,13 @@
 			/* Check if access is allowed */
 			if(addOneBasic()){
 				$result = strip_tags($css->print->formatted());
-				// $url = outputWrite($result,'css','decompress');
-		    	//$output = array($result, $url);
-		        echo json_encode($result);
+				$url = outputWrite($result,'css');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
 			}else{
 				echo json_encode('access denied');
 			}
-		}
+		} // decompressCSS()
 	// ==== decompressHTML() ====
 		function decompressHTML($in){
 			ob_start();
@@ -126,9 +124,9 @@
 			// Output
 			/* Check if access is allowed */
 			if(addOneBasic()){
-				// $url = outputWrite($tidy,'html','decompress');
-		    	//$output = array($tidy, $url);
-		    	echo json_encode($tidy);
+				$url = outputWrite($tidy,'html');
+		    	$output = array($tidy, $url);
+		    	echo json_encode($output);
 			}else{
 				echo json_encode('access denied');
 			}

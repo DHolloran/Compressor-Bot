@@ -1,6 +1,7 @@
 <?php
 	require_once "functions.php";
 	require_once 'css-crush/CssCrush.php';
+	require_once '../model/ProfileModel.php';
 // == Input ==
 	$input =sanitize($_POST['input'],false);
 	$action = sanitize($_POST['tool']);
@@ -21,58 +22,73 @@
 	}
 
 // ==== compressJS() ====
-	function compressJS($in){
+	function compressJS($result){
 		/* REMOVE TABS, SPACES, COMMENTS & LINE BREAKS */
-		$in = preg_replace('{\t}', '', $in);
-		$in = str_replace(array('  ', '    ', '    '), '', $in);
-		$in = preg_replace('{(^[\/]{2}[^\n]*)|([\n|\s]{1}[\/]{2}[^\n]*)}', '', $in);
-		$in = preg_replace('{(^[\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})|([\n|\r][\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})}', '', $in);
-		$in = preg_replace('{(?<=\s)\/\/.+}', '', $in);
+		$result = preg_replace('{\t}', '', $result);
+		$result = str_replace(array('  ', '    ', '    '), '', $result);
+		$result = preg_replace('{(^[\/]{2}[^\n]*)|([\n|\s]{1}[\/]{2}[^\n]*)}', '', $result);
+		$result = preg_replace('{(^[\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})|([\n|\r][\/]{1}+[\*]{1}+([^/][^*]*\*+)*[\/]{1})}', '', $result);
+		$result = preg_replace('{(?<=\s)\/\/.+}', '', $result);
 
-		$in = preg_replace('{\n}', ' ', $in);
-		$in = preg_replace('{\r}', '', $in);
+		$result = preg_replace('{\n}', ' ', $result);
+		$result = preg_replace('{\r}', '', $result);
 
 		/* REMOVE UNNECESSARY SPACES */
-		$in = str_replace('{ ', '{', $in);
-		$in = str_replace(' }', '}', $in);
-		$in = str_replace('; ', ';', $in);
-		$in = str_replace(', ', ',', $in);
-		$in = str_replace(' {', '{', $in);
-		$in = str_replace('} ', '}', $in);
-		$in = str_replace(': ', ':', $in);
-		$in = str_replace(' ,', ',', $in);
-		$in = str_replace(' ;', ';', $in);
-		$in = str_replace(' (', '(', $in);
-		$in = str_replace('( ', '(', $in);
-		$in = str_replace(' )', ')', $in);
-		$in = str_replace(') ', ')', $in);
-		$in = str_replace(' = ','=',$in);
-		echo json_encode($in);
+		$result = str_replace('{ ', '{', $result);
+		$result = str_replace(' }', '}', $result);
+		$result = str_replace('; ', ';', $result);
+		$result = str_replace(', ', ',', $result);
+		$result = str_replace(' {', '{', $result);
+		$result = str_replace('} ', '}', $result);
+		$result = str_replace(': ', ':', $result);
+		$result = str_replace(' ,', ',', $result);
+		$result = str_replace(' ;', ';', $result);
+		$result = str_replace(' (', '(', $result);
+		$result = str_replace('( ', '(', $result);
+		$result = str_replace(' )', ')', $result);
+		$result = str_replace(') ', ')', $result);
+		$result = str_replace(' = ','=',$result);
+		/* Check if access is allowed */
+			if(addOneBasic()){
+				$url = outputWrite($result,'js');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
+			}else{
+				echo json_encode('access denied');
+			}
 	}
 // ==== compressCSS() ====
-	function compressCSS($in){
+	function compressCSS($result){
 		/* Prefix */
 		if(!empty($_POST['css_prefixer'])){
-			$in = CssCrush::string($in);
+			$result = CssCrush::string($result);
 		}
 		/* REMOVE COMMENTS */
-		$in = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $in);
+		$result = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $result);
 		/* REMOVE TABS, SPACES, NEW LINES, ETC */
-		$in = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $in);
+		$result = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $result);
 		/* REMOVE UNNECESSARY SPACES */
-		$in = str_replace('{ ', '{', $in);
-		$in = str_replace(' }', '}', $in);
-		$in = str_replace('; ', ';', $in);
-		$in = str_replace(', ', ',', $in);
-		$in = str_replace(' {', '{', $in);
-		$in = str_replace('} ', '}', $in);
-		$in = str_replace(': ', ':', $in);
-		$in = str_replace(' ,', ',', $in);
-		$in = str_replace(' ;', ';', $in);
-		echo json_encode($in);
+		$result = str_replace('{ ', '{', $result);
+		$result = str_replace(' }', '}', $result);
+		$result = str_replace('; ', ';', $result);
+		$result = str_replace(', ', ',', $result);
+		$result = str_replace(' {', '{', $result);
+		$result = str_replace('} ', '}', $result);
+		$result = str_replace(': ', ':', $result);
+		$result = str_replace(' ,', ',', $result);
+		$result = str_replace(' ;', ';', $result);
+
+		/* Check if access is allowed */
+			if(addOneBasic()){
+				$url = outputWrite($result,'css');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
+			}else{
+				echo json_encode('access denied');
+			}
 	} // compressCSS()
 // ==== compressHTML() ====
-	function compressHTML($in){
+	function compressHTML($result){
 	    $search = array(
 	        '/\>[^\S ]+/s', //strip whitespaces after tags, except space
 	        '/[^\S ]+\</s', //strip whitespaces before tags, except space
@@ -83,6 +99,31 @@
 	        '<',
 	        '\\1'
 	        );
-	  	$in = preg_replace($search, $replace, $in);
-		echo json_encode($in);
+	  	$result = preg_replace($search, $replace, $result);
+		if(addOneBasic()){
+				$url = outputWrite($result,'html');
+		    	$output = array($result, $url);
+		        echo json_encode($output);
+			}else{
+				echo json_encode('access denied');
+			}
 	} // compressHTML()
+// ==== Add 1 to Users Limit if Basic ====
+	function addOneBasic(){
+		session_start();
+		$model = new ProfileModel();
+		$user_name = $_SESSION['user_info']['user_name'];
+		$plan = $model->getUserExisting($user_name);
+		if($plan['user_plan'] === 'basic'){
+			if($plan['tool_uses']<10){
+				$uses = $plan['tool_uses'] + 1;
+				$_SESSION['user_info']['tool_uses'] = $uses;
+				$model->updatePlan($user_name,$uses);
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return true;
+		}
+	}

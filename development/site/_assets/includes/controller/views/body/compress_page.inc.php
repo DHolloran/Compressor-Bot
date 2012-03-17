@@ -73,7 +73,7 @@
         <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
         <li>Upload</li>
       </ul>
-    <form action="<?php echo "$homePage/_assets/includes/helpers/upload_files.php"; ?>" method="post" name="compress_upload"
+    <form action="<?php echo "$homePage/_assets/includes/helpers/files/upload_files.php"; ?>" method="post" name="compress_upload"
 enctype="multipart/form-data">
       <div id="file_upload">
       <!-- Upload Table -->
