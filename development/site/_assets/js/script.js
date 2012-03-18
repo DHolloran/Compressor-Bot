@@ -4,6 +4,7 @@ http://compressorbot.com
 Copyright CompressorBot 2012 and beyond
 */
 $(function(){
+// ==== Vars ====
 	var modalLink = $('.modal_link'),
 		modalClose = $('.modal_close'),
 		modalWrapper = $('.modal_wrapper'),
@@ -38,7 +39,8 @@ $(function(){
 		registerForm = registerModal.find('form'),
 		usesLeft = $('.uses_left'),
 		signupLink = $('.signup_link'),
-		outputModal = $('.output_modal')
+		outputModal = $('.output_modal'),
+		uploadForm = $('#code_upload').find('form')
 	;
 // ==== Set ROOT to Development/Live ===
 	if(document.location.hostname === "localhost"){
@@ -411,6 +413,11 @@ $(function(){
 		e.preventDefault();
 	});
 // ==== Submit Upload AJAX ====
+	uploadForm.on('submit', function(e){
+
+		// e.preventDefault();
+	});
+// ==== File Upload Table ====
 	compressUpload.on('change',function(e){
 		var that  = $(this),
 			uploadTable = $('#table_wrapper').find('table tbody')

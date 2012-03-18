@@ -3,7 +3,9 @@
 	require_once 'css-crush/CssCrush.php';
 	require_once '../model/ProfileModel.php';
 // == Input ==
-	$input =sanitize($_POST['input'],false);
+	if(!empty($_POST['input'])){
+		$input =sanitize($_POST['input'],false);
+	}
 	$action = sanitize($_POST['tool']);
 // ==== INIT ====
 	switch ($action) {
@@ -20,7 +22,6 @@
 			echo json_encode("No language choosen");
 			break;
 	}
-
 // ==== compressJS() ====
 	function compressJS($result){
 		/* REMOVE TABS, SPACES, COMMENTS & LINE BREAKS */

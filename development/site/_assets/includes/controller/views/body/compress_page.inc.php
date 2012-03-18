@@ -1,7 +1,7 @@
 <!-- Compress BODY Section -->
 <div id="content" class="wrapper" role="main">
   <div id="compress_wrapper" class="wrapper">
-  <!-- Code Input Section -->
+<!-- Code Input Section -->
     <section id="code_insert">
       <hgroup>
         <h2>Insert text to compress.</h2>
@@ -73,8 +73,7 @@
         <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
         <li>Upload</li>
       </ul>
-    <form action="<?php echo "$homePage/_assets/includes/helpers/files/upload_files.php"; ?>" method="post" name="compress_upload"
-enctype="multipart/form-data">
+      <form method="post" action="<?php echo "$homePage/_assets/includes/helpers/files/upload_files.php"; ?>" enctype="multipart/form-data" name="upload">
       <div id="file_upload">
       <!-- Upload Table -->
         <div id="table_wrapper">
@@ -83,7 +82,7 @@ enctype="multipart/form-data">
               </tbody>
             </table>
         </div><!-- #table_wrapper -->
-        <input type="file" name="file" id="compress_upload" multiple="multiple">
+        <input name="filesToUpload[]" id="compress_upload" type="file" multiple="">
         <input type="submit" class="tool_btn" value="Compress">
       </div> <!-- END #file_upload -->
       <section class="languages_options">
@@ -92,11 +91,11 @@ enctype="multipart/form-data">
         <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
       <!-- Languages -->
         <h4>Languages</h4>
-          <input type="radio" name="language" id="out_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">
+          <input type="radio" name="tool" id="out_html" data-lang="html" class="language_choice html" value="compress_html" checked="checked">
             <label for="out_html">HTML</label><br>
-          <input type="radio" name="language" id="out_css" data-lang="css" class="language_choice css" value="css_options">
+          <input type="radio" name="tool" id="out_css" data-lang="css" class="language_choice css" value="compress_css">
             <label for="out_css">CSS</label><br>
-          <input type="radio" name="language" id="out_js" data-lang="js" class="language_choice js" value="js_options">
+          <input type="radio" name="tool" id="out_js" data-lang="js" class="language_choice js" value="compress_js">
             <label for="out_js">Javascript</label>
       <!-- Options -->
         <h4>Options</h4>
