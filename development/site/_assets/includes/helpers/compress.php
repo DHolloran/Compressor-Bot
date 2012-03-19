@@ -5,6 +5,8 @@
 // == Input ==
 	if(!empty($_POST['input'])){
 		$input =sanitize($_POST['input'],false);
+	}else{
+		$input = "";
 	}
 	$action = sanitize($_POST['tool']);
 // ==== INIT ====
@@ -109,22 +111,3 @@
 				echo json_encode('access denied');
 			}
 	} // compressHTML()
-// ==== Add 1 to Users Limit if Basic ====
-	function addOneBasic(){
-		session_start();
-		$model = new ProfileModel();
-		$user_name = $_SESSION['user_info']['user_name'];
-		$plan = $model->getUserExisting($user_name);
-		if($plan['user_plan'] === 'basic'){
-			if($plan['tool_uses']<10){
-				$uses = $plan['tool_uses'] + 1;
-				$_SESSION['user_info']['tool_uses'] = $uses;
-				$model->updatePlan($user_name,$uses);
-				return true;
-			}else{
-				return false;
-			}
-		}else{
-			return true;
-		}
-	}

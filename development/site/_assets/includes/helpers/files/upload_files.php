@@ -2,20 +2,24 @@
 // Setup Uploader
   require_once "upload.php";
   $upload = new Upload();
-// Require Tools
-  require_once "../compress.php";
-  require_once "../decompress.php";
 
 // Restrict .html,.js.css files
   $upload->setAllowExt(array('html','js','css'));
+
+// Vars
+  $fileName = $_FILES['file']['name'];
+  $tool = $_POST['tool'];
 
 // Upload Files
   if(isset($_FILES)&& isset($_FILES['file'])){
     $file =$upload->upload($_FILES['file']);
     if(false===$file){
-        print_r($upload->getMsg());
+        echo json_encode(false);
     }else {
-        echo 'file has been uploaded, and file id is '.$file;
+        $url = "upload/{$file}/${fileName}";
+        $input = file_get_contents($url);
+        $response = array($input, $tool);
+        echo json_encode($response);
     }
   }
 ?>

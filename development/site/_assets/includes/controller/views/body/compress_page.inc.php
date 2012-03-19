@@ -82,7 +82,7 @@
               </tbody>
             </table>
         </div><!-- #table_wrapper -->
-        <input name="filesToUpload[]" id="compress_upload" type="file" multiple="">
+        <input name="file" id="compress_upload" type="file" multiple="">
         <input type="submit" class="tool_btn" value="Compress">
       </div> <!-- END #file_upload -->
       <section class="languages_options">

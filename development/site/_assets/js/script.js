@@ -106,8 +106,8 @@ $(function(){
 		;
 		// Set Wrapper to Document Size
 		modalWrap.css({
-			'height': $(document).outerHeight(),
-			'width': $(document).outerWidth()
+			'height': '100%',
+			'width': '100%'
 		});
 		// Set modal windows top/left location
 		modalWindow.css({
@@ -149,7 +149,9 @@ $(function(){
 	(function(){
 		if(languageOptions.length !== 0){
 			var start = languageOptions.find('input[type=radio]:checked'),
-				selected = start.data('lang')
+				selected = start.data('lang'),
+				uploadTool = $('#upload_tool'),
+				lang = selected
 			;
 			if(selected === "js"){
 			selected = "Javascript";
@@ -159,15 +161,18 @@ $(function(){
 			// Use for submit button
 			if(toolBtn.data('page') === 'decompress'){
 				toolBtn.val('Decompress ' + selected);
+				uploadTool.val('decompress_'+lang);
 			}else{
 				toolBtn.val('Compress ' + selected);
+				uploadTool.val('compress_'+lang);
 			}
 		}
-
 	})();
 	languageChoice.on('click', function(e){
 		var that = $(this),
-			selected = that.data('lang')
+			selected = that.data('lang'),
+			uploadTool = $('#upload_tool'),
+			lang = selected
 		;
 		// Close all options
 		htmlOptions.hide();
@@ -186,8 +191,10 @@ $(function(){
 		// Set button text
 		if(toolBtn.data('page') === 'decompress'){
 			toolBtn.val('Decompress ' + selected);
+			uploadTool.val('decompress_'+lang);
 		}else{
 			toolBtn.val('Compress ' + selected);
+			uploadTool.val('compress_'+lang);
 		}
 	});
 // ==== Contact Us Bug Report Subject ====
@@ -325,31 +332,19 @@ $(function(){
 			var response = $.parseJSON(data.messages);
 		});
 	}
+// ==== CSSLint ====
+// ==== JSLint ====
 // ==== Submit Compress AJAX ====
-	compressForm.on('submit', function(e){
-		var that = $(this),
-			modalWrap = compressModal.parent()
-		;
-		// Query Validator (HTML & CSS)
-		if(that.find('.css_validate:checked').length !== 0 || that.find('.html_validate:checked').length !== 0){
-		}
-		// CSSLint (CSS)
-		if(that.find('.css_lint:checked').length !== 0){
-			// $input = cssLint(that);
-		}
-		// JSLint (JS)
-		if(that.find('.js_lint:checked').length !== 0){
-			// $input = cssLint(that);
-		}
-
+	function compressorAjax(param){
+		var modalWrap = compressModal.parent();
 		// Send to compress.php
-		$.post(root + '/_assets/includes/helpers/compress.php',that.serialize(),function(data){
+		$.post(root + '/_assets/includes/helpers/compress.php',param,function(data){
 			var response = $.parseJSON(data);
 			if( typeof response !== 'string' && response !== 'access denied'){
 				// Set compressor modal wrapper width/height
 				modalWrap.css({
-				'height': $(document).outerHeight(),
-				'width': $(document).outerWidth()
+				'height': '100%',
+				'width': '100%'
 				});
 				// Set modal windows top/left location
 				modalWindow.css({
@@ -362,33 +357,45 @@ $(function(){
 				}else{
 					compressModal.find('textarea').val(response[0]);
 				}
+				// Set Download Link
+				compressModal.find('.dl_url').val(response[1]);
+				// Fade in Compress Modal
+				compressModal.parent().fadeIn(300);
 			}else{
 				usesLeft.empty().append('No uses left!');
 			}
-			// Set Download Link
-			compressModal.find('.dl_url').val(response[1]);
-			// Fade in Compress Modal
-				compressModal.parent().fadeIn(300);
 		});
+	}
+	// Activate On Submit
+	compressForm.on('submit', function(e){
+		var that = $(this);
+		// Query Validator (HTML & CSS)
+		if(that.find('.css_validate:checked').length !== 0 || that.find('.html_validate:checked').length !== 0){
+		}
+		// CSSLint (CSS)
+		if(that.find('.css_lint:checked').length !== 0){
+			// $input = cssLint(that);
+		}
+		// JSLint (JS)
+		if(that.find('.js_lint:checked').length !== 0){
+			// $input = cssLint(that);
+		}
+		// Send To Compressor.php
+		compressorAjax(that.serialize());
 		e.preventDefault();
 	});
 // ==== Submit Decompress Ajax ====
-	decompressForm.on('submit', function(e){
-		var that = $(this),
-			modalWrap = decompressModal.parent()
-		;
-		// Query Validator (HTML & CSS)
-		// CSSLint (CSS)
-		// JSLint (JS)
-		// Send to decompress.php
-		$.post(root + '/_assets/includes/helpers/decompress.php', that.serialize(), function(data){
-			var response = $.parseJSON(data);
+	function decompressorAjax(param){
+		$.post(root + '/_assets/includes/helpers/decompress.php', param, function(data){
+			var response = $.parseJSON(data),
+				modalWrap = decompressModal.parent()
+			;
 
 			if( typeof response !== 'string' && response !== 'access denied'){
 				// Set decompressor modal wrapper width/height
 				modalWrap.css({
-					'height': $(document).outerHeight(),
-					'width': $(document).outerWidth()
+					'height': '100%',
+					'width': '100%'
 				});
 
 				// Set modal windows top/left location
@@ -410,13 +417,31 @@ $(function(){
 				usesLeft.empty().append('No uses left!');
 			}
 		});
+
+	} // decompressorAjax()
+	// Activate On Form Submit
+	decompressForm.on('submit', function(e){
+		var that = $(this);
+		// Query Validator (HTML & CSS)
+		// CSSLint (CSS)
+		// JSLint (JS)
+		// Send to decompress.php
+		decompressorAjax(that.serialize());
 		e.preventDefault();
 	});
 // ==== Submit Upload AJAX ====
-	uploadForm.on('submit', function(e){
-
-		// e.preventDefault();
-	});
+    uploadForm.ajaxForm(function(data) {
+		var response = $.parseJSON(data),
+			input = response[0],
+			tool = response[1],
+			serialize = 'input=' + input + '&tool=' + tool
+		;
+		if(tool.indexOf("decompress") !== -1){
+			decompressorAjax(serialize);
+		}else{
+			compressorAjax(serialize);
+		}
+    });
 // ==== File Upload Table ====
 	compressUpload.on('change',function(e){
 		var that  = $(this),

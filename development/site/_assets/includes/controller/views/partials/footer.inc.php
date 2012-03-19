@@ -13,6 +13,7 @@
 
 <!-- SCRIPTS -->
   <script defer src="<?php echo"$assets/js/plugins.js"; ?>"></script>
+  <script defer src="<?php echo"$assets/js/libs/jquery.form.js"; ?>" ></script>
   <script defer src="<?php echo"$assets/js/libs/h5video-min.js"; ?>"></script>
   <script defer src="<?php echo"$assets/js/script.js?=v6"; ?>"></script>
   <!-- END SCRIPTS -->

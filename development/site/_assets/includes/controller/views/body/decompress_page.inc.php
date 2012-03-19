@@ -77,7 +77,7 @@
           <li><a href="#code_insert" data-tool="code_upload" class="tool_switch">Insert</a></li>
           <li>Upload</li>
         </ul>
-      <form action="#" method="post" name="decompress_upload">
+      <form method="post" action="<?php echo "$homePage/_assets/includes/helpers/files/upload_files.php"; ?>" enctype="multipart/form-data" name="upload">
         <div id="file_upload">
         <!-- Upload Table -->
           <div id="table_wrapper">
@@ -86,7 +86,7 @@
                 </tbody>
               </table>
           </div><!-- #table_wrapper -->
-          <input type="file" name="compress_upload">
+          <input name="file" id="decompress_upload" type="file" multiple="">
           <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
         </div> <!-- END #file_upload -->
         <section class="languages_options">
@@ -94,11 +94,11 @@
             <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
         <!-- Languages -->
           <h4>Languages</h4>
-            <input type="radio" name="language" id="out_html" data-lang="html" class="language_choice html" value="html_options" checked="checked">
+            <input type="radio" name="tool" id="out_html" data-lang="html" class="language_choice html" value="decompress_html" checked="checked">
               <label for="out_html">HTML</label><br>
-            <input type="radio" name="language" id="out_css" data-lang="css" class="language_choice css" value="css_options">
+            <input type="radio" name="tool" id="out_css" data-lang="css" class="language_choice css" value="decompress_css">
               <label for="out_css">CSS</label><br>
-            <input type="radio" name="language" id="out_js" data-lang="js" class="language_choice js" value="js_options">
+            <input type="radio" name="tool" id="out_js" data-lang="js" class="language_choice js" value="decompress_js">
               <label for="out_js">Javascript</label>
         <!-- Options -->
           <h4>Options</h4>
