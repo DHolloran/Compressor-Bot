@@ -50,7 +50,7 @@ $(function(){
 	}
 // ==== Set Uses Left ====
 	function setUsesLeft(){
-			$.getJSON(root+'_assets/includes/helpers/uses_left.php',function(data){
+			$.getJSON(root+'/_assets/includes/helpers/uses_left.php',function(data){
 				//var response = $.parseJSON(data);
 				usesLeft.empty();
 				if(data === 'Unlimited'){
