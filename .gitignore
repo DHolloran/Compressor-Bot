@@ -34,6 +34,8 @@ dwsync.xml
 intermediate
 publish
 .idea
+upload/*
+download/*
 
 # build script local files
 build/buildinfo.properties
@@ -42,7 +44,3 @@ build/config/buildinfo.properties
 # Apache Security Files
 .htaccess
 .htpasswd
-
-#Dir
-uploads/
-downloads/
