@@ -24,7 +24,7 @@
 				</select> </td></tr>
 				</table>
 				<input type="hidden" name="currency_code" class="paypal4" value="USD">
-				<input type="image" src="<?php echo "{$rootDir}/_assets/img/buttons/register_btn.png"; ?>" border="0" name="submit" alt="REGISTER">
+				<input type="image" src="<?php echo "{$assets}/_assets/img/buttons/register_btn.png"; ?>" border="0" name="submit" alt="REGISTER">
 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
 		</section><!-- END #register_modal -->
