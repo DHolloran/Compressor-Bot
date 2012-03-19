@@ -1,0 +1,33 @@
+/* ============ Footer ================= */
+  footer{
+    clear:both;
+    background-color: @footBg;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+    a:link, a:visited{
+      color: #ccc;
+    }
+    a:hover,a:active{
+      color: @link;
+    }
+    .wrapper{
+      width: 960px;
+      ul{
+        list-style-type: none;
+        float: right;
+        li{
+          float: left;
+          color: #ccc;
+          &:nth-child(1){
+            padding-right: 8px;
+            border-right: 2px solid #555;
+          }  /* End footer .wrapper ul li:nth-child(1) */
+          &:nth-child(2){
+            padding-left: 8px;
+          }  /* End footer .wrapper ul li:nth-child(2) */
+        }  /* End footer .wrapper ul li*/
+      } /* End footer .wrapper ul */
+    } /* End footer .wrapper */
+  } /* End footer */
