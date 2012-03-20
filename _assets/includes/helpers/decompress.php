@@ -116,7 +116,7 @@
 				$url = outputWrite($result,'css');
 				// Validate written File
 				$root = checkHost();
-				$fileUrl "$root/_assets/includes/helpers/files/download/$url";
+				$fileUrl = "$root/_assets/includes/helpers/files/download/$url";
 				$validation = validateFile($fileUrl);
 				// Rewrite file if validation errors occur
 				if($validation != ''){
