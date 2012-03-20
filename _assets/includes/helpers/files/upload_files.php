@@ -24,6 +24,7 @@
         $input = file_get_contents($url);
         $response = array($input, $tool);
         echo json_encode($response);
+        $upload->deleteAll();
     }
   }
 ?>

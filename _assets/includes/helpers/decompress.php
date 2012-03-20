@@ -116,7 +116,8 @@
 				$url = outputWrite($result,'css');
 				// Validate written File
 				$root = checkHost();
-				$validation = validateFile("$root/_assets/includes/helpers/files/download/$url");
+				echo "$root/_assets/includes/helpers/files/download/$url";
+				$validation = validateFile("http://compressorbot.com/tests/test.html");
 				// Rewrite file if validation errors occur
 				if($validation != ''){
 					$result = $validation .= $result;
