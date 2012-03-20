@@ -107,6 +107,9 @@
 		$validate = file_get_contents($url);
 		// Handle JSON Response
 		$response = json_decode($validate, true);
+		if( $response === NULL ){
+			return false;
+		}
 		$messages = $response['messages'];
 	    $validationOutput = '';
 	    // Create validation response string

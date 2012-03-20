@@ -93,7 +93,6 @@
 			if(!empty($_POST['css_prefixer'])){
 				$in = CssCrush::string($in);
 			}
-
 			/* CSSTidy */
 			$css = new csstidy();
 			$css->set_cfg('remove_last_;',TRUE);
@@ -102,7 +101,9 @@
 			// Output
 			/* Check if access is allowed */
 			if(addOneBasic()){
+				$css->print->formatted();
 				$result = strip_tags($css->print->formatted());
+
 				// Add spaces/tabs
 				// Set Tabs or spaces
 			    $whiteSpace = $_POST['wsp'];
@@ -111,6 +112,7 @@
 			    }elseif( $whiteSpace === 'spaces'){
 			    	$tab = "    ";
 			    }
+
 			    $result = preg_replace("/{[\\r\\n]/um", "{\r\n".$tab, $result);
 				// Write to file
 				$url = outputWrite($result,'css');
@@ -119,7 +121,7 @@
 				$fileUrl = "$root/_assets/includes/helpers/files/download/$url";
 				$validation = validateFile($fileUrl);
 				// Rewrite file if validation errors occur
-				if($validation != ''){
+				if(!$validation){
 					$result = $validation .= $result;
 					$url = outputWrite($result,'css');
 				}
@@ -158,7 +160,7 @@
 				$fileUrl = "$root/_assets/includes/helpers/files/download/$url";
 				$validation = validateFile($fileUrl);
 				// Rewrite file if validation errors occur
-				if($validation != ''){
+				if(!$validation){
 					$tidy = $validation .= $tidy;
 					$url = outputWrite($tidy,'css');
 				}
