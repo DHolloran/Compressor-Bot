@@ -431,7 +431,7 @@
 			"file": "_assets/js/script.js",
 			"settings":
 			{
-				"buffer_size": 14072,
+				"buffer_size": 14082,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,7 +447,7 @@
 			"file": "_assets/includes/helpers/decompress.php",
 			"settings":
 			{
-				"buffer_size": 4684,
+				"buffer_size": 4736,
 				"line_ending": "Unix"
 			}
 		},
@@ -709,6 +709,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$validation = validateFil",
 			"?v",
 			"OutputLintHTML",
 			"Lint",
@@ -835,8 +836,7 @@
 			"<span class=\"uses_left\">Unlimted</span>",
 			"<a href=\"#edit_modal\"",
 			"<a href=\"#edit_modal\" title=\"Upgrade now!\">",
-			"modal",
-			"textarea"
+			"modal"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -857,7 +857,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -925,15 +925,15 @@
 					"file": "_assets/js/script.js",
 					"settings":
 					{
-						"buffer_size": 14072,
+						"buffer_size": 14082,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11101,
-								11101
+								12569,
+								12569
 							]
 						],
 						"settings":
@@ -944,7 +944,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 640.0,
+						"translation.y": 9678.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -974,7 +974,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 427.0,
+						"translation.y": 67.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -984,15 +984,15 @@
 					"file": "_assets/includes/helpers/decompress.php",
 					"settings":
 					{
-						"buffer_size": 4684,
+						"buffer_size": 4736,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5,
-								5
+								3335,
+								3335
 							]
 						],
 						"settings":
@@ -1003,7 +1003,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1198.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1032,7 +1032,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3066.0,
+						"translation.y": 186.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
