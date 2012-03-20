@@ -145,7 +145,7 @@
 			           'wrap'           => 200);
 
 			// Tidy
-			$tidy = new tidy;
+			$tidy = new tidy();
 			$tidy->parseString($html, $config, 'utf8');
 			$tidy->cleanRepair();
 
