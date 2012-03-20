@@ -41,7 +41,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.png"; ?>">
   <!-- CSS -->
-  <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=2";?>">
+  <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=7";?>">
   <!-- Prefix free to add vendor specific prefixes -->
   <!--<script src="<?php //echo"$assets/js/libs/prefixfree.min.js"; ?>"></script>-->
 </head>

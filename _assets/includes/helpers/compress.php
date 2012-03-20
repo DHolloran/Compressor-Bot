@@ -84,6 +84,14 @@
 		/* Check if access is allowed */
 			if(addOneBasic()){
 				$url = outputWrite($result,'css');
+				// Validate written File
+				$root = checkHost();
+				$validation = validateFile("$root/_assets/includes/helpers/files/download/$url");
+				// Rewrite file if validation errors occur
+				if($validation != ''){
+					$result = $validation .= $result;
+					$url = outputWrite($result,'css');
+				}
 		    	$output = array($result, $url);
 		        echo json_encode($output);
 			}else{
@@ -105,6 +113,14 @@
 	  	$result = preg_replace($search, $replace, $result);
 		if(addOneBasic()){
 				$url = outputWrite($result,'html');
+				// Validate written File
+				$root = checkHost();
+				$validation = validateFile("$root/_assets/includes/helpers/files/download/$url");
+				// Rewrite file if validation errors occur
+				if($validation != ''){
+					$result = $validation .= $result;
+					$url = outputWrite($result,'css');
+				}
 		    	$output = array($result, $url);
 		        echo json_encode($output);
 			}else{

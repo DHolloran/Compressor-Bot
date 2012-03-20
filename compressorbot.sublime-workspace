@@ -411,6 +411,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "_assets/includes/controller/views/partials/header.inc.php",
+			"settings":
+			{
+				"buffer_size": 3049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/includes/controller/views/partials/footer.inc.php",
+			"settings":
+			{
+				"buffer_size": 1373,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/js/script.js",
+			"settings":
+			{
+				"buffer_size": 14072,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/includes/helpers/files/upload_files.php",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/includes/helpers/decompress.php",
+			"settings":
+			{
+				"buffer_size": 4684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_assets/includes/helpers/functions.php",
+			"settings":
+			{
+				"buffer_size": 3536,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -661,6 +709,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?v",
 			"OutputLintHTML",
 			"Lint",
 			"JSLEngine",
@@ -787,8 +836,7 @@
 			"<a href=\"#edit_modal\"",
 			"<a href=\"#edit_modal\" title=\"Upgrade now!\">",
 			"modal",
-			"textarea",
-			"<span class=\"uses_left\">Unlimted</span>"
+			"textarea"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -809,8 +857,186 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "_assets/includes/controller/views/partials/header.inc.php",
+					"settings":
+					{
+						"buffer_size": 3049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1698,
+								1698
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1042.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_assets/includes/controller/views/partials/footer.inc.php",
+					"settings":
+					{
+						"buffer_size": 1373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								849,
+								849
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_assets/js/script.js",
+					"settings":
+					{
+						"buffer_size": 14072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11101,
+								11101
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 640.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_assets/includes/helpers/files/upload_files.php",
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								673,
+								673
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 427.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_assets/includes/helpers/decompress.php",
+					"settings":
+					{
+						"buffer_size": 4684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_assets/includes/helpers/functions.php",
+					"settings":
+					{
+						"buffer_size": 3536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3205,
+								3205
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3066.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -860,8 +1086,28 @@
 		"selected_items":
 		[
 			[
+				"dec",
+				"_assets/includes/helpers/decompress.php"
+			],
+			[
+				"func",
+				"_assets/includes/helpers/functions.php"
+			],
+			[
+				"upl",
+				"_assets/includes/helpers/files/upload_files.php"
+			],
+			[
 				"scr",
 				"_assets/js/script.js"
+			],
+			[
+				"foo",
+				"_assets/includes/controller/views/partials/footer.inc.php"
+			],
+			[
+				"head",
+				"_assets/includes/controller/views/partials/header.inc.php"
 			],
 			[
 				"reg",
@@ -870,10 +1116,6 @@
 			[
 				"edit",
 				"_assets/includes/controller/views/modals/edit_modal.inc.php"
-			],
-			[
-				"dec",
-				"_assets/includes/controller/views/body/decompress_page.inc.php"
 			],
 			[
 				"compress.",
@@ -886,10 +1128,6 @@
 			[
 				"co",
 				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"func",
-				"_assets/includes/helpers/functions.php"
 			],
 			[
 				"compre",
@@ -914,10 +1152,6 @@
 			[
 				"dow",
 				"_assets/includes/helpers/files/download.php"
-			],
-			[
-				"upl",
-				"compress/upload.php"
 			],
 			[
 				"decom",
@@ -1012,10 +1246,6 @@
 				"_assets/includes/helpers/login.php"
 			],
 			[
-				"head",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
 				"auth",
 				"_assets/includes/model/AuthModel.php"
 			],
@@ -1106,10 +1336,6 @@
 			[
 				"sty",
 				"_assets/less/style.less"
-			],
-			[
-				"foo",
-				"_assets/includes/controller/views/partials/footer.inc.php"
 			],
 			[
 				"cont",
