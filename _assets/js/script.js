@@ -380,6 +380,7 @@ $(function(){
 // ==== Submit Decompress Ajax ====
 	function decompressorAjax(param){
 		$.post(root + '/_assets/includes/helpers/decompress.php', param, function(data){
+			console.log(data);
 			var response = $.parseJSON(data),
 				modalWrap = decompressModal.parent()
 			;

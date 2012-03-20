@@ -18,8 +18,7 @@
   if(isset($_FILES)&& isset($_FILES['file'])){
     $file =$upload->upload($_FILES['file']);
     if(false===$file){
-
-        // echo json_encode(false);
+      echo json_encode(false);
     }else {
         $url = "upload/{$file}/${fileName}";
         $input = file_get_contents($url);
