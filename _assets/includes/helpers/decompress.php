@@ -116,16 +116,7 @@
 			    $result = preg_replace("/{[\\r\\n]/um", "{\r\n".$tab, $result);
 				// Write to file
 				$url = outputWrite($result,'css');
-<<<<<<< HEAD
-				// Validate written File
-				$root = checkHost();
-				$fileUrl = "$root/_assets/includes/helpers/files/download/$url";
-				$validation = validateFile($fileUrl);
-				// Rewrite file if validation errors occur
-				if(!$validation){
-					$result = $validation .= $result;
-					$url = outputWrite($result,'css');
-=======
+
 				if($_SERVER['DOCUMENT_ROOT'] !== 'localhost' || $_SERVER['DOCUMENT_ROOT'] !== 'localhost'){
 					// Validate written File
 					$root = checkHost();
@@ -136,7 +127,7 @@
 						$result = $validation .= $result;
 						$url = outputWrite($result,'css');
 					}
->>>>>>> 42571e8c5689b02dedf8264f65b84c4361a5851b
+
 				}
 				// Set Output Values
 		    	$output = array($result, $url);
