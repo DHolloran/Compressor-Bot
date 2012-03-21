@@ -378,7 +378,6 @@ $(function(){
 // ==== Submit Decompress Ajax ====
 	function decompressorAjax(param){
 		$.post(root + '/_assets/includes/helpers/decompress.php', param, function(data){
-			console.log(data);
 			var response = $.parseJSON(data),
 				modalWrap = decompressModal.parent()
 			;
@@ -412,7 +411,7 @@ $(function(){
 
 	} // decompressorAjax()
 	// Activate On Form Submit
-	decompressForm.on('submit', function(e){
+	/*decompressForm.on('submit', function(e){
 		var that = $(this);
 		// Query Validator (HTML & CSS)
 		// CSSLint (CSS)
@@ -420,7 +419,7 @@ $(function(){
 		// Send to decompress.php
 		decompressorAjax(that.serialize());
 		e.preventDefault();
-	});
+	});*/
 // ==== Submit Upload AJAX ====
 	uploadForm.ajaxForm(function(data) {
 		var response = $.parseJSON(data),

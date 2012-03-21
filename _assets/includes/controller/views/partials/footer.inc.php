@@ -15,7 +15,7 @@
   <script defer src="<?php echo"$assets/js/plugins.js"; ?>"></script>
   <script defer src="<?php echo"$assets/js/libs/jquery.form.js"; ?>" ></script>
   <script defer src="<?php echo"$assets/js/libs/h5video-min.js"; ?>"></script>
-  <script defer src="<?php echo"$assets/js/script.js?=v8"; ?>"></script>
+  <script defer src="<?php echo"$assets/js/min/script.min.js?=v9"; ?>"></script>
   <!-- END SCRIPTS -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

@@ -107,9 +107,6 @@
           </div><!-- END #html_options -->
         <!-- CSS Options -->
           <div class="css_options">
-          <!-- CSS Keep Comments -->
-            <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
-              <label for="up_css_keep_comments">Keep Comments</label><br>
           <!-- CSSLint -->
             <input type="checkbox" class="css_lint" name="css_lint" id="up_css_lint">
               <label for="up_css_lint">CSSLint</label><br>
@@ -125,8 +122,6 @@
           </div><!-- END #css_options -->
           <!-- JS Options -->
             <div class="js_options">
-            <!-- JS Keep Comments -->
-              <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments"> <label for="up_js_keep_comments">Keep Comments</label><br>
             <!-- JSLint -->
               <input type="checkbox" class="js_lint" name="js_lint" id="up_js_lint"> <label for="up_js_lint">JSLint</label><br>
             <!-- JS Concat -->

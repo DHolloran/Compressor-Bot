@@ -12,9 +12,9 @@
 // ==== Check if it is Development or Live ===
 	function checkHost(){
 		if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1' ){
-				return 'http://localhost/~dholloran/compressorbot/development/site';
+				return 'http://localhost/~dholloran/compressorbot';
 			}else{
-				return 'http://compressorbot.com/development/site';
+				return 'http://compressorbot.com';
 			}
 	}
 // ==== Salt the pass ====
@@ -36,10 +36,8 @@
 		date_default_timezone_set( 'America/Chicago');
 		$todayDate = date("Y-m-d");// current date
 		if( $plan === 'basic' ){
-			//Add one month to today
-			$date = strtotime(date("m/d/Y", strtotime($todayDate)) . "+1 month");
-
-			return date('m/d/Y', $date);
+			// No Limit For Basic
+			return '00/00/0000';
 		}elseif( $plan === 'monthly' ){
 			//Add one month to today
 			$date = strtotime(date("m/d/Y", strtotime($todayDate)) . "+1 month");
@@ -56,45 +54,72 @@
 	function afterHeaderRedirect($url){
 		echo "<META HTTP-EQUIV=\"Refresh\" Content=\"0; URL={$url}\">";
 	}
-// ==== Create Zip File ====
-	function create_zip($files = array(),$destination = '',$overwrite = true) {
-	  //if the zip file already exists and overwrite is false, return false
-	  if(file_exists($destination) && !$overwrite) { return false; }
-	  //vars
-	  $valid_files = array();
-	  //if files were passed in...
-	  if(is_array($files)) {
-	    //cycle through each file
-	    foreach($files as $file) {
-	      //make sure the file exists
-	      if(file_exists($file)) {
-	        $valid_files[] = $file;
-	      }
-	    }
-	  }
-	  //if we have good files...
-	  if(count($valid_files)) {
-	    //create the archive
-	    $zip = new ZipArchive();
-	    if($zip->open($destination,$overwrite ? ZIPARCHIVE::OVERWRITE : ZIPARCHIVE::CREATE) !== true) {
-	      return false;
-	    }
-	    //add the files
-	    foreach($valid_files as $file) {
-	      $zip->addFile($file,$file);
-	    }
-	    //debug
-	    //echo 'The zip archive contains ',$zip->numFiles,' files with a status of ',$zip->status;
+// ==== Write Output To File ====
+	function outputWrite($output,$type){
+		$root = checkHost();
+			// Set Language Type
+			switch ($type) {
+				case 'html':
+					$f = fopen("files/download/index.html", "w");
+					$url = "index.html";
+					break;
+				case 'css':
+					$f = fopen("files/download/style.css", "w");
+					$url = "style.css";
+					break;
+				case 'js':
+					$f = fopen("files/download/script.js", "w");
+					$url = "script.js";
+					break;
 
-	    //close the zip -- done!
-	    $zip->close();
-
-	    //check to make sure the file exists
-	    return file_exists($destination);
-	  }
-	  else
-	  {
-	    return false;
-	  }
+				default:
+					$file = '';
+					break;
+			}
+		fwrite($f, $output);
+		fclose($f);
+		return $url;
 	}
+// ==== Add 1 to Users Limit if Basic ====
+	function addOneBasic(){
+		session_start();
+		$model = new ProfileModel();
+		$user_name = $_SESSION['user_info']['user_name'];
+		$plan = $model->getUserExisting($user_name);
+		if($plan['user_plan'] === 'basic'){
+			if($plan['tool_uses']<10){
+				$uses = $plan['tool_uses'] + 1;
+				$_SESSION['user_info']['tool_uses'] = $uses;
+				$model->updatePlan($user_name,$uses);
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return true;
+		}
+	}
+// ==== Validate Input (W3C Validator) ====
+	function validateFile($uri){
+		// URL to validate
+		$url = "http://validator.w3.org/check?uri=$uri;output=json;verbose=1";
+		// Send to validator
+		$validate = file_get_contents($url);
+		// Handle JSON Response
+		$response = json_decode($validate, true);
+		if( $response === NULL ){
+			return false;
+		}
+		$messages = $response['messages'];
+	    $validationOutput = '';
+	    // Create validation response string
+	    foreach ($messages as $value) {
+	    	$line = "Line: " . $value['lastLine'] . " ";
+			$col = "Column: " . $value['lastColumn'] . " ";
+			$lang = "Language: " . $value['messageid'] . "\r\n";
+			$msg = "Error: " . $value['message'] . "\r\n";
+		    $validationOutput .= $line . $col . $lang . $msg . "\r\n";
+	    }
 
+		return $validationOutput;
+	}

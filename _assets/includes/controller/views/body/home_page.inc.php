@@ -5,10 +5,7 @@
       <section id="intro">
         <h2>Speed up your code!</h2>
         <p>
-          Morbi consectetur ipsum porttitor arcu auctor accumsan.
-          Cras id libero mauris. Nullam odio turpis, sollic
-          itudin. Morbi consectetur ipsum porttitor arcu auctor accu
-          msan. Cras id libero mauris. Nullam odio turpis, sollicitudin. Morbi consectetur ipsum porttitor arcu auctor accumsan. Cras id libero mauris. Nullam odio turpis, sollicitudin.
+Are you tired of slow loading sluggish websites?  Then CompressorBot is the tool for you.  CompressorBot will help make your life easier by being the one stop place for all your HTML, CSS, and JavaScript code maintenance needs.
         </p>
         <!-- Signup Button -->
         <a href="#register_modal" class="modal_link">SIGN UP NOW!</a>
@@ -21,9 +18,9 @@
         </div><!-- /video_player -->
       <!-- Showcase Thumbnails -->
       <ul>
-        <li><img src="_assets/img/placeholders/home/upload_thumb.png" alt="Compress Input Upload" width="142" height="142"></li>
-        <li><img src="_assets/img/placeholders/home/copy_paste_thumb.png" alt="Compress Input Copy/Paste" width="142" height="142"></li>
-        <li><img src="_assets/img/placeholders/home/output_thumb.png" alt="Compress Output" width="142" height="142"></li>
+        <li><img src="_assets/img/home/upload_thumb.png" alt="Compress Input Upload" width="142" height="142"></li>
+        <li><img src="_assets/img/home/copy_paste_thumb.png" alt="Compress Input Copy/Paste" width="142" height="142"></li>
+        <li><img src="_assets/img/home/output_thumb.png" alt="Compress Output" width="142" height="142"></li>
       </ul><!-- / -->
     </div> <!-- END #showcase_div -->
   </div><!-- END #home_wrapper -->
