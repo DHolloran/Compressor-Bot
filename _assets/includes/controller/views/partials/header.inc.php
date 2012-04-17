@@ -9,7 +9,7 @@
   //Check if user has access to view page
   if($pageTitle === 'Compress' || $pageTitle === 'Decompress'){
     if(!isset($_SESSION['logged_in'])){
-      header("Location: http://compressorbot.com/development/site/");
+      header($homePage);
       exit;
     }
   }
@@ -28,6 +28,9 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!-- Flow Analytics Chart --><script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_links track_forms register register_once unregister identify name_tag set_config".split(" ");for(e=0;e<
+g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+mixpanel.init("9e095061dd428a02a99c44e0706ebc2e");</script><!-- End Flow Analytics -->
 <head>
   <meta charset="utf-8">
 
@@ -41,7 +44,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="<?php echo"{$assets}/img/icons/favicon.png"; ?>">
   <!-- CSS -->
-  <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=8";?>">
+  <link rel="stylesheet" href="<?php echo"{$assets}/css/style.css?v=9";?>">
   <!-- Prefix free to add vendor specific prefixes -->
   <!--<script src="<?php //echo"$assets/js/libs/prefixfree.min.js"; ?>"></script>-->
 </head>

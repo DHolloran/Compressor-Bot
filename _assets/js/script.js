@@ -135,7 +135,7 @@ $(function(){
 			e.preventDefault();
 			return false;
 		});
-//==== Tool Control (switch to upload/insert)==== */
+// ==== Tool Control (switch to upload/insert)====
 	toolSwitch.on('click', function(e){
 		var that = $(this);
 		// Show compress/decompress depending on what is already showing
@@ -314,9 +314,9 @@ $(function(){
 			},
 			animationDuration : 350,
 			source : {
-				"video/ogg"  : root+"/_assets/media/video/compressorbot_placeholder_video.theora.ogv",
-				"video/mp4"  : root+"/_assets/media/video/compressorbot_placeholder_video.mp4",
-				"video/webm" : root+"/_assets/media/video/compressorbot_placeholder_video.webm"
+				"video/ogg"  : root+"/_assets/media/video/walk_through.theora.ogv",
+				"video/mp4"  : root+"/_assets/media/video/walk_through.mp4",
+				"video/webm" : root+"/_assets/media/video/walk_through.webm"
 			},
 			loop : false,
 			preload: true,
@@ -411,7 +411,7 @@ $(function(){
 
 	} // decompressorAjax()
 	// Activate On Form Submit
-	/*decompressForm.on('submit', function(e){
+	decompressForm.on('submit', function(e){
 		var that = $(this);
 		// Query Validator (HTML & CSS)
 		// CSSLint (CSS)
@@ -419,7 +419,7 @@ $(function(){
 		// Send to decompress.php
 		decompressorAjax(that.serialize());
 		e.preventDefault();
-	});*/
+	});
 // ==== Submit Upload AJAX ====
 	uploadForm.ajaxForm(function(data) {
 		var response = $.parseJSON(data),
