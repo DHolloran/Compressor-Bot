@@ -18,24 +18,15 @@
           </div><!-- END .text_input -->
         <!-- .languages_options -->
           <section class="languages_options">
-            <span class="uses_left"></span>
-            <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
             <h4>Languages</h4>
-
-            <input type="radio" name="tool" id="in_html" data-lang="html" class="language_choice html" value="decompress_html" checked="checked">
-              <label for="in_html">HTML</label><br>
-
-            <input type="radio" name="tool" id="in_css" data-lang="css" class="language_choice css" value="decompress_css">
+            <!-- CSS Input -->
+            <input type="radio" name="tool" id="in_css" data-lang="css" class="language_choice css" value="decompress_css" checked="checked">
               <label for="in_css">CSS</label><br>
-
+            <!-- JS Input -->
             <input type="radio" name="tool" id="in_js" data-lang="js" class="language_choice js" value="decompress_js">
               <label for="in_js">Javascript</label>
+          <!-- Options -->
             <h4>Options</h4>
-          <!-- HTML Options -->
-            <div class="html_options">
-              <input type="checkbox" name="html_validate" id="in_html_validate" value="true">
-                <label for="in_html_validate">Validate</label><br>
-            </div><!-- END #html_options -->
           <!-- CSS Options -->
             <div class="css_options">
             <!-- CSS Whitespace-wsp (tabs/spaces)-->
@@ -43,9 +34,6 @@
                 <label for="in_css_wsp_tabs">Tabs</label><br>
               <input type="radio" id="in_css_wsp_spaces" name="wsp" value="spaces">
                 <label for="in_css_wsp_spaces">Spaces</label><br>
-            <!-- CSSLint -->
-              <input type="checkbox" name="css_lint" id="in_css_lint" value="true">
-                <label for="in_css_lint">CSSLint</label><br>
             <!-- CSS Validate -->
               <input type="checkbox" name="css_validate" id="in_css_validate" value="true">
                 <label for="in_css_validate">Validate</label><br>
@@ -60,9 +48,6 @@
                 <label for="in_js_wsp_tabs">Tabs</label><br>
               <input type="radio" id="in_js_wsp_spaces" name="wsp" value="spaces">
                 <label for="in_js_wsp_spaces">Spaces</label><br>
-            <!-- JSLint -->
-              <input type="checkbox" name="js_lint" id="in_js_lint" value="true">
-                <label for="in_js_lint">JSLint</label>
             </div><!-- END #js_options -->
           </section><!-- END #language_options -->
         </form>
@@ -90,8 +75,6 @@
           <input type="submit" class="tool_btn" data-page="decompress" value="Decompress">
         </div> <!-- END #file_upload -->
         <section class="languages_options">
-          <span class="uses_left"></span>
-            <span class="signup_link"><a href="#edit_modal" class="modal_link" title="Upgrade now!">Upgrade now!</a></span>
         <!-- Languages -->
           <h4>Languages</h4>
             <input type="radio" name="tool" id="out_html" data-lang="html" class="language_choice html" value="decompress_html" checked="checked">
@@ -115,12 +98,6 @@
                 <label for="out_css_wsp_tabs">Tabs</label><br>
               <input type="radio" id="out_css_wsp_spaces" name="wsp" value="spaces">
                 <label for="out_css_wsp_spaces">Spaces</label><br>
-            <!-- CSS Keep Comments -->
-              <input type="checkbox" name="css_keep_comments" id="up_css_keep_comments">
-                <label for="up_css_keep_comments">Keep Comments</label><br>
-            <!-- CSSLint -->
-              <input type="checkbox" name="css_lint" id="up_css_lint">
-                <label for="up_css_lint">CSSLint</label><br>
             <!-- CSS Validate -->
               <input type="checkbox" name="css_validate" id="up_css_validate">
                 <label for="up_css_validate">Validate</label><br>
@@ -138,12 +115,6 @@
                   <label for="out_js_wsp_tabs">Tabs</label><br>
                 <input type="radio" id="out_js_wsp_spaces" name="wsp" value="spaces">
                   <label for="out_js_wsp_spaces">Spaces</label><br>
-              <!-- JS Keep Comments -->
-                <input type="checkbox" name="js_keep_comments" id="up_js_keep_comments"> <label for="up_js_keep_comments">Keep Comments</label><br>
-              <!-- JSLint -->
-                <input type="checkbox" name="js_lint" id="up_js_lint"> <label for="up_js_lint">JSLint</label><br>
-              <!-- JS Concat -->
-                <input type="checkbox" name="js_concat" id="up_js_concat"> <label for="up_js_concat">Concatenate</label><br>
               </div><!-- END #js_options -->
         </section><!-- END .languages_options -->
       </form>

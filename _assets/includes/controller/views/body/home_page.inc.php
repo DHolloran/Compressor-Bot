@@ -5,10 +5,10 @@
       <section id="intro">
         <h2>Speed up your code!</h2>
         <p>
-Are you tired of slow loading sluggish websites?  Then CompressorBot is the tool for you.  CompressorBot will help make your life easier by being the one stop place for all your HTML, CSS, and JavaScript code maintenance needs.
+Are you tired of slow loading sluggish websites?  Then CompressorBot is the tool for you.  CompressorBot will help make your life easier by being the one stop place for all your CSS and JavaScript code maintenance needs.
         </p>
         <!-- Signup Button -->
-        <a href="#register_modal" class="modal_link">SIGN UP NOW!</a>
+        <!-- <a href="#register_modal" class="modal_link">SIGN UP NOW!</a> -->
       </section>
     <!-- Showcase -->
       <div id="showcase">

@@ -5,7 +5,7 @@
   require_once "{$rootDir}/_assets/includes/helpers/functions.php";
   $loginView = 'login_form';
   //Check if user is logged in
-  session_start();
+  /*session_start();
   //Check if user has access to view page
   if($pageTitle === 'Compress' || $pageTitle === 'Decompress'){
     if(!isset($_SESSION['logged_in'])){
@@ -15,7 +15,7 @@
   }
   if(isset($_SESSION['logged_in'])&& $_SESSION['logged_in']){
     $loginView = 'logged_in';
-  }
+  }*/
   // Set Default Timezone
   date_default_timezone_set('America/Chicago');
 ?>
@@ -68,8 +68,8 @@ mixpanel.init("9e095061dd428a02a99c44e0706ebc2e");</script><!-- End Flow Analyti
             </ul>
           </nav>
           <?php
-            $model = new PageView();
-            $model->show($loginView,'partials')
+            // $model = new PageView();
+            // $model->show($loginView,'partials')
           ?>
       </div><!-- END .wrapper -->
     </header>

@@ -153,8 +153,21 @@ $(function(){
 				uploadTool = $('#upload_tool'),
 				lang = selected
 			;
+			// Close all options
+			htmlOptions.hide();
+			cssOptions.hide();
+			jsOptions.hide();
+			$('.' + selected +'_options').fadeIn(300);
+			// Make all selected options marked
+			$('.' + selected).prop('checked',true);
 			if(selected === "js"){
 			selected = "Javascript";
+			}else{
+				selected = selected.toUpperCase();
+			}
+			// Set language text value for button
+			if(selected === "js"){
+				selected = "Javascript";
 			}else{
 				selected = selected.toUpperCase();
 			}
@@ -168,6 +181,7 @@ $(function(){
 			}
 		}
 	})();
+// ==== Language Choice Click Control ====
 	languageChoice.on('click', function(e){
 		var that = $(this),
 			selected = that.data('lang'),
