@@ -4,6 +4,158 @@
 		"selected_items":
 		[
 			[
+				"subst",
+				"substr_count"
+			],
+			[
+				"post",
+				"post_content"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"cur",
+				"cursor	cursor: type"
+			],
+			[
+				"object",
+				"objectToArray"
+			],
+			[
+				"contact",
+				"contact_name"
+			],
+			[
+				"set",
+				"setInterval();"
+			],
+			[
+				"out",
+				"outerWidth  (function)"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"file_",
+				"file_get_contents"
+			],
+			[
+				"thu",
+				"thumbnail"
+			],
+			[
+				"strT",
+				"strtolower"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"project",
+				"projectList"
+			],
+			[
+				"Projects_",
+				"Projects_model"
+			],
+			[
+				"footer",
+				"footerBg"
+			],
+			[
+				"twitt",
+				"twitter-wjs"
+			],
+			[
+				"projects",
+				"projectsController"
+			],
+			[
+				"span",
+				"span4"
+			],
+			[
+				"num",
+				"num_rows"
+			],
+			[
+				"Users",
+				"Users_model"
+			],
+			[
+				"array",
+				"array	$… = array (…)"
+			],
+			[
+				"arr",
+				"array_push"
+			],
+			[
+				"Us",
+				"Users_model"
+			],
+			[
+				"CI_M",
+				"CI_Model  (class)"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"mar",
+				"margin	margin-bottom: length"
+			],
+			[
+				"con",
+				"controls"
+			],
+			[
+				"control",
+				"control-group"
+			],
+			[
+				"CI_Con",
+				"CI_Controller  (class)"
+			],
+			[
+				"strto",
+				"strtotime  (function)"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"mouse",
+				"mouseenter  (function)"
+			],
+			[
+				"portfolio",
+				"portfolioThumbnail"
+			],
+			[
+				"pul",
+				"pull-right"
+			],
+			[
+				"pull",
+				"pull-left"
+			],
+			[
+				"curl",
+				"curlhandle"
+			],
+			[
 				"file",
 				"fieldset	<fieldset>"
 			],
@@ -120,16 +272,8 @@
 				"downloader"
 			],
 			[
-				"str_re",
-				"str_replace  (function)"
-			],
-			[
 				"preg",
 				"preg_replace"
-			],
-			[
-				"json",
-				"parseJSON  (function)"
 			],
 			[
 				"label",
@@ -146,10 +290,6 @@
 			[
 				"preg_mathc",
 				"preg_match_all  (function)"
-			],
-			[
-				"array",
-				"array"
 			],
 			[
 				"arra",
@@ -170,10 +310,6 @@
 			[
 				"class",
 				"classes"
-			],
-			[
-				"out",
-				"outerHeight  (function)"
 			],
 			[
 				"fad",
@@ -284,14 +420,6 @@
 				"link	link - stylesheet"
 			],
 			[
-				"span",
-				"span"
-			],
-			[
-				"footer",
-				"Footer"
-			],
-			[
 				"te",
 				"text	text-align: left/center/right"
 			],
@@ -310,10 +438,6 @@
 			[
 				"list-sty",
 				"list-style-type:   (property)"
-			],
-			[
-				"mar",
-				"margin	margin: T R B L"
 			],
 			[
 				"fetch",
@@ -390,78 +514,62 @@
 			[
 				"check",
 				"checked  (function)"
-			],
-			[
-				"char",
-				"characters"
-			],
-			[
-				"sele",
-				"selector"
-			],
-			[
-				"val",
-				"value=  (attribute)"
-			],
-			[
-				"chec",
-				"checked  (function)"
-			],
-			[
-				"su",
-				"subpixel_antialias"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "_assets/includes/controller/views/partials/header.inc.php",
-			"settings":
-			{
-				"buffer_size": 3004,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/EditProfile.php",
-			"settings":
-			{
-				"buffer_size": 1535,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/modals/edit_modal.inc.php",
-			"settings":
-			{
-				"buffer_size": 3641,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/less/modals.less",
-			"settings":
-			{
-				"buffer_size": 3752,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_assets/includes/controller/views/modals/register_modal.inc.php",
-			"settings":
-			{
-				"buffer_size": 1073,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 234.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"gis",
+				"Gist: Open Gist"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"show",
+				"Show TODOs in project and open files"
+			],
+			[
+				"sho",
+				"Show TODOs in project and open files"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"instla",
+				"Package Control: Install Package"
+			],
 			[
 				"githu",
 				"GitHub: Copy Gist to Clipboard"
@@ -475,10 +583,6 @@
 				"Gist: Open Gist"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"INSTA",
 				"Package Control: Install Package"
 			],
@@ -489,10 +593,6 @@
 			[
 				"add",
 				"Package Control: Add Repository"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"Package Control: ",
@@ -543,7 +643,7 @@
 				"Set Syntax: PHP"
 			]
 		],
-		"width": 406.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -560,134 +660,134 @@
 	},
 	"file_history":
 	[
-		"/Users/dholloran/Sites/compressorbot/_assets/less/style.less",
-		"/Users/dholloran/Sites/compressorbot/.htaccess",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/views/partials/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/decompress.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/views/partials/footer.inc.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/js/script.js",
-		"/Users/dholloran/Sites/compressorbot/sample_code/samplecss.css",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/compress.php",
-		"/Users/dholloran/Sites/compressorbot/sample_code/samplejs.js",
-		"/Users/dholloran/Sites/compressorbot/_assets/js/libs/h5video-min.js",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/functions.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/views/body/decompress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/files/download/index.html",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/csstidy/testing/css_results.php",
-		"/Users/dholloran/Sites/compressorbot/sandbox/index.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/views/body/compress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/views/body/home_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/less/body.less",
-		"/Users/dholloran/Sites/compressorbot/sandbox/files/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/sandbox/files/downloader.php",
-		"/Users/dholloran/Sites/compressorbot/sandbox/files/download.php",
-		"/Users/dholloran/Sites/compressorbot/_assets/includes/helpers/files/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/jsl-0.3.0/src/_jsl_online.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/register_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/edit_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/compress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/decompress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/decompress_page.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/compress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/footer.inc.php",
-		"/Users/dholloran/Downloads/multiple-file-upload/test/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/functions.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/modals.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/download.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/compress/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/decompress_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/compress_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/download.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/files/file_handler.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/index.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/decompress/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplecss.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/samplejs.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/sample_code/examplehtml.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/humans.txt",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/file_handler.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/config/constants.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/config/config.php",
+		"/Users/dholloran/Sites/compressorbot/_assets/includes/controller/PageView.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/config/database.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/index.php",
+		"/Users/dholloran/Sites/danholloran/dev/.htaccess",
+		"/Users/dholloran/Sites/danholloran/.htaccess",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/post.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/views/no_post.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/body.less",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/stickyfooter.less",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/views/post_view.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/models/Blog_model.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/blog_ajax.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/header.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/footer.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog/full_post.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/footer.less",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog/post_listing.jade",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/helpers/functions_helper.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/posts.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/js/script.js",
+		"/Users/dholloran/Sites/danholloran/dev/blog/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/post.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/post.html",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog/create_post.jade",
+		"/Users/dholloran/Sites/danholloran/dev/blog/post/index.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog_admin.jade",
+		"/Users/dholloran/Sites/danholloran/dev/sandbox/index.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog/update_post.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/blog/delete_post.jade",
+		"/Users/dholloran/Sites/danholloran/dev/admin/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/admin/index.html",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/style.less",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/fonts.less",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/header.less",
+		"/Users/dholloran/Sites/danholloran/dev/about/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/head.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/bootstrap/variables.less",
+		"/Users/dholloran/Sites/danholloran/includes/views/header.inc.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/content/home.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/site/base.less",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/as3/audio_app/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/as3_project.jade",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/models/Users_model.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/users_ajax.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/index.html",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/models/Projects_model.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/projects_ajax.php",
+		"/Users/dholloran/Sites/danholloran/dev/index.jade",
+		"/Users/dholloran/Desktop/sprite-example.css",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/project_list.jade",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/helpers/latest_tweet.php",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/helpers/files/twitter_result.data",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/bootstrap/navbar.less",
 		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/EditProfile.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/decompress/script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/decompress/style.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/decompress/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/files/downloader.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/files/file_handler.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/js/min/script.min.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/jsl-0.3.0/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/ProfileModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/functions.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/ProfileModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox2.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/plan_renew.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/uses_left.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/body.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/global.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/header.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/login.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/Register.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/model/AuthModel.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Paypal.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/payment_handler.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/output_script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/output_script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/css/style.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/decompress/script.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/files/decompress/index.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/style.css",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefixer.php",
-		"/Users/dholloran/Downloads/peteboere-css-crush-d729cf8/lib/Rule.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixr.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Prefixer.php",
-		"/Users/dholloran/Downloads/peteboere-css-crush-d729cf8/CssCrush.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/prefix_properties",
-		"/Users/dholloran/Downloads/LeaVerou-prefixfree-7031ff1/prefixfree.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/body/home_page.inc.php",
-		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadCSS.php",
-		"/Users/dholloran/Downloads/dynamically-load-minified-compressed-css-js/loadJS.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/classes.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/header.less",
-		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/style2.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5video.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/h5vide.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/print.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/helpers.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/media.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/footer.less",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/less/reset.less",
-		"/Users/dholloran/Desktop/examplehtml.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/PageView.php",
-		"/Volumes/ftp.compressorbot.com/compressorbot/development/site/_assets/includes/helpers/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/upload_files.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/sandbox3.php",
-		"/Users/dholloran/Desktop/samplecss.css",
-		"/Users/dholloran/Desktop/samplejs.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/sendmail.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/ompress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/Compress.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox/download_files.php",
-		"/Users/dholloran/Downloads/application/upload.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/modals/contact_modal.inc.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/controller/views/partials/login_form.inc.php",
-		"/Users/dholloran/Desktop/test.html",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox2.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.php",
-		"/Users/dholloran/Sites/compressorbot/development/site/sandbox.html",
-		"/etc/php.ini",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/tools/JSLint/jslint.js",
-		"/Users/dholloran/Sites/compressorbot/development/site/_assets/includes/helpers/vendor_prefixes.php"
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/as3/drawing_app/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/as3/weather_app/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/as3/audio_app/index.html",
+		"/Users/dholloran/Sites/danholloran/includes/views/projects/drawing-app.inc.php",
+		"/Users/dholloran/Sites/danholloran/includes/views/footer.inc.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/as3/drawing_app.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/as3/as3_project.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/as3/weather_app.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/project_flash.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/social_buttons.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/login_form.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/modals/contact_modal.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/content/about.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/contact_form.jade",
+		"/Users/dholloran/Sites/danholloran/dev/about/index.html",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/register_modal.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/create_project.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/delete_project.jade",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/project_image.html",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/jade/includes/partials/project/project_image.jade",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/index.jade",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/photozoom/site/-/js/badgeInstall.js",
+		"/Users/dholloran/Sites/compressorbot/_assets/js/script.js",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/index.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/-/css/main.css",
+		"/Users/dholloran/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/apple_tv.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/flash_full_size.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/flash_h264_full.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/flash_half_size.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/iphone_h64.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/fso_advert/ntsc_mov_full_size.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/radio.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_apple_tv.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_flash_full_size.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_flash_h264.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_flash_half_size.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_iphone.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/dkvx_media/vaca_ad/vaca_ntsc.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/business.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/business_article.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/index.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/tech.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/tech_article.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/world.html",
+		"/Users/dholloran/Sites/danholloran/dev/portfolio/projects/external/wwn_site/world_article.html",
+		"/Users/dholloran/Sites/danholloran/dev/ci/application/config/autoload.php",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/bootstrap/bootstrap.less",
+		"/Users/dholloran/Sites/danholloran/dev/_assets/css/less/bootswatch.less",
+		"/Users/dholloran/Sites/danholloran/.gitignore",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/external/photozoom/site/-/js/badgeInstall.js",
+		"/Users/dholloran/Sites/danholloran.com/.gitignore",
+		"/Volumes/DanHolloran.com/.htaccess",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/js/script.js",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/jade/includes/partials/project/project_list.jade",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/css/less/bootstrap/variables.less",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/external/photozoom/site/index.html",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/css/less/site/body.less",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/external/photozoom/site/-/install_swf/AIRInstallBadge.swf",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/external/photozoom/site/-/install_swf/expressinstall.swf",
+		"/Users/dholloran/Sites/danholloran.com/dev/sandbox/index.php",
+		"/Users/dholloran/Sites/danholloran.com/dev/sandbox/github.data",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/index.html",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/index.html",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/projects/index.jade",
+		"/Users/dholloran/Sites/danholloran.com/dev/portfolio/index.jade",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/jade/includes/partials/footer.jade",
+		"/Users/dholloran/Sites/danholloran.com/dev/_assets/css/less/site/footer.less",
+		"/Users/dholloran/Sites/danholloran.com/dev/ci/application/controllers/projects_ajax.php",
+		"/Users/dholloran/Sites/danholloran.com/dev/ci/application/helpers/latest_tweet.php",
+		"/Users/dholloran/Sites/danholloran.com/dev/ci/application/helpers/functions_helper.php"
 	],
 	"find":
 	{
@@ -698,6 +798,10 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/dholloran/Sites/danholloran/dev",
+			"/Users/dholloran/Sites/danholloran/dev/portfolio",
+			"<open folders>",
+			"/Users/dholloran/Sites/danholloran.com/dev/_assets/inc"
 		]
 	},
 	"find_state":
@@ -705,134 +809,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"access",
-			"Access",
-			"access",
-			"Access",
-			"access",
-			".png",
-			"compressorbot_placeholder_video",
-			"name=\"wsp\"",
-			"Tabs",
-			"placeholders/",
-			"Keep",
-			"!==",
-			"isset($_FILES['file",
-			"isset($_FILES['file1'])",
-			"isset($_FILES)&& ",
-			"uploadFiles",
-			"$fileName",
+			"<p",
+			"result",
+			"75em",
+			"span",
+			"&nbsp;",
+			"icon",
+			"/_assets",
+			"../_assets/jade/includes",
+			"..",
+			",",
+			"post",
+			"create",
+			"Create",
+			"create",
+			"Create",
+			"5em",
+			"160",
+			"i.pull-left",
+			"i.icon",
+			"a.btn",
+			"social-",
+			"&nbsp;",
+			"{",
+			".",
+			"\")",
+			"a.btn",
+			"80",
+			"460",
+			"}}\") ",
+			"/_a",
+			"http://flickholdr.com/434/246/sea/",
+			"());",
+			"i.icon-ok",
+			"a(",
+			"i.icon-ok",
+			".skill-active",
+			"&nbsp;",
+			".skill-active",
+			"&nbsp;",
+			".skill-active",
+			"&nbsp;",
+			".skill-active &nbsp;",
+			"li ",
+			"pull-right",
+			"190",
+			"@shadow",
+			"console",
+			"20px",
 			"1",
-			"']);",
-			"name=\"\"",
-			"value=\"\" placeholder=\"\"",
-			"	echo \"<br>\";\n	echo \"<hr>\";\n	echo \"<br>\";",
-			"echo \"<br>\"",
-			"console.log",
-			"comments",
-			"keep comments",
-			"comment",
-			"comments",
-			"*/",
-			"/*",
-			"$validation = validateFil",
-			"?v",
-			"OutputLintHTML",
-			"Lint",
-			"JSLEngine",
-			"JSLEn",
-			"name=\"tool",
-			"name=\"tool\"",
-			"code_upload",
-			"_options",
-			"name=\"language\"",
-			"add",
-			"type=\"text/javascript\" language=\"javascript\"",
-			".js\"",
-			"src=\"../",
-			"name=\"tool\"",
-			"name=\"compress_",
-			"compressAjax",
-			"$(document).outerWidth()",
-			"$(document).outerHeight()",
-			"modalWrap",
-			"compressModal",
-			"data",
-			"<!-- table",
-			"sign",
-			"#code_upload",
-			"echo \"<br><br>\";",
-			"}",
-			"[\"type\"]",
-			"[2]",
-			"[1]",
-			"[\"name\"]",
-			"{",
-			"}",
-			"[2]",
-			"[1]",
-			"{",
-			")",
-			"[\"name\"]",
-			"pload']",
-			"'uploadedfile'",
-			"filesToUpload",
-			"['error']",
-			"'photo'",
-			"'file'",
-			"['uploads']",
-			"$f",
-			"f",
-			"['upload']",
-			"$_FILES['file']",
-			"['uploads']",
-			"fh",
-			"_options",
-			"name=\"language\"",
-			"submit",
-			"code_upload",
-			"upload",
-			"upload_files",
-			"$root/_assets/includes/helpers/files/download/",
-			"  //   ",
-			"outputModal.on('submit', function(e){\n\n		console.log(e);\n\n		e.preventDefault();\n	});",
-			"submit",
-			"console.log",
-			"decompressModal",
-			"decompress",
+			".span2",
+			"li:",
+			"li",
+			"Li",
+			"li",
+			".pull-left",
+			"name",
+			"pull-right",
+			"mark",
+			"92",
+			"25",
+			"200",
+			".pull-left",
+			".span",
+			".span3",
+			".span",
+			".span4",
+			"color",
+			".icon-white",
+			"background-color",
+			"var ",
+			"<body>'",
+			"/434",
+			"434",
+			"functions",
+			"objectToArray",
+			"post_content",
+			"json",
+			"project",
+			"Project",
+			"1000",
+			"<!",
+			"_asse",
+			"_",
+			"328",
+			"578",
+			"conso//",
+			"conso",
+			"li.pull-right: |",
+			"\">",
+			"<div class=\"",
+			"@c",
+			"div",
+			"#home-",
+			"<div id=\"project_ex_nav\"><ul><li><a href=\"http://danholloran.com/portfolio/\"><img src=\"http://danholloran.com/_assets/img/body/arrow.png\" alt=\"\" width=\"12\" height=\"12\"/> Back</a></li><li><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"DHolloran\" data-count=\"none\">Tweet</a></li><li><g:plusone size=\"medium\" annotation=\"none\"></g:plusone></li><li><script src=\"http://platform.linkedin.com/in.js\" type=\"text/javascript\"></script><script type=\"IN/Share\"></script></li></ul></div>",
+			"<<head",
+			"group",
+			".btns",
+			"span6",
+			"li.span6",
+			"460",
+			"40",
+			"button",
+			"li",
+			"//-",
+			"</a>",
+			"\">",
+			"\" ",
+			" class=\"",
+			"|",
+			"button",
+			"<hr>",
 			"$results",
-			"$in",
-			"wsp",
-			"/_assets/includes/files/download/",
-			"$root",
-			"fopen(\"$root",
-			"decompress",
-			"window.location",
-			"console",
-			"$output",
-			"$url",
-			"$url = outputWrite",
-			"decompress",
-			"1",
-			"submitPaypal(paypal);",
-			"p1 = $('.paypal1').val(),\n			p2 = $('.paypal2').val(),\n			p3 = $('.paypal3').val(),\n			p4 = $('.paypal4').val(),\n			p5 = $('.paypal5').val(),\n			paypal = [p1,p2,p3,p4,p5]",
-			"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V9GVS7ACWNXN2&on0=&os0=Monthly&currency_code=USD",
-			"console",
-			"1",
-			"console",
-			"console.log",
-			"$output[",
-			".class",
-			".body",
-			"html",
-			"js",
-			"html",
-			"js",
-			"css",
-			"html",
-			"JS",
-			"decompress",
-			"Decompress"
+			");",
+			";",
+			"as3",
+			"audio",
+			"projects",
+			"as3_project",
+			"checkbox",
+			"-right",
+			"li",
+			".project_gutter.span1",
+			"300",
+			"../",
+			"200",
+			"first",
+			"email",
+			"ajax"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -840,6 +944,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<body>",
+			" ",
+			"",
 			"'",
 			"id=\"ceb",
 			"name=\"ceb"
@@ -853,156 +960,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "_assets/includes/controller/views/partials/header.inc.php",
-					"settings":
-					{
-						"buffer_size": 3004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								436,
-								436
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 110.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_assets/includes/controller/EditProfile.php",
-					"settings":
-					{
-						"buffer_size": 1535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_assets/includes/controller/views/modals/edit_modal.inc.php",
-					"settings":
-					{
-						"buffer_size": 3641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 48.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_assets/less/modals.less",
-					"settings":
-					{
-						"buffer_size": 3752,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1455,
-								1455
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1920.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "_assets/includes/controller/views/modals/register_modal.inc.php",
-					"settings":
-					{
-						"buffer_size": 1073,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1052,16 +1011,372 @@
 		"selected_items":
 		[
 			[
+				"dat",
+				"ci/application/config/database.php"
+			],
+			[
+				"bod",
+				"_assets/css/less/site/body.less"
+			],
+			[
+				"stic",
+				"_assets/css/less/site/stickyfooter.less"
+			],
+			[
+				"blog",
+				"ci/application/models/Blog_model.php"
+			],
+			[
+				"pos",
+				"ci/application/controllers/post.php"
+			],
+			[
+				"header",
+				"_assets/jade/includes/partials/header.jade"
+			],
+			[
+				"full",
+				"_assets/jade/includes/partials/blog/full_post.jade"
+			],
+			[
+				"foot",
+				"_assets/jade/includes/partials/footer.jade"
+			],
+			[
+				"foote",
+				"_assets/css/less/site/footer.less"
+			],
+			[
+				"conf",
+				"ci/application/config/config.php"
+			],
+			[
+				"func",
+				"ci/application/helpers/functions_helper.php"
+			],
+			[
+				"post_",
+				"_assets/jade/includes/partials/blog/post_listing.jade"
+			],
+			[
+				"blog_",
+				"_assets/jade/includes/partials/blog/post_listing.jade"
+			],
+			[
+				"blog/",
+				"_assets/jade/includes/partials/blog/create_post.jade"
+			],
+			[
+				"scrip",
+				"_assets/js/script.js"
+			],
+			[
+				"bo",
+				"_assets/css/less/site/body.less"
+			],
+			[
+				"blog/u",
+				"_assets/jade/includes/partials/blog/update_post.jade"
+			],
+			[
+				"blog/up",
+				"_assets/jade/includes/partials/blog/update_post.jade"
+			],
+			[
+				"blog/de",
+				"_assets/jade/includes/partials/blog/delete_post.jade"
+			],
+			[
+				"admin/",
+				"admin/index.jade"
+			],
+			[
+				"body",
+				"_assets/css/less/site/body.less"
+			],
+			[
+				"adm",
+				"_assets/jade/includes/partials/blog_admin.jade"
+			],
+			[
+				"font",
+				"_assets/css/less/site/fonts.less"
+			],
+			[
+				"head",
+				"_assets/css/less/site/header.less"
+			],
+			[
+				"he",
+				"_assets/jade/includes/partials/header.jade"
+			],
+			[
+				"va",
+				"_assets/css/less/bootstrap/variables.less"
+			],
+			[
+				"vari",
+				"_assets/css/less/bootstrap/variables.less"
+			],
+			[
+				"home",
+				"_assets/jade/includes/content/home.jade"
+			],
+			[
+				"bas",
+				"_assets/css/less/site/base.less"
+			],
+			[
+				"hom",
+				"_assets/jade/includes/content/home.jade"
+			],
+			[
+				"users",
+				"ci/application/models/Users_model.php"
+			],
+			[
+				"_aja",
+				"ci/application/controllers/users_ajax.php"
+			],
+			[
+				"projects_",
+				"ci/application/models/Projects_model.php"
+			],
+			[
+				"stick",
+				"_assets/css/less/site/stickyfooter.less"
+			],
+			[
+				"scri",
+				"_assets/js/script.js"
+			],
+			[
+				"foo",
+				"_assets/jade/includes/partials/footer.jade"
+			],
+			[
+				"inde",
+				"portfolio/index.jade"
+			],
+			[
+				"pro",
+				"_assets/jade/includes/partials/project/project_list.jade"
+			],
+			[
+				"la",
+				"ci/application/helpers/latest_tweet.php"
+			],
+			[
+				"sc",
+				"_assets/js/script.js"
+			],
+			[
+				"project_",
+				"_assets/jade/includes/partials/project/project_list.jade"
+			],
+			[
+				"proje",
+				"_assets/jade/includes/partials/project/project_list.jade"
+			],
+			[
+				"footer",
+				"_assets/jade/includes/partials/footer.jade"
+			],
+			[
+				"soc",
+				"_assets/jade/includes/partials/project/social_buttons.jade"
+			],
+			[
+				"log",
+				"_assets/jade/includes/partials/login_form.jade"
+			],
+			[
+				"admin",
+				"admin/index.jade"
+			],
+			[
+				"blo",
+				"blog/index.jade"
+			],
+			[
+				"project",
+				"ci/application/controllers/projects_ajax.php"
+			],
+			[
+				"auto",
+				"ci/application/config/autoload.php"
+			],
+			[
+				"projects",
+				"ci/application/models/Projects_model.php"
+			],
+			[
+				"post",
+				"_assets/jade/includes/partials/blog/post_listing.jade"
+			],
+			[
+				"about",
+				"about/index.jade"
+			],
+			[
+				"hea",
+				"_assets/jade/includes/partials/header.jade"
+			],
+			[
+				"about/in",
+				"about/index.html"
+			],
+			[
+				"index.jade",
+				"about/index.jade"
+			],
+			[
+				"lates",
+				"ci/application/helpers/latest_tweet.php"
+			],
+			[
+				"late",
+				"ci/application/helpers/latest_tweet.php"
+			],
+			[
+				"",
+				"_assets/jade/includes/partials/project/project_list_temp.jade"
+			],
+			[
+				"model",
+				"ci/application/models/Projects_model.php"
+			],
+			[
+				"create",
+				"_assets/jade/includes/partials/project/create_project.jade"
+			],
+			[
+				"regi",
+				"_assets/jade/includes/partials/register_modal.jade"
+			],
+			[
+				"con",
+				"ci/application/config/config.php"
+			],
+			[
+				"cre",
+				"_assets/jade/includes/partials/project/create_project.jade"
+			],
+			[
+				"up",
+				"_assets/jade/includes/partials/project/update_project.jade"
+			],
+			[
+				"upd",
+				"_assets/jade/includes/partials/blog/update_post.jade"
+			],
+			[
+				"de",
+				"_assets/jade/includes/partials/blog/delete_post.jade"
+			],
+			[
+				"del",
+				"_assets/jade/includes/partials/project/delete_project.jade"
+			],
+			[
+				"modal",
+				"_assets/jade/includes/partials/register_modal.jade"
+			],
+			[
+				"regis",
+				"_assets/jade/includes/partials/register_modal.jade"
+			],
+			[
+				"confi",
+				"ci/application/config/config.php"
+			],
+			[
+				"dele",
+				"_assets/jade/includes/partials/project/delete_project.jade"
+			],
+			[
+				"lat",
+				"_assets/inc/latest_tweet.php"
+			],
+			[
+				"header.ja",
+				"_assets/jade/includes/partials/header.jade"
+			],
+			[
+				"login",
+				"_assets/jade/includes/partials/login_form.jade"
+			],
+			[
+				"por",
+				"_assets/jade/includes/partials/portfolio_admin.jade"
+			],
+			[
+				"welcom",
+				"ci/application/controllers/welcome.php"
+			],
+			[
+				"co",
+				"_assets/inc/twitteroauth/config.php"
+			],
+			[
+				"p",
+				"_assets/jade/includes/content/portfolio.jade"
+			],
+			[
+				"varia",
+				"_assets/css/less/bootstrap/variables.less"
+			],
+			[
+				"portf",
+				"_assets/jade/includes/content/portfolio.jade"
+			],
+			[
+				"script",
+				"_assets/js/script.js"
+			],
+			[
+				"st",
+				"_assets/css/less/style.less"
+			],
+			[
+				"sy",
+				"_assets/css/less/style.less"
+			],
+			[
+				"styl",
+				"_assets/css/less/style.less"
+			],
+			[
+				"portfoli",
+				"_assets/jade/includes/content/portfolio.jade"
+			],
+			[
+				"style",
+				"_assets/css/less/style.less"
+			],
+			[
+				"portfol",
+				"portfolio/index.jade"
+			],
+			[
+				"stye",
+				"_assets/css/less/style.less"
+			],
+			[
+				"boot",
+				"twitter-bootstrap-59503e7/css/bootstrap.css"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
 				"regist",
 				"_assets/includes/controller/views/modals/register_modal.inc.php"
 			],
 			[
 				"mod",
 				"_assets/less/modals.less"
-			],
-			[
-				"st",
-				"_assets/less/style.less"
 			],
 			[
 				"edit",
@@ -1072,24 +1387,8 @@
 				"_assets/includes/controller/EditProfile.php"
 			],
 			[
-				"he",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
-				"foot",
-				"_assets/includes/controller/views/partials/footer.inc.php"
-			],
-			[
 				"dec",
 				"_assets/includes/helpers/decompress.php"
-			],
-			[
-				"foo",
-				"_assets/includes/controller/views/partials/footer.inc.php"
-			],
-			[
-				"scri",
-				"_assets/js/script.js"
 			],
 			[
 				"scr",
@@ -1104,36 +1403,12 @@
 				"sample_code/samplecss.css"
 			],
 			[
-				"sc",
-				"_assets/js/script.js"
-			],
-			[
-				"head",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
 				"decom",
 				"_assets/includes/controller/views/body/decompress_page.inc.php"
 			],
 			[
-				"func",
-				"_assets/includes/helpers/functions.php"
-			],
-			[
-				"hom",
-				"_assets/includes/controller/views/body/home_page.inc.php"
-			],
-			[
 				"com",
 				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"hea",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
-				"body",
-				"_assets/less/body.less"
 			],
 			[
 				"ho",
@@ -1156,20 +1431,12 @@
 				"_assets/includes/helpers/compress.php"
 			],
 			[
-				"co",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
 				"compre",
 				"_assets/includes/helpers/compress.php"
 			],
 			[
 				"copress.",
 				"_assets/includes/helpers/compress.php"
-			],
-			[
-				"modal",
-				"_assets/less/modals.less"
 			],
 			[
 				"compress",
@@ -1180,16 +1447,8 @@
 				"_assets/includes/helpers/files/download.php"
 			],
 			[
-				"script",
-				"_assets/js/script.js"
-			],
-			[
 				"deco",
 				"_assets/includes/helpers/decompress.php"
-			],
-			[
-				"regis",
-				"_assets/includes/controller/views/modals/register_modal.inc.php"
 			],
 			[
 				"editmo",
@@ -1208,16 +1467,8 @@
 				"_assets/includes/helpers/compress.php"
 			],
 			[
-				"scrip",
-				"_assets/js/min/script.min.js"
-			],
-			[
 				"sampl",
 				"sample_code/samplejs.js"
-			],
-			[
-				"pro",
-				"_assets/includes/model/ProfileModel.php"
 			],
 			[
 				"prof",
@@ -1244,24 +1495,8 @@
 				"sandbox/sandbox2.php"
 			],
 			[
-				"log",
-				"_assets/includes/helpers/login.php"
-			],
-			[
 				"auth",
 				"_assets/includes/model/AuthModel.php"
-			],
-			[
-				"styl",
-				"_assets/less/style.less"
-			],
-			[
-				"",
-				"_assets/includes/helpers/payment_handler.php"
-			],
-			[
-				"regi",
-				"_assets/includes/controller/views/modals/register_modal.inc.php"
 			],
 			[
 				"fun",
@@ -1286,206 +1521,6 @@
 			[
 				"compress.p",
 				"_assets/includes/helpers/compress.php"
-			],
-			[
-				"sandbox",
-				"sandbox/sandbox2.php"
-			],
-			[
-				"style",
-				"_assets/less/style.less"
-			],
-			[
-				"logi",
-				"_assets/includes/helpers/login.php"
-			],
-			[
-				"home",
-				"_assets/includes/controller/views/body/home_page.inc.php"
-			],
-			[
-				"compress.php",
-				"_assets/includes/helpers/compress.php"
-			],
-			[
-				"sa",
-				"sandbox/sandbox.html"
-			],
-			[
-				"cla",
-				"_assets/less/classes.less"
-			],
-			[
-				"pa",
-				"_assets/includes/controller/PageView.php"
-			],
-			[
-				"upload",
-				"sandbox/upload_files.php"
-			],
-			[
-				"sand",
-				"sandbox/sandbox3.php"
-			],
-			[
-				"sty",
-				"_assets/less/style.less"
-			],
-			[
-				"cont",
-				"_assets/includes/controller/views/modals/contact_modal.inc.php"
-			],
-			[
-				"se",
-				"_assets/includes/helpers/sendmail.php"
-			],
-			[
-				"conta",
-				"_assets/includes/controller/views/modals/contact_modal.inc.php"
-			],
-			[
-				"aut",
-				"_assets/includes/model/AuthModel.php"
-			],
-			[
-				"sandbo",
-				"sandbox/sandbox.html"
-			],
-			[
-				"compress_p",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"s",
-				"sandbox.php"
-			],
-			[
-				"pr",
-				"_assets/includes/helpers/Prefixer.php"
-			],
-			[
-				"send",
-				"_assets/includes/helpers/sendmail.php"
-			],
-			[
-				"contac",
-				"_assets/includes/controller/views/modals/contact_modal.inc.php"
-			],
-			[
-				"re",
-				"_assets/includes/controller/Register.php"
-			],
-			[
-				"pag",
-				"_assets/includes/controller/PageView.php"
-			],
-			[
-				"lo",
-				"_assets/includes/helpers/login.php"
-			],
-			[
-				"page",
-				"_assets/includes/controller/PageView.php"
-			],
-			[
-				"sandb",
-				"sandbox.php"
-			],
-			[
-				"less",
-				"_assets/less/style.less"
-			],
-			[
-				"sendma",
-				"_assets/includes/helpers/sendmail.php"
-			],
-			[
-				"functi",
-				"_assets/includes/helpers/functions.php"
-			],
-			[
-				"logge",
-				"_assets/includes/controller/views/partials/logged_in.inc.php"
-			],
-			[
-				"login",
-				"_assets/includes/controller/views/partials/login_form.inc.php"
-			],
-			[
-				"logg",
-				"_assets/includes/controller/views/partials/logged_in.inc.php"
-			],
-			[
-				"fucn",
-				"_assets/includes/helpers/functions.php"
-			],
-			[
-				"index",
-				"decompress/index.php"
-			],
-			[
-				"edit_",
-				"_assets/includes/controller/views/modals/edit_modal.inc.php"
-			],
-			[
-				"compress_pa",
-				"_assets/includes/controller/views/body/compress_page.inc.php"
-			],
-			[
-				"register",
-				"_assets/includes/controller/views/modals/register_modal.inc.php"
-			],
-			[
-				"heade",
-				"_assets/includes/controller/views/partials/header.inc.php"
-			],
-			[
-				"pap",
-				"_assets/includes/controller/PageView.php"
-			],
-			[
-				"le",
-				"_assets/less/style.less"
-			],
-			[
-				"contact",
-				"_assets/includes/controller/views/modals/contact_modal.inc.php"
-			],
-			[
-				"stye",
-				"_assets/less/style.less"
-			],
-			[
-				"styel",
-				"_assets/less/style.less"
-			],
-			[
-				"compres_mod",
-				"_assets/includes/controller/views/modals/compress_modal.inc.php"
-			],
-			[
-				"inde",
-				"compress/index.php"
-			],
-			[
-				"ind",
-				"index.php"
-			],
-			[
-				"ema",
-				"_assets/includes/helpers/email_form.php"
-			],
-			[
-				"footer",
-				"_assets/includes/controller/views/templates/footer.inc.php"
-			],
-			[
-				"edit_mo",
-				"_assets/includes/controller/views/modals/edit_modal.inc.php"
-			],
-			[
-				"style.lss",
-				"_assets/less/style.less"
 			]
 		],
 		"width": 0.0
@@ -1497,7 +1532,7 @@
 		[
 			[
 				"",
-				"/Users/dholloran/Sites/compressorbot/compressorbot.sublime-project"
+				"/Users/dholloran/Sites/danholloran/dev/ci/application/controllers/compressorbot.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1506,6 +1541,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 222.0,
+	"side_bar_width": 286.0,
 	"status_bar_visible": true
 }
