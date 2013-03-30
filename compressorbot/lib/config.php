@@ -65,7 +65,7 @@ function roots_display_sidebar() {
      */
     array(
       'page-beautifier.php',
-      'page-compressor.php'
+      'page-minifier.php'
     )
   );
 

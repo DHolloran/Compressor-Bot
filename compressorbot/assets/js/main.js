@@ -4,6 +4,7 @@ Dan Holloran @dholloran
 // @codekit-prepend "vendor/cssbeautify.js"
 // @codekit-prepend "vendor/jsbeautify.js"
 // @codekit-prepend "vendor/htmlbeautify.js"
+// @codekit-prepend "vendor/cssmin.js"
 // @codekit-prepend "plugins.js"
 jQuery(function($){
 	$(window).ready(function(){
@@ -26,10 +27,10 @@ jQuery(function($){
 		// @codekit-prepend "beautfier/html-beautifier.js"
 		// @codekit-prepend "beautfier/css-beautifier.js"
 		// @codekit-prepend "beautfier/js-beautifier.js"
-		// @codekit-prepend "compressor/compressor.js"
-		// @codekit-prepend "compressor/css-compressor.js"
-		// @codekit-prepend "compressor/js-compressor.js"
-		// @codekit-prepend "compressor/html-compressor.js"
+		// @codekit-prepend "minifier/minifier.js"
+		// @codekit-prepend "minifier/css-minifier.js"
+		// @codekit-prepend "minifier/js-minifier.js"
+		// @codekit-prepend "minifier/html-minifier.js"
 		// @codekit-prepend "scripts.js"
 	}); // $(window).ready(
 }(jQuery));
