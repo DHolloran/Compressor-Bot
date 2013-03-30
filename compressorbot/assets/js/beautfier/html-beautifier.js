@@ -58,3 +58,10 @@ $('.hb-indent-scripts').on('change', function(){
 hbInput.on('keyup', function(){
 	beautifyHtml();
 });
+
+/**
+* Beautify HTML Load
+*/
+if ( hbOutput.length > 0 ) {
+	beautifyHtml();
+}

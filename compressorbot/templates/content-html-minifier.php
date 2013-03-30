@@ -1,5 +1,5 @@
 <div class="span8 hm-options-section hide">
-	<h2>Minify Your HTML <span class="muted">powered by <a href="" target="_blank"></a></span></h2>
+	<h2>Minify Your HTML <span class="muted">powered by <a href="https://github.com/tylerhall/html-compressor" target="_blank">HTML Compressor</a></span></h2>
 	<div class="row">
 		<div class="span4">
 			<textarea id="hm_input" class="pull-left input" name="hm_input">
@@ -7,7 +7,11 @@
 				<head>
 					<title></title>
 				</head>
+				<!-- comment -->
 				<body>
+					<div>
+						content
+					</div>
 				</body>
 				</html>
 			</textarea>

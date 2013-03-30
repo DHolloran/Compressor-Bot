@@ -31,7 +31,12 @@
 
 	<!-- HTML Options -->
 	<div class="row">
-		<div id="hm_options" class="span3 hm-options-section options-section hide"></div> <!-- /#hm_options -->
+		<div id="hm_options" class="span3 hm-options-section options-section hide">
+			<p>
+				<h4>Comments</h4>
+				<label><input checked type="checkbox" name="hb_strip_comments" class="hb-strip-comments" id="hb_strip_comments" value="on"> Strip comments</label>
+			</p>
+		</div> <!-- /#hm_options -->
 	</div> <!-- /.row -->
 	<!-- END HTML Options -->
 
