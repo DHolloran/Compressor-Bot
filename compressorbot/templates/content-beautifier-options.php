@@ -4,8 +4,9 @@
 		<div id="lb_options" class="span3 options-section">
 			<h3>Language Options</h3>
 			<p>
-				<label><input type="radio" name="lb_language" class="lb-language" id="lb_cb_language" value="cb-options-section"> CSS</label>
-				<label><input checked type="radio" name="lb_language" class="lb-language" id="lb_jb_language" value="jb-options-section"> JS</label>
+				<label><input checked type="radio" name="lb_language" class="lb-language" id="lb_cb_language" value="cb-options-section"> CSS</label>
+				<label><input type="radio" name="lb_language" class="lb-language" id="lb_jb_language" value="jb-options-section"> JS</label>
+				<label><input type="radio" name="lb_language" class="lb-language" id="lb_hb_language" value="hb-options-section"> HTML</label>
 			</p>
 		</div>
 	</div> <!-- /.row -->
@@ -13,7 +14,7 @@
 
 	<!-- CSS Options -->
 	<div class="row">
-		<div id="cb_options" class="span3 cb-options-section options-section hide">
+		<div id="cb_options" class="span3 cb-options-section options-section">
 			<h3>CSS Options</h3>
 			<p>
 				<h4>Indent</h4>
@@ -40,7 +41,7 @@
 
 	<!-- JS Options -->
 	<div class="row">
-		<div id="jb_options" class="span3 jb-options-section options-section">
+		<div id="jb_options" class="span3 jb-options-section options-section hide">
 			<h3>JS Options</h3>
 			<p>
 				<h4>Indent</h4>
@@ -92,5 +93,31 @@
 		</div> <!-- /#jb_options -->
 	</div> <!-- /.row -->
 	<!-- END JS Options -->
+
+	<!-- HTML Options -->
+	<div class="row">
+		<div id="hb_options" class="span3 hb-options-section options-section hide">
+			<h3>HTML Options</h3>
+			<p>
+				<h4>Indent</h4>
+				<label><input checked type="radio" name="hb_indent_char" class="hb-indent-char" id="hb_indent_char_tab" value="tab"> tab</label>
+				<label><input type="radio" name="hb_indent_char" class="hb-indent-char" id="hb_indent_char_twospaces" value="twospaces"> two spaces</label>
+				<label><input type="radio" name="hb_indent_char" class="hb-indent-char" id="hb_indent_char_fourspaces" value="fourspaces"> four spaces</label>
+			</p>
+			<p>
+				<h4>Braces</h4>
+				<label><input checked type="radio" name="hb_braces" class="hb-braces" id="hb_collapse_brace" value="collapse"> collapsed</label>
+				<label><input type="radio" name="hb_braces" class="hb-braces" id="hb_expand" value="expand"> expanded</label>
+				<label><input type="radio" name="hb_braces" class="hb-braces" id="hb_end_expanded" value="end-expand"> end expanded</label>
+			</p>
+			<p>
+				<h4>Indent Scripts</h4>
+				<label><input checked type="radio" name="hb_indent_scripts" class="hb-indent-scripts" id="hb_normal" value="normal"> normal</label>
+				<label><input type="radio" name="hb_indent_scripts" class="hb-indent-scripts" id="hb_keep" value="keep"> keep</label>
+				<label><input type="radio" name="hb_indent_scripts" class="hb-indent-scripts" id="hb_seperate" value="seperate"> seperate</label>
+			</p>
+		</div> <!-- /#hb_options -->
+	</div> <!-- /.row -->
+	<!-- END HTML Options -->
 
 </div> <!-- /.row -->
