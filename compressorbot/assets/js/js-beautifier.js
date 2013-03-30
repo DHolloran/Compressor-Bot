@@ -11,7 +11,9 @@ space_before_conditional = true | false;
 unescape_strings = false | true;
 wrap_line_length = int;
 */
-var jbOptionsCheckBox = $('#jb_options input[type="checkbox"]'),
+var jbInput = $('#jb_input'),
+		jbOutput = $('#jb_output'),
+		jbOptionsCheckBox = $('#jb_options input[type="checkbox"]'),
 		jbOptionsRadio = $('#jb_options input[type="radio"]'),
 		jbOptionsNumber = $('#jb_options input[type="number"]'),
 		jbOptions = {
@@ -33,8 +35,8 @@ var jbOptionsCheckBox = $('#jb_options input[type="checkbox"]'),
 * Beautify JS
 */
 function beautifyJs() {
-	var beautifiedJs = js_beautify(jbInput.getVal(), jbOptions);
-	jbOutput.setVal(beautifiedJs);
+	var beautifiedJs = js_beautify(jbInput.val(), jbOptions);
+	jbOutput.val(beautifiedJs);
 }
 
 /**
@@ -55,7 +57,7 @@ jbOptionsRadio.on('change',function(){
 			selectedOption = that.attr('id').replace('jb_', '')
 	;
 
-	switch(jbInput.getVal()) {
+	switch(that.val()) {
 		case 'tab':
 			jbOptions.selectedOption = '\t';
 			break;

@@ -1,4 +1,6 @@
-var cbOptions = {
+var cbInput = $('#cb_input'),
+		cbOutput = $('#cb_output'),
+		cbOptions = {
 			indent: '\t',
 			openbrace: 'separate-line',
 			autosemicolon: true
@@ -14,7 +16,7 @@ var cbOptions = {
 */
 function beautifyCss() {
 	var beautifiedCss = cssbeautify( cbInput.val(), cbOptions );
-	cbOutput.setVal( beautifiedCss );
+	cbOutput.val( beautifiedCss );
 }
 
 
@@ -23,7 +25,7 @@ function beautifyCss() {
 */
 // indent is a string used for the indentation of the declaration
 cbIndentElem.on('change', function(){
-	switch( cbInput.getValue() ) {
+	switch( $(this).val() ) {
 		case 'tab':
 			cbOptions.indent = '\t';
 			break;

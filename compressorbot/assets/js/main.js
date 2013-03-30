@@ -3,16 +3,10 @@ Dan Holloran @dholloran
 */
 // @codekit-prepend "vendor/cssbeautify.js"
 // @codekit-prepend "vendor/jsbeautify.js"
+// @codekit-prepend "vendor/htmlbeautify.js"
 // @codekit-prepend "vendor/plugin.js"
 jQuery(function($){
 	$(window).ready(function(){
-
-		var jbEditor = CodeMirror.fromTextArea(document.getElementById("jb_input"), {
-				lineNumbers: true,
-				matchBrackets: false,
-				lineWrapping: true,
-				tabSize: 4
-		});
 		/**
 		* Options Advanced Link
 		*/
@@ -28,20 +22,8 @@ jQuery(function($){
 					}
 			e.preventDefault();
 		});
-		// @codekit-prepend "vendor/codemirror/codemirror.js"
-		// @codekit-prepend "vendor/codemirror/method-css.js"
-		// @codekit-prepend "vendor/codemirror/method-javascript.js"
-		var codeMirrorOptions = {
-			lineNumbers: true,
-			matchBrackets: false,
-			lineWrapping: true,
-			tabSize: 4
-		};
-		// jbInput = CodeMirror.fromTextArea(document.getElementById("jb_input"), codeMirrorOptions);
-		// jbOutput = CodeMirror.fromTextArea(document.getElementById("jb_output"), codeMirrorOptions);
-		// cbInput = CodeMirror.fromTextArea(document.getElementById("cd_input"), codeMirrorOptions);
-		// cbOutput = CodeMirror.fromTextArea(document.getElementById("cd_output"), codeMirrorOptions);
 		// @codekit-prepend "beautifier.js"
+		// @codekit-prepend "html-beautifier.js"
 		// @codekit-prepend "css-beautifier.js"
 		// @codekit-prepend "js-beautifier.js"
 		// @codekit-prepend "css-compressor.js"
