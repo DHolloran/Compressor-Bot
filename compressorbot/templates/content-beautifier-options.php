@@ -2,7 +2,7 @@
 	<!-- Language Options -->
 	<div class="row">
 		<div id="lb_options" class="span3 options-section">
-			<h3>Language Options</h3>
+			<h3>Choose Your Language</h3>
 			<p>
 				<label><input checked type="radio" name="lb_language" class="lb-language" id="lb_cb_language" value="cb-options-section"> CSS</label>
 				<label><input type="radio" name="lb_language" class="lb-language" id="lb_jb_language" value="jb-options-section"> JS</label>
@@ -14,8 +14,10 @@
 
 	<!-- CSS Options -->
 	<div class="row">
+		<div class="span3">
+			<h3>Select Your Options</h3>
+		</div>
 		<div id="cb_options" class="span3 cb-options-section options-section">
-			<h3>CSS Options</h3>
 			<p>
 				<h4>Indent</h4>
 				<label><input checked type="radio" name="cb_indent" class="cb-spacing" id="cb_tab" value="tab"> tab</label>
@@ -31,10 +33,10 @@
 				<h4>Semicolon</h4>
 				<label><input checked type="checkbox" name="cb_autosemicolon" class="cb-auto-semicolon" id="cb_cb_autosemicolon" value="on"> Automatic semicolon</label>
 			</p>
-			<p>
+			<!-- <p>
 				<h4>CSS Linting</h4>
 				<label><input checked type="checkbox" name="cb_csslint" class="cb-css-lint" id="cb_csslint" value="on"> CSS Lint</label>
-			</p>
+			</p> -->
 		</div>
 	</div> <!-- /.row -->
 	<!-- END CSS Options -->
@@ -42,7 +44,6 @@
 	<!-- JS Options -->
 	<div class="row">
 		<div id="jb_options" class="span3 jb-options-section options-section hide">
-			<h3>JS Options</h3>
 			<p>
 				<h4>Indent</h4>
 				<label><input checked type="radio" name="jb_indent_char" class="jb-indent-char" id="jb_indent_char_tab" value="tab"> tab</label>
@@ -97,7 +98,6 @@
 	<!-- HTML Options -->
 	<div class="row">
 		<div id="hb_options" class="span3 hb-options-section options-section hide">
-			<h3>HTML Options</h3>
 			<p>
 				<h4>Indent</h4>
 				<label><input checked type="radio" name="hb_indent_char" class="hb-indent-char" id="hb_indent_char_tab" value="tab"> tab</label>
