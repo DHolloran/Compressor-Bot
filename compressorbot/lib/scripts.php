@@ -32,6 +32,7 @@ function roots_scripts() {
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, null, false);
   wp_register_script('roots_main', get_template_directory_uri() . '/assets/js/main.min.js', array( 'jquery' ), null, true);
+  wp_localize_script( 'roots_main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
   wp_enqueue_script('jquery');
   wp_enqueue_script('modernizr');
   wp_enqueue_script('roots_main');
