@@ -4,7 +4,7 @@ Dan Holloran @dholloran
 // @codekit-prepend "vendor/cssbeautify.js"
 // @codekit-prepend "vendor/jsbeautify.js"
 // @codekit-prepend "vendor/htmlbeautify.js"
-// @codekit-prepend "vendor/plugin.js"
+// @codekit-prepend "plugins.js"
 jQuery(function($){
 	$(window).ready(function(){
 		/**

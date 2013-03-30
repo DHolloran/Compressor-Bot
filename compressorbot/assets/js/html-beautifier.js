@@ -13,13 +13,16 @@ var hbInput = $('#hb_input'),
 * Beautify HTML
 */
 function beautifyHtml(){
+	// for /assets/js/vendor/htmlbeautify.js
 	beautifiedHtml = style_html(hbInput.val(), hbOptions);
 	hbOutput.val(beautifiedHtml);
 }
 
 /**
-* Beautify HTML Options
+* Beautify HTML Options for /assets/js/vendor/htmlbeautify.js
 */
+
+// Indent Char for /assets/js/vendor/htmlbeautify.js
 $('.hb-indent-char').on('change', function(){
 	var that = $(this);
 
@@ -37,12 +40,13 @@ $('.hb-indent-char').on('change', function(){
 	beautifyHtml();
 });
 
+// Braces for /assets/js/vendor/htmlbeautify.js
 $('.hb-braces').on('change', function(){
 	hbOptions.brace_style = $(this).val();
 	beautifyHtml();
 });
 
-// Indent Scripts
+// Indent Scripts for /assets/js/vendor/htmlbeautify.js
 $('.hb-indent-scripts').on('change', function(){
 	hbOptions.indent_scripts = $(this).val();
 	beautifyHtml();

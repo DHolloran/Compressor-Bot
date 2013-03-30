@@ -14,7 +14,8 @@ wrap_line_length = int;
 var jbInput = $('#jb_input'),
 		jbOutput = $('#jb_output'),
 		jbOptionsCheckBox = $('#jb_options input[type="checkbox"]'),
-		jbOptionsRadio = $('#jb_options input[type="radio"]'),
+		jbOptionsIndentRadio = $('.jb-indent-char'),
+		jbOptionsBracesRadio = $('.jb-braces'),
 		jbOptionsNumber = $('#jb_options input[type="number"]'),
 		jbOptions = {
 			brace_style: "collapse",
@@ -42,44 +43,91 @@ function beautifyJs() {
 /**
 * JS Beautifier Options
 */
+
 // Checkboxes
 jbOptionsCheckBox.on('change',function(){
-	var that = $(this);
-			selectedOption = that.attr('id').replace('jb_', '')
+	var that = $(this),
+			isChecked = that.is(':checked')
 	;
+	switch( that.attr('name') ) {
+		case 'jb_preserve_newlines':
+			jbOptions.preserve_newlines = isChecked;
+			break;
+		case 'jb_break_chained_methods':
+			jbOptions.break_chained_methods = isChecked;
+			break;
+		case 'jb_jslint_happy':
+			jbOptions.jslint_happy = isChecked;
+			break;
+		case 'jb_keep_array_indentation':
+			jbOptions.keep_array_indentation = isChecked;
+			break;
+		case 'jb_space_before_conditional':
+			jbOptions.space_before_conditional = isChecked;
+			break;
+		case 'jb_unescape_strings':
+			jbOptions.unescape_strings = isChecked;
+			break;
+	}
 	jbOptions.selectedOption = that.is(':checked');
 	beautifyJs();
 });
 
-// Radio Buttons
-jbOptionsRadio.on('change',function(){
+// Indent Radio
+jbOptionsIndentRadio.on('change',function(){
 	var that = $(this);
-			selectedOption = that.attr('id').replace('jb_', '')
-	;
 
-	switch(that.val()) {
+	switch( that.val() ) {
 		case 'tab':
-			jbOptions.selectedOption = '\t';
+			jbOptions.indent_char = '\t';
 			break;
 		case 'fourspaces':
-			jbOptions.selectedOption = '    ';
+			jbOptions.indent_char = '    ';
 			break;
 		case 'twospaces':
-			jbOptions.selectedOption = '  ';
+			jbOptions.indent_char = '  ';
 			break;
 		default:
-			jbOptions.selectedOption = that.val();
+			jbOptions.indent_char = '\t';
 			break;
 	}
 	beautifyJs();
 });
 
-// Number Input
+// Braces Radio
+jbOptionsBracesRadio.on('change',function(){
+	var that = $(this);
+
+	switch( that.val() ) {
+		case 'collapse':
+			jbOptions.brace_style = 'collapse';
+			break;
+		case 'expand':
+			jbOptions.brace_style = 'expand';
+			break;
+		case 'end-expand':
+			jbOptions.brace_style = 'end-expand';
+			break;
+		case 'expand-strict':
+			jbOptions.brace_style = 'expand-strict';
+			break;
+		default:
+			jbOptions.brace_style = 'collapse';
+			break;
+	}
+	beautifyJs();
+});
+
+// Number Inputs
 jbOptionsNumber.on('change',function(){
 	var that = $(this);
-			selectedOption = that.attr('id').replace('jb_', '')
-	;
-	jbOptions.selectedOption = that.val();
+	if ( that.attr('name') === 'jb_max_preserve_newlines') {
+		jbOptions.max_preserve_newlines = that.val();
+	}
+
+	if ( that.attr('name') === 'jb_wrap_line_length') {
+		jbOptions.wrap_line_length = that.val();
+	}
 	beautifyJs();
 });
 
