@@ -59,4 +59,9 @@ cbInput.on('keyup', function(){
 });
 
 
-
+/**
+* Beautify CSS Load
+*/
+if ( cbOutput.length > 0 ) {
+	beautifyCss();
+}

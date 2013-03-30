@@ -8,4 +8,17 @@ function minifyCss() {
 	var minifiedCss = YAHOO.compressor.cssmin(cmInput.val());
 	cmOutput.val( minifiedCss );
 }
-minifyCss();
+
+/**
+* Minify CSS Keyup
+*/
+cmInput.on('keyup', function(){
+	minifyCss();
+});
+
+/**
+* Minify CSS Load
+*/
+if ( cmOutput.length > 0 ) {
+	minifyCss();
+}

@@ -137,3 +137,11 @@ jbOptionsNumber.on('change',function(){
 jbInput.on('keyup', function(){
 	beautifyJs();
 });
+
+
+/**
+* Beautify JS Load
+*/
+if ( jbOutput.length > 0 ) {
+	beautifyJs();
+}
