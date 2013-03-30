@@ -1,66 +1,58 @@
-var cssBeautifierInput = $('#css_beautifier_input'),
-		cssBeautifierOutput = $('#css_beautifier_output'),
-		cssBeautifierOptions = {
+var cbOptions = {
 			indent: '\t',
 			openbrace: 'separate-line',
 			autosemicolon: true
 		},
-		cssBeautifierOptionsElem = $('#css_beautifier_options'),
-		cssBeautifierSpacingElem = $('.css-beautifier-spacing'),
-		cssBeautifierBracesElem = $('.css-beautifier-braces'),
-		cssBeautifierAutoSemicolon = $('.css-beautifier-auto-semicolon')
+		cbOptionsElem = $('#cb_options'),
+		cbIndentElem = $('.cb-spacing'),
+		cbBracesElem = $('.cb-braces'),
+		cbAutoSemicolon = $('.cb-auto-semicolon'),
+		cbCssLint = $('.cb-css-lint')
 ;
 /**
 * CSS Beautifier
 */
 function beautifyCss() {
-	var beautifiedCss = cssbeautify( cssBeautifierInput.val(), cssBeautifierOptions );
-	cssBeautifierOutput.val( beautifiedCss );
+	var beautifiedCss = cssbeautify( cbInput.val(), cbOptions );
+	cbOutput.setVal( beautifiedCss );
 }
 
 
 /**
 * CSS Beautifier Options
 */
-// indent is a string used for the indentation of the declaration (default is 4 spaces)
-cssBeautifierSpacingElem.on('change', function(){
-	switch( $(this).val() ) {
+// indent is a string used for the indentation of the declaration
+cbIndentElem.on('change', function(){
+	switch( cbInput.getValue() ) {
 		case 'tab':
-			cssBeautifierOptions.indent = '\t';
+			cbOptions.indent = '\t';
 			break;
 		case 'fourspaces':
-			cssBeautifierOptions.indent = '    ';
+			cbOptions.indent = '    ';
 			break;
 		case 'twospaces':
-			cssBeautifierOptions.indent = '  ';
+			cbOptions.indent = '  ';
 			break;
 	}
 	beautifyCss();
 });
 
-// openbrace defines the placement of open curly brace, either end-of-line (default) or separate-line.
-cssBeautifierBracesElem.on('change', function(){
-	// end-of-line
-	// separate-line
-	cssBeautifierOptions.autosemicolon = $(this).val();
-	console.log(cssBeautifierOptions);
+// openbrace defines the placement of open curly brace, either end-of-line
+cbBracesElem.on('change', function(){
+	cbOptions.openbrace = $(this).val();
 	beautifyCss();
 });
 
-// autosemicolon always inserts a semicolon after the last ruleset (default is false)
-cssBeautifierAutoSemicolon.on('change', function(){
-	if ( $(this).is(':checked') ) {
-		cssBeautifierOptions.openbrace = true;
-	} else {
-		cssBeautifierOptions.openbrace = false;
-	}
+// autosemicolon always inserts a semicolon after the last ruleset
+cbAutoSemicolon.on('change', function(){
+	cbOptions.autosemicolon = $(this).is(':checked');
 	beautifyCss();
 });
 
 /**
-* CSS Beautifier
+* CSS Beautifier Keyup
 */
-cssBeautifierInput.on('keyup', function(){
+cbInput.on('keyup', function(){
 	beautifyCss();
 });
 
