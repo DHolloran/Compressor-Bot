@@ -22,12 +22,14 @@ jQuery(function($){
 					}
 			e.preventDefault();
 		});
-		// @codekit-prepend "beautifier.js"
-		// @codekit-prepend "html-beautifier.js"
-		// @codekit-prepend "css-beautifier.js"
-		// @codekit-prepend "js-beautifier.js"
-		// @codekit-prepend "css-compressor.js"
-		// @codekit-prepend "js-compressor.js"
+		// @codekit-prepend "beautfier/beautifier.js"
+		// @codekit-prepend "beautfier/html-beautifier.js"
+		// @codekit-prepend "beautfier/css-beautifier.js"
+		// @codekit-prepend "beautfier/js-beautifier.js"
+		// @codekit-prepend "compressor/compressor.js"
+		// @codekit-prepend "compressor/css-compressor.js"
+		// @codekit-prepend "compressor/js-compressor.js"
+		// @codekit-prepend "compressor/html-compressor.js"
 		// @codekit-prepend "scripts.js"
 	}); // $(window).ready(
 }(jQuery));

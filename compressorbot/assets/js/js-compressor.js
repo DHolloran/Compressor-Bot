@@ -1,1 +1,0 @@
-/* All Variables should be instantiated in main.js*/
