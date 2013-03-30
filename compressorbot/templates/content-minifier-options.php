@@ -17,7 +17,9 @@
 		<div class="span3">
 			<h3>Select Your Options</h3>
 		</div>
-		<div id="cm_options" class="span3 cm-options-section options-section"></div>
+		<div id="cm_options" class="span3 cm-options-section options-section">
+			<p class="muted">No CSS minification options are available.</p>
+		</div>
 	</div> <!-- /.row -->
 	<!-- END CSS Options -->
 
