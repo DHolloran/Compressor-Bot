@@ -2,5 +2,22 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+	background-image: url("../img/body-bg.png");
+	background-repeat: repeat;
+	line-height: 1.75em;
+}
+
+a{
+	&:link, &:visited { color: $link-color; }
+	&:hover, &:active { color: $link-hover-color; }
+}
+
+.btn,
+button,
+submit {
+	&:hover {-webkit-box-shadow: 1px 1px 3px $theme-color-shadow; box-shadow: 1px 1px 4px $theme-color-shadow; }
+}
 h2 .muted { font-size: 14px; }
+
+.theme-color { color: $theme-color; }

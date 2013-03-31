@@ -1,3 +1,14 @@
 /* ==========================================================================
    Colors
    ========================================================================== */
+$black: #333;
+$white: #FAFAFA;
+$light-grey: #CCC;
+$mid-grey: #999;
+$dark-grey: #666;
+$theme-color: #B3D085;
+$theme-color-rgba: rgba(179, 208, 133, 0.075);
+$theme-color-shadow: rgba(179, 208, 133, 0.25);
+$black-shadow: rgba(0, 0, 0, 0.25);
+$link-color: darken($theme-color, 10%);
+$link-hover-color: $theme-color;
