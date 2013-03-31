@@ -21,16 +21,6 @@ function html_compressor_callback() {
 
 
 /**
- * HTML Compressor AJAX
- */
-add_action('wp_ajax_build_download', 'build_download_callback');
-add_action('wp_ajax_nopriv_build_download', 'build_download_callback');
-function build_download_callback() {
-	echo json_encode( 'works' );
-	die();
-}
-
-/**
  * Pretty Print Debug
  */
 function pp( $value )
@@ -44,3 +34,16 @@ function pp( $value )
 	}
 	echo "</pre>";
 }
+
+/**
+* Favicon
+*/
+function db_add_favicon() {
+	echo '<link rel="shortcut icon" href="'.get_template_directory_uri().'/assets/img/favicon.ico" />';
+} // db_add_favicon()
+// Add to all front end pages
+add_action( 'wp_head', 'db_add_favicon' );
+// Add to login
+add_action( 'login_head', 'db_add_favicon' );
+// Adds a favicon for admin area
+add_action( 'admin_head', 'db_add_favicon' );
