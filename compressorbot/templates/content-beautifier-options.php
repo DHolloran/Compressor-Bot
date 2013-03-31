@@ -33,10 +33,10 @@
 				<h4>Semicolon</h4>
 				<label><input checked type="checkbox" name="cb_autosemicolon" class="cb-auto-semicolon" id="cb_cb_autosemicolon" value="on"> Automatic semicolon</label>
 			</p>
-			<!-- <p>
+			<p>
 				<h4>CSS Linting</h4>
 				<label><input checked type="checkbox" name="cb_csslint" class="cb-css-lint" id="cb_csslint" value="on"> CSS Lint</label>
-			</p> -->
+			</p>
 		</div>
 	</div> <!-- /.row -->
 	<!-- END CSS Options -->
@@ -86,11 +86,11 @@
 					<label>wrap line length<input type="number" name="jb_wrap_line_length" class="jb-wrap-line-length" id="jb_wrap_line_length" min="0" value="0"></label>
 				</p>
 			</div>
-			<!-- <p>
+			<p>
 				<h4>JS Linting</h4>
-				<label><input checked type="radio" name="jb_linting" class="jb-linting" id="jb_jslint" value="jslint"> JSLint</label>
-				<label><input type="radio" name="jb_linting" class="jb-linting" id="jb_jshint" value="jshint"> JSHint</label>
-			</p> -->
+				<!-- <label><input checked type="radio" name="jb_linting" class="jb-linting" id="jb_jslint" value="jslint"> JSLint</label> -->
+				<label><input checked type="checkbox" name="jb_linting" class="jb-linting" id="jb_jshint" value="jshint"> JSHint</label>
+			</p>
 		</div> <!-- /#jb_options -->
 	</div> <!-- /.row -->
 	<!-- END JS Options -->

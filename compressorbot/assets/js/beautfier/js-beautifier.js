@@ -28,15 +28,53 @@ var jbInput = $('#jb_input'),
 			keep_array_indentation: false,
 			space_before_conditional: true,
 			unescape_strings: false,
-			wrap_line_length: 0
-		}
+			wrap_line_length: 0,
+			jshint: true
+		},
+		jbJsHint = $('#jb_jshint'),
+		jbJsHintErrors = $('#jb_jshint_errors'),
+		jbJsHintErrorsTextArea = $('#jb_jshint_errors').find('textarea')
 ;
+
+/**
+* JSHint
+*/
+function executeJShint(beautifedJs) {
+	if (!jbOptions.jshint || beautifedJs.length === 0) {
+		jbJsHintErrorsTextArea.val('');
+		return beautifedJs;
+	}
+	// character: 35
+	// evidence: "		console.log(JSHINT.errors)"
+	// line: 10
+	// reason: "Missing semicolon."
+	var jshintSuccess = JSHINT(beautifedJs);
+	if ( jshintSuccess ) {
+		jbJsHintErrorsTextArea.val('Your Awesome!!!! There are no issues with your JS!');
+	} else {
+		var errorMsg = '';
+		$.each(JSHINT.errors, function() {
+			var obj = $(this),
+					that = obj[0],
+					error = that.id.toString().trim().toUpperCase() + ' ',
+					character = 'col ' + that.character.toString().trim() + ' ',
+					line = 'line ' + that.line.toString().trim() + ' ',
+					evidence = that.evidence.toString().trim() + ' ',
+					message = that.reason.toString().trim() + ' '
+			;
+
+			errorMsg = errorMsg + error + character + line + evidence + message + "\n";
+		});
+		jbJsHintErrorsTextArea.val(errorMsg);
+	}
+}
 
 /**
 * Beautify JS
 */
 function beautifyJs() {
 	var beautifiedJs = js_beautify(jbInput.val(), jbOptions);
+	executeJShint(beautifiedJs);
 	jbOutput.val(beautifiedJs);
 }
 
@@ -67,6 +105,14 @@ jbOptionsCheckBox.on('change',function(){
 			break;
 		case 'jb_unescape_strings':
 			jbOptions.unescape_strings = isChecked;
+			break;
+		case 'jb_linting':
+			jbOptions.jshint = isChecked;
+			if ( jbOptions.jshint ) {
+				jbJsHintErrors.removeClass('hide');
+			} else {
+				jbJsHintErrors.addClass('hide');
+			}
 			break;
 	}
 	jbOptions.selectedOption = that.is(':checked');
@@ -142,6 +188,6 @@ jbInput.on('keyup', function(){
 /**
 * Beautify JS Load
 */
-if ( jbOutput.length > 0 ) {
-	beautifyJs();
-}
+// if ( jbOutput.length > 0 ) {
+// 	beautifyJs();
+// }

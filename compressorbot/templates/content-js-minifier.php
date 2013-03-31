@@ -12,4 +12,5 @@
 			<textarea id="jm_output" class="pull-left output" name="jm_output"></textarea>
 		</div>
 	</div>
+	<?php get_template_part('templates/content', 'js-minifier-errors'); ?>
 </div>

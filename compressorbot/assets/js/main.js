@@ -5,6 +5,8 @@ Dan Holloran @dholloran
 // @codekit-prepend "vendor/jsbeautify.js"
 // @codekit-prepend "vendor/htmlbeautify.js"
 // @codekit-prepend "vendor/cssmin.js"
+// @codekit-prepend "vendor/csslint.js"
+// @codekit-prepend "vendor/jshint-1.1.0.js"
 // @codekit-prepend "plugins.js"
 jQuery(function($){
 	$(window).ready(function(){

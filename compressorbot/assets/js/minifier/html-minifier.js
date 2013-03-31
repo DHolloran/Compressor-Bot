@@ -43,6 +43,6 @@ hmInput.on('keyup', function(){
 /**
 * Minify HTML Load
 */
-if ( hmOutput.length > 0 ) {
-	minifyHtml();
-}
+// if ( hmOutput.length > 0 ) {
+// 	minifyHtml();
+// }

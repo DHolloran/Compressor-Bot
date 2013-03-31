@@ -62,6 +62,6 @@ hbInput.on('keyup', function(){
 /**
 * Beautify HTML Load
 */
-if ( hbOutput.length > 0 ) {
-	beautifyHtml();
-}
+// if ( hbOutput.length > 0 ) {
+// 	beautifyHtml();
+// }
