@@ -1,4 +1,4 @@
-/*
+/**
 * Header Loader Animation
 */
 function headerLoaderAnimation() {
@@ -11,6 +11,10 @@ function headerLoaderAnimation() {
 }
 headerLoaderAnimation();
 
+
+/**
+* Sticky Sidebar
+*/
 if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
 
 	var	stickyElem = $('.sticky'),
@@ -30,5 +34,17 @@ if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
 			stickyElem.css('position','static').removeClass('offset9').addClass('offset1');
 		}
 	});
-
 }
+
+
+/**
+* Create Download File
+*/
+$('.download-btn').on('click', function(e){
+	var that = $(this),
+			textarea = that.parent().siblings('textarea')
+	;
+	console.log(textarea.val());
+	e.preventDefault();
+	return false;
+});

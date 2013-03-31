@@ -2,4 +2,13 @@
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+	margin-top: 35px;
+	background: $black;
+	color: $white;
+	line-height: 30px;
+}
+.copyright {
+	margin-bottom: 0;
+	text-align: center;
+}

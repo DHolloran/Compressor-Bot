@@ -7,7 +7,7 @@
 			<h4>Choose Your Language</h4>
 			<p>
 				<label><input checked type="radio" name="lm_language" class="lm-language" id="lm_cm_language" value="cm-options-section"> CSS</label>
-				<!-- <label><input type="radio" name="lm_language" class="lm-language" id="lm_jm_language" value="jm-options-section"> JS</label> -->
+				<label><input type="radio" name="lm_language" class="lm-language" id="lm_jm_language" value="jm-options-section"> JS</label>
 				<label><input type="radio" name="lm_language" class="lm-language" id="lm_hm_language" value="hm-options-section"> HTML</label>
 			</p>
 		</div>
@@ -26,7 +26,13 @@
 		<!-- END CSS Options -->
 
 		<!-- JS Options -->
-		<div id="jm_options" class="span3 jm-options-section options-section hide"></div> <!-- /#jm_options -->
+		<div id="jm_options" class="span3 jm-options-section options-section hide">
+			<p>
+				<h5>JS Linting</h5>
+				<!-- <label><input checked type="radio" name="jm_linting" class="jm-linting" id="jm_jslint" value="jslint"> JSLint</label> -->
+				<label><input checked type="checkbox" name="jm_linting" class="jm-linting" id="jm_jshint" value="jshint"> JSHint</label>
+			</p>
+		</div> <!-- /#jm_options -->
 		<!-- END JS Options -->
 
 		<!-- HTML Options -->
