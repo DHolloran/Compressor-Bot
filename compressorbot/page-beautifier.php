@@ -2,9 +2,7 @@
 /*
 Template Name: Beautifier Page Template
 */
-
-
-get_template_part('templates/page', 'header');?>
+?>
 <div class="row">
 	<?php get_template_part('templates/content', 'loop'); ?>
 </div>
