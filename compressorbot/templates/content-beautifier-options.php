@@ -1,6 +1,6 @@
-<div class="span3 offset1 options">
-	<!-- Language Options -->
-	<div class="row">
+<div class="span3 offset1 options-wrap sticky">
+	<div class="row options-bg">
+		<!-- Language Options -->
 		<div id="lb_options" class="span3 options-section">
 			<h4>Choose Your Language</h4>
 			<p>
@@ -9,11 +9,9 @@
 				<label><input type="radio" name="lb_language" class="lb-language" id="lb_hb_language" value="hb-options-section"> HTML</label>
 			</p>
 		</div>
-	</div> <!-- /.row -->
-	<!-- END Language Options -->
+		<!-- END Language Options -->
 
-	<!-- CSS Options -->
-	<div class="row">
+		<!-- CSS Options -->
 		<div class="span3">
 			<h4>Select Your Options</h4>
 		</div>
@@ -38,11 +36,9 @@
 				<label><input checked type="checkbox" name="cb_csslint" class="cb-css-lint" id="cb_csslint" value="on"> CSS Lint</label>
 			</p>
 		</div>
-	</div> <!-- /.row -->
-	<!-- END CSS Options -->
+		<!-- END CSS Options -->
 
-	<!-- JS Options -->
-	<div class="row">
+		<!-- JS Options -->
 		<div id="jb_options" class="span3 jb-options-section options-section hide">
 			<p>
 				<h5>Indent</h5>
@@ -92,11 +88,9 @@
 				</p>
 			</div>
 		</div> <!-- /#jb_options -->
-	</div> <!-- /.row -->
-	<!-- END JS Options -->
+		<!-- END JS Options -->
 
-	<!-- HTML Options -->
-	<div class="row">
+		<!-- HTML Options -->
 		<div id="hb_options" class="span3 hb-options-section options-section hide">
 			<p>
 				<h5>Indent</h5>
@@ -117,7 +111,8 @@
 				<label><input type="radio" name="hb_indent_scripts" class="hb-indent-scripts" id="hb_seperate" value="seperate"> seperate</label>
 			</p>
 		</div> <!-- /#hb_options -->
+		<!-- END HTML Options -->
+
 	</div> <!-- /.row -->
-	<!-- END HTML Options -->
 
 </div> <!-- /.row -->
